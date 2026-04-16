@@ -22,7 +22,9 @@ const config: Config = {
         input: "rgb(var(--input))",
         ring: "rgb(var(--ring))",
         primary: "rgb(var(--foreground))",
+        "primary-foreground": "rgb(var(--background))",
         secondary: "rgb(var(--muted-foreground))",
+        "secondary-foreground": "rgb(var(--background))",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
