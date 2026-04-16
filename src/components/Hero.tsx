@@ -12,28 +12,33 @@ import {
   Award,
   ChevronDown
 } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/data/translations";
 
 const stats = [
-  { value: "$2.4M", label: "Revenue impact generado", icon: TrendingUp },
-  { value: "50+", label: "Proyectos completados", icon: Target },
-  { value: "30%", label: "Eficiencia mejorada", icon: Zap },
+  { value: "$2.4M", icon: TrendingUp },
+  { value: "50+", icon: Target },
+  { value: "30%", icon: Zap },
 ];
 
 const companies = ["Google", "Mercado Libre", "Globant", "IBM", "Accenture"];
 
 export default function Hero() {
+  const { lang } = useLanguage();
+  const t = translations[lang].hero;
+
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-12">
       {/* Background gradients */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gray-100 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/4" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4 dark:bg-accent/5" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gray-200 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/4 dark:bg-gray-800" />
 
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-24">
         {/* Top badge */}
         <div className="flex justify-center mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent text-sm font-medium rounded-full">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            Disponible para nuevas oportunidades
+            {t.available}
           </span>
         </div>
 
@@ -42,18 +47,17 @@ export default function Hero() {
           <p className="text-accent text-sm sm:text-base mb-3 tracking-wide uppercase font-semibold">
             Lautaro Ortiz
           </p>
-          <p className="text-muted text-sm sm:text-base mb-6 tracking-wide uppercase font-medium">
-            Data Analyst & Business Intelligence Specialist
+          <p className="text-muted-foreground text-sm sm:text-base mb-6 tracking-wide uppercase font-medium">
+            {t.role}
           </p>
           
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-6">
-            Convierto datos en{" "}
-            <span className="text-accent italic">resultados medibles</span>
+            {t.headline}{" "}
+            <span className="text-accent italic">{t.headlineAccent}</span>
           </h1>
           
-          <p className="text-muted text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            Especialista en transformar datos complejos en insights accionables. 
-            Ayudo a empresas a tomar decisiones basadas en datos que impulsan crecimiento real.
+          <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            {t.description}
           </p>
         </div>
 
@@ -81,18 +85,18 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 sm:mb-16">
           <a
             href="#projects"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md hover:bg-secondary transition-colors text-sm sm:text-base font-medium"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md hover:opacity-90 transition-opacity text-sm sm:text-base font-medium"
           >
             <Database className="w-4 h-4 sm:w-5 sm:h-5" />
-            Ver Proyectos
+            {t.ctaProjects}
             <ArrowRight className="w-4 h-4" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 border-2 border-primary px-6 sm:px-8 py-3 sm:py-4 rounded-md hover:bg-primary hover:text-white transition-colors text-sm sm:text-base font-medium"
+            className="inline-flex items-center justify-center gap-2 border-2 border-primary px-6 sm:px-8 py-3 sm:py-4 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors text-sm sm:text-base font-medium"
           >
             <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
-            Contactar
+            {t.ctaContact}
           </a>
         </div>
 
@@ -101,7 +105,7 @@ export default function Hero() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-4 sm:p-6 bg-white border border-gray-200 rounded-lg shadow-sm"
+              className="flex items-center gap-4 p-4 sm:p-6 bg-card border border-border rounded-lg shadow-sm"
             >
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                 <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
@@ -110,7 +114,7 @@ export default function Hero() {
                 <p className="text-2xl sm:text-3xl font-display font-semibold text-primary">
                   {stat.value}
                 </p>
-                <p className="text-xs sm:text-sm text-muted">{stat.label}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{[t.stats.revenue, t.stats.projects, t.stats.efficiency][index]}</p>
               </div>
             </div>
           ))}
@@ -118,10 +122,10 @@ export default function Hero() {
 
         {/* Companies/Social Proof */}
         <div className="text-center mb-8">
-          <p className="text-xs sm:text-sm text-muted uppercase tracking-wider mb-4">
-            Experiencia trabajando con
+          <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mb-4">
+            {t.companies}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-10 gap-y-2 text-muted/60">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-10 gap-y-2 text-muted-foreground/60">
             {companies.map((company) => (
               <span key={company} className="text-sm sm:text-base font-medium">
                 {company}

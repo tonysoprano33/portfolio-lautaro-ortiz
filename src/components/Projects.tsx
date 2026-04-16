@@ -2,16 +2,20 @@
 
 import { projects } from "@/data/projects";
 import { ExternalLink, Github, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/data/translations";
 
 export default function Projects() {
+  const { lang } = useLanguage();
+  const t = translations[lang].projects;
+
   return (
-    <section id="projects" className="py-24 px-6 lg:px-12 xl:px-24 bg-white">
+    <section id="projects" className="py-24 px-6 lg:px-12 xl:px-24 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium mb-4">Proyectos</h2>
-          <p className="text-muted max-w-2xl">
-            Selección de proyectos que demuestran mi experiencia en análisis de datos,
-            visualización y machine learning. Cada proyecto incluye datos reales de impacto empresarial.
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium mb-4">{t.title}</h2>
+          <p className="text-muted-foreground max-w-2xl">
+            {t.subtitle}
           </p>
         </div>
 
@@ -19,13 +23,13 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="group border border-gray-200 rounded-sm p-6 hover:border-accent/50 hover:shadow-sm transition-all duration-300"
+              className="group border border-border rounded-sm p-6 hover:border-accent/50 hover:shadow-sm transition-all duration-300 bg-card"
             >
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 bg-gray-100 text-muted rounded-sm"
+                    className="text-xs px-2 py-1 bg-muted/10 text-muted-foreground rounded-sm"
                   >
                     {tag}
                   </span>
@@ -36,19 +40,19 @@ export default function Projects() {
                 {project.title}
               </h3>
 
-              <p className="text-muted text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
 
               <div className="mb-4">
-                <p className="text-xs text-muted mb-2 uppercase tracking-wide">
-                  Tecnologías
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">
+                  {t.technologies}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="text-xs text-secondary"
+                      className="text-xs text-muted-foreground"
                     >
                       {tool}
                       {project.tools.indexOf(tool) < project.tools.length - 1 && (
@@ -64,23 +68,23 @@ export default function Projects() {
                 <span>{project.results}</span>
               </div>
 
-              <div className="flex gap-4 pt-4 border-t border-gray-100">
+              <div className="flex gap-4 pt-4 border-t border-border">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
-                    className="inline-flex items-center gap-1 text-sm text-muted hover:text-primary transition-colors"
+                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Github className="w-4 h-4" />
-                    Código
+                    {t.code}
                   </a>
                 )}
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
-                    className="inline-flex items-center gap-1 text-sm text-muted hover:text-primary transition-colors"
+                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Demo
+                    {t.demo}
                   </a>
                 )}
               </div>

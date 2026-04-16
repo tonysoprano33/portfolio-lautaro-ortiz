@@ -3,7 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 250 250 250;
+    --foreground: 26 26 26;
+    --card: 255 255 255;
+    --card-foreground: 26 26 26;
+    --muted: 107 114 128;
+    --muted-foreground: 107 114 128;
+    --accent: 79 70 229;
+    --accent-foreground: 255 255 255;
+    --border: 229 231 235;
+    --input: 229 231 235;
+    --ring: 79 70 229;
+  }
+
+  .dark {
+    --background: 10 10 10;
+    --foreground: 250 250 250;
+    --card: 18 18 18;
+    --card-foreground: 250 250 250;
+    --muted: 115 115 115;
+    --muted-foreground: 156 163 175;
+    --accent: 99 102 241;
+    --accent-foreground: 255 255 255;
+    --border: 55 55 55;
+    --input: 55 55 55;
+    --ring: 99 102 241;
+  }
+
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
   }
 }
