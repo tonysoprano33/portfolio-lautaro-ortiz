@@ -4,24 +4,24 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-foreground text-background">
+    <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8 bg-foreground text-background">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-display text-3xl sm:text-4xl font-medium mb-4">
-          Trabajemos juntos
+        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-medium mb-6 leading-tight">
+          Hablemos
         </h2>
-        <p className="text-background/70 max-w-xl mx-auto mb-10">
-          ¿Tenés un proyecto o búsqueda laboral? Hablemos.
+        <p className="text-background/70 text-lg max-w-xl mx-auto mb-12">
+          ¿Tenés un proyecto donde los datos puedan marcar la diferencia?
         </p>
 
         <a
           href="mailto:tu.email@ejemplo.com"
-          className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-md hover:opacity-90 transition-opacity text-base font-medium mb-12"
+          className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 hover:opacity-90 transition-opacity text-lg font-medium"
         >
           <Mail className="w-5 h-5" />
-          Enviar email
+          tu.email@ejemplo.com
         </a>
 
-        <div className="flex justify-center gap-6 pt-10 border-t border-background/20">
+        <div className="flex justify-center gap-8 mt-16 pt-10 border-t border-background/20">
           <a href="#" className="text-background/50 hover:text-background transition-colors">
             <Linkedin className="w-6 h-6" />
           </a>
