@@ -29,9 +29,9 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-12">
-      {/* Background gradients */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4 dark:bg-accent/5" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gray-200 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/4 dark:bg-gray-800" />
+      {/* Background gradients - subtle in both modes */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4 dark:bg-accent/10" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gray-200/50 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/4 dark:bg-gray-800/30" />
 
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-24">
         {/* Top badge */}
@@ -74,7 +74,7 @@ export default function Hero() {
           ].map((tech) => (
             <span
               key={tech}
-              className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white border border-gray-200 text-secondary text-xs sm:text-sm rounded-md shadow-sm hover:border-accent/30 transition-colors"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 bg-card border border-border text-muted-foreground text-xs sm:text-sm rounded-md shadow-sm hover:border-accent/50 transition-colors"
             >
               {tech}
             </span>
