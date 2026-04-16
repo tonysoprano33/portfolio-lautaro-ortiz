@@ -1,94 +1,50 @@
 "use client";
 
 import { projects } from "@/data/projects";
-import { ExternalLink, Github, TrendingUp } from "lucide-react";
-import { useLanguage } from "@/hooks/useLanguage";
-import { translations } from "@/data/translations";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
-  const { lang } = useLanguage();
-  const t = translations[lang].projects;
+  // Show only first 4 projects
+  const featuredProjects = projects.slice(0, 4);
 
   return (
-    <section id="projects" className="py-24 px-6 lg:px-12 xl:px-24 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium mb-4">{t.title}</h2>
-          <p className="text-muted-foreground max-w-2xl">
-            {t.subtitle}
-          </p>
-        </div>
+    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <p className="text-accent text-sm font-medium uppercase tracking-wide mb-4">
+          Proyectos
+        </p>
+        <h2 className="font-display text-3xl sm:text-4xl font-medium mb-12">
+          Trabajos seleccionados
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <article
+        <div className="space-y-8">
+          {featuredProjects.map((project) => (
+            <a
               key={project.id}
-              className="group border border-border rounded-sm p-6 hover:border-accent/50 hover:shadow-sm transition-all duration-300 bg-card"
+              href={project.githubUrl || "#"}
+              className="group block p-6 sm:p-8 bg-card border border-border rounded-lg hover:border-accent/50 transition-colors"
             >
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-1 bg-muted/10 text-muted-foreground rounded-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex justify-between items-start gap-4 mb-4">
+                <h3 className="font-display text-xl sm:text-2xl font-medium group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
+                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0" />
               </div>
 
-              <h3 className="font-display text-xl md:text-2xl font-medium mb-3 group-hover:text-accent transition-colors">
-                {project.title}
-              </h3>
-
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4">
                 {project.description}
               </p>
 
-              <div className="mb-4">
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">
-                  {t.technologies}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {project.tools.map((tool) => (
-                    <span
-                      key={tool}
-                      className="text-xs text-muted-foreground"
-                    >
-                      {tool}
-                      {project.tools.indexOf(tool) < project.tools.length - 1 && (
-                        <span className="mx-1">·</span>
-                      )}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap items-center gap-3 text-xs">
+                <span className="text-accent font-medium">{project.results}</span>
+                <span className="text-muted-foreground">|</span>
+                {project.tools.slice(0, 3).map((tool, i) => (
+                  <span key={tool} className="text-muted-foreground">
+                    {tool}{i < 2 && ","}
+                  </span>
+                ))}
               </div>
-
-              <div className="flex items-center gap-2 text-accent text-sm mb-4">
-                <TrendingUp className="w-4 h-4" />
-                <span>{project.results}</span>
-              </div>
-
-              <div className="flex gap-4 pt-4 border-t border-border">
-                {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    {t.code}
-                  </a>
-                )}
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    {t.demo}
-                  </a>
-                )}
-              </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

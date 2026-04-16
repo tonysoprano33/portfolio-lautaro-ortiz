@@ -1,60 +1,34 @@
 "use client";
 
-import { Mail, Linkedin, Github, FileText } from "lucide-react";
-import { useLanguage } from "@/hooks/useLanguage";
-import { translations } from "@/data/translations";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
-  const { lang } = useLanguage();
-  const t = translations[lang].contact;
-
   return (
-    <section id="contact" className="py-24 px-6 lg:px-12 xl:px-24 bg-foreground text-background">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-foreground text-background">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium mb-6">
-          {t.title}
+        <h2 className="font-display text-3xl sm:text-4xl font-medium mb-4">
+          Trabajemos juntos
         </h2>
-        <p className="text-background/70 max-w-2xl mx-auto mb-12 leading-relaxed">
-          {t.subtitle}
+        <p className="text-background/70 max-w-xl mx-auto mb-10">
+          ¿Tenés un proyecto o búsqueda laboral? Hablemos.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
-          <a
-            href="mailto:tu.email@ejemplo.com"
-            className="inline-flex items-center gap-3 px-5 sm:px-6 py-3 border border-background/30 rounded-md hover:border-background hover:bg-background hover:text-foreground transition-all text-sm sm:text-base"
-          >
-            <Mail className="w-5 h-5" />
-            {t.email}
+        <a
+          href="mailto:tu.email@ejemplo.com"
+          className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-md hover:opacity-90 transition-opacity text-base font-medium mb-12"
+        >
+          <Mail className="w-5 h-5" />
+          Enviar email
+        </a>
+
+        <div className="flex justify-center gap-6 pt-10 border-t border-background/20">
+          <a href="#" className="text-background/50 hover:text-background transition-colors">
+            <Linkedin className="w-6 h-6" />
           </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 px-5 sm:px-6 py-3 border border-background/30 rounded-md hover:border-background hover:bg-background hover:text-foreground transition-all text-sm sm:text-base"
-          >
-            <Linkedin className="w-5 h-5" />
-            {t.linkedin}
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 px-5 sm:px-6 py-3 border border-background/30 rounded-md hover:border-background hover:bg-background hover:text-foreground transition-all text-sm sm:text-base"
-          >
-            <Github className="w-5 h-5" />
-            {t.github}
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 px-5 sm:px-6 py-3 border border-background/30 rounded-md hover:border-background hover:bg-background hover:text-foreground transition-all text-sm sm:text-base"
-          >
-            <FileText className="w-5 h-5" />
-            {t.cv}
+          <a href="#" className="text-background/50 hover:text-background transition-colors">
+            <Github className="w-6 h-6" />
           </a>
         </div>
-
-        <footer className="pt-12 border-t border-background/20">
-          <p className="text-background/50 text-sm">
-            © {new Date().getFullYear()} Data Analyst Portfolio. 
-            {t.footer}
-          </p>
-        </footer>
       </div>
     </section>
   );
