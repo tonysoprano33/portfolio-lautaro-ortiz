@@ -2,36 +2,35 @@
 
 export default function Credibility() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-4xl mx-auto">
-        {/* Section label */}
-        <p className="text-accent text-sm font-medium uppercase tracking-wider mb-12">
+    <section className="py-32 sm:py-40 px-6 sm:px-12 lg:px-24 bg-background">
+      <div>
+        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-16">
           Resultados concretos
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16">
-          <div className="border-l-2 border-accent pl-6">
-            <p className="font-display text-4xl sm:text-5xl font-semibold text-primary mb-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8">
+          <div>
+            <p className="font-display text-6xl sm:text-7xl md:text-8xl font-medium text-primary mb-4">
               15+
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Proyectos de análisis completados
+            <p className="text-muted-foreground text-base">
+              Proyectos completados
             </p>
           </div>
-          <div className="border-l-2 border-accent pl-6">
-            <p className="font-display text-4xl sm:text-5xl font-semibold text-primary mb-2">
-              30%
+          <div>
+            <p className="font-display text-6xl sm:text-7xl md:text-8xl font-medium text-primary mb-4">
+              30<span className="text-accent">%</span>
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Reducción promedio en tiempos de reporte
+            <p className="text-muted-foreground text-base">
+              Reducción en tiempos de reporte
             </p>
           </div>
-          <div className="border-l-2 border-accent pl-6">
-            <p className="font-display text-4xl sm:text-5xl font-semibold text-primary mb-2">
-              SQL · Python
+          <div>
+            <p className="font-display text-5xl sm:text-6xl md:text-7xl font-medium text-accent mb-4">
+              SQL
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Stack principal + Tableau/Power BI
+            <p className="text-muted-foreground text-base">
+              Python · Tableau · Power BI
             </p>
           </div>
         </div>

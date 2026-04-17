@@ -1,41 +1,51 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { useLanguage } from "@/hooks/useLanguage";
-import { translations } from "@/data/translations";
+import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
-  const { lang } = useLanguage();
-  const t = translations[lang].hero;
-
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 relative">
-      <div className="max-w-5xl mx-auto">
-        {/* Main headline - AGRESIVO */}
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-[0.95] mb-8 tracking-tight">
-          Datos que<br />
-          <span className="text-accent">convencen</span>
-        </h1>
+    <section className="h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 relative overflow-hidden">
+      {/* Background subtle pattern */}
+      <div className="absolute inset-0 -z-10 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
 
-        {/* Subheadline - directo */}
-        <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-2xl mb-12 leading-relaxed">
-          No vendo dashboards. Entrego respuestas que hacen que alguien diga "ah, entonces eso".
+      {/* Main content - NO container, full bleed */}
+      <div>
+        {/* Pre-title */}
+        <p className="text-muted-foreground text-sm sm:text-base mb-6 tracking-widest uppercase">
+          Lautaro Ortiz / Data Analyst
         </p>
 
-        {/* Single CTA - prominente */}
+        {/* HEADLINE EXTREMO */}
+        <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-medium leading-[0.85] tracking-tight mb-8">
+          Datos<br />
+          <span className="text-accent italic">que</span><br />
+          convencen
+        </h1>
+
+        {/* Value prop - una línea nada más */}
+        <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-lg leading-relaxed mb-16">
+          Transformo información compleja en decisiones claras. SQL, Python, y visuales que hablan.
+        </p>
+
+        {/* CTA - solo texto + flecha */}
         <a
           href="#featured"
-          className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 rounded-none text-base font-medium hover:opacity-90 transition-opacity"
+          className="group inline-flex items-center gap-4 text-accent text-lg sm:text-xl font-medium hover:gap-6 transition-all"
         >
-          Ver el mejor proyecto
-          <ArrowRight className="w-5 h-5" />
+          Ver proyecto destacado
+          <ArrowDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
 
-      {/* Scroll hint minimal */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-muted-foreground/50 rounded-full animate-bounce" />
+      {/* Corner detail - identidad */}
+      <div className="absolute bottom-6 right-6 sm:bottom-12 sm:right-12">
+        <div className="w-16 h-16 sm:w-24 sm:h-24 border-2 border-accent/30 rounded-full flex items-center justify-center">
+          <span className="text-accent text-xs sm:text-sm font-medium tracking-widest rotate-90">2024</span>
         </div>
       </div>
     </section>
