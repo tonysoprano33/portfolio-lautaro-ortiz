@@ -47,11 +47,11 @@ export default function Projects() {
                     {project.tools.join(" · ")}
                   </div>
                   
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground">
                     <span className="font-medium text-foreground">Resultados:</span> {project.results}
                   </p>
                   
-                  <div className="flex gap-4" onClick={(e) => e.stopPropagation()}>
+                  <div className="flex gap-4 mt-2" onClick={(e) => e.stopPropagation()}>
                     {project.githubUrl && project.githubUrl !== "#" && (
                       <a
                         href={project.githubUrl}
