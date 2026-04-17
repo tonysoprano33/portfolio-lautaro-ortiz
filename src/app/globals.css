@@ -40,3 +40,13 @@
     color: rgb(var(--foreground));
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); opacity: 0.6; }
+  50% { transform: translateY(-10px); opacity: 0.3; }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.5; }
+}
