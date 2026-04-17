@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import Featured from "@/components/Featured";
+import HeroProject from "@/components/HeroProject";
 import Credibility from "@/components/Credibility";
 import Projects from "@/components/Projects";
 import Process from "@/components/Process";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Featured />
+      <HeroProject />
       <Credibility />
       <Projects />
       <Process />
