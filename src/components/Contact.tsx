@@ -18,22 +18,24 @@ export default function Contact() {
           ¿Tenés un proyecto donde los datos puedan marcar la diferencia?
         </p>
 
-        <a
-          href="mailto:tu.email@ejemplo.com"
-          className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity mb-6"
-        >
-          <Mail className="w-5 h-5" />
-          tu.email@ejemplo.com
-        </a>
+        <div className="flex flex-col items-center gap-4 mb-12">
+          <a
+            href="mailto:tu.email@ejemplo.com"
+            className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            <Mail className="w-5 h-5" />
+            tu.email@ejemplo.com
+          </a>
 
-        <a
-          href="/cv-lautaro-ortiz.pdf"
-          download
-          className="inline-flex items-center gap-3 border-2 border-background/30 text-background px-8 py-3 text-base font-medium hover:border-background hover:bg-background hover:text-foreground transition-all mb-12"
-        >
-          <FileDown className="w-5 h-5" />
-          Descargar CV
-        </a>
+          <a
+            href="/cv-lautaro-ortiz.pdf"
+            download
+            className="inline-flex items-center gap-3 border-2 border-background/30 text-background px-8 py-3 text-base font-medium hover:border-background hover:bg-background hover:text-foreground transition-all"
+          >
+            <FileDown className="w-5 h-5" />
+            Descargar CV
+          </a>
+        </div>
 
         <div className="flex justify-center gap-8 pt-10 border-t border-background/20">
           <a href="#" className="text-background/40 hover:text-background transition-colors">
