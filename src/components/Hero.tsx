@@ -23,54 +23,64 @@ export default function Hero() {
           ORTIZ
         </h1>
 
-        {/* Ilustración artística - silueta elegante apoyada */}
-        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-8">
-          <svg width="300" height="450" viewBox="0 0 300 450" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
-            {/* Silueta de persona apoyada - línea continua artística */}
+        {/* Ilustración única - Símbolo de automatización LO */}
+        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-4">
+          <svg width="280" height="320" viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-70">
+            {/* L inicial - transformándose en loop de automatización */}
             <path 
-              d="M 80 400 Q 75 350 80 300 Q 85 250 75 200 Q 70 150 80 120 Q 90 90 110 85 Q 135 80 150 95 Q 165 110 160 140 Q 155 170 140 180 Q 125 190 130 220 Q 135 250 150 280 Q 165 310 170 350 Q 175 390 170 420" 
+              d="M 60 80 L 60 200 Q 60 240 100 240 L 140 240" 
               stroke="currentColor" 
-              strokeWidth="3" 
+              strokeWidth="4" 
               fill="none" 
               className="text-primary"
               strokeLinecap="round"
+              strokeLinejoin="round"
             />
             
-            {/* Línea de pared/vertical */}
-            <line x1="60" y1="50" x2="60" y2="450" stroke="currentColor" strokeWidth="2" className="text-accent opacity-40" strokeLinecap="round"/>
+            {/* O que se convierte en loop/ciclo de automatización */}
+            <ellipse cx="180" cy="160" rx="50" ry="60" 
+              stroke="currentColor" 
+              strokeWidth="4" 
+              fill="none" 
+              className="text-accent"
+            />
             
-            {/* Detalle de mano en bolsillo */}
-            <ellipse cx="135" cy="310" rx="8" ry="12" fill="currentColor" className="text-primary opacity-60"/>
+            {/* Flecha de loop dentro del O - representa automatización */}
+            <path 
+              d="M 165 120 Q 210 130 205 170 Q 200 200 160 190" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              fill="none" 
+              className="text-accent"
+              strokeLinecap="round"
+              strokeDasharray="4 6"
+            >
+              <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/>
+            </path>
             
-            {/* Cuello de camisa - detalle accent */}
-            <path d="M 115 200 L 115 220 Q 130 225 145 220 L 145 200" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+            {/* Punto de entrada (datos crudos) */}
+            <circle cx="50" cy="60" r="6" fill="currentColor" className="text-primary opacity-40"/>
+            <line x1="55" y1="65" x2="58" y2="75" stroke="currentColor" strokeWidth="1.5" className="text-primary opacity-40"/>
             
-            {/* Pelo largo - líneas fluidas */}
-            <path d="M 85 140 Q 70 160 75 200 Q 80 230 70 260" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-60" strokeLinecap="round"/>
-            <path d="M 165 140 Q 180 160 175 200 Q 170 230 180 250" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-40" strokeLinecap="round"/>
-            <path d="M 95 100 Q 110 90 130 95 Q 150 100 155 120" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary" strokeLinecap="round"/>
+            {/* Línea de conexión L → O */}
+            <path d="M 140 240 Q 160 240 170 220" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-50"/>
             
-            {/* Ojos mirando a la izquierda (hacia el nombre) - simples */}
-            <circle cx="105" cy="125" r="3" fill="currentColor" className="text-accent"/>
-            <circle cx="135" cy="125" r="3" fill="currentColor" className="text-accent"/>
+            {/* Puntos de proceso (pasos) */}
+            <circle cx="140" cy="160" r="4" fill="currentColor" className="text-accent">
+              <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="180" cy="110" r="3" fill="currentColor" className="text-primary opacity-40"/>
+            <circle cx="220" cy="160" r="3" fill="currentColor" className="text-primary opacity-40"/>
+            <circle cx="180" cy="210" r="3" fill="currentColor" className="text-primary opacity-40"/>
             
-            {/* Sombra suave */}
-            <ellipse cx="125" cy="435" rx="50" ry="10" fill="currentColor" className="text-primary opacity-10"/>
+            {/* Output/Resultado */}
+            <circle cx="250" cy="160" r="5" fill="currentColor" className="text-accent">
+              <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <line x1="230" y1="160" x2="245" y2="160" stroke="currentColor" strokeWidth="2" className="text-accent"/>
             
-            {/* Animación: dedo señalando abajo (ocasional) */}
-            <g opacity="0">
-              <path d="M 160 280 Q 180 320 185 370" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-              <circle cx="188" cy="380" r="5" fill="currentColor" className="text-accent"/>
-              <line x1="188" y1="385" x2="188" y2="395" stroke="currentColor" strokeWidth="2" className="text-accent"/>
-              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.82;0.88;0.9;1" dur="6s" repeatCount="indefinite"/>
-            </g>
-            
-            {/* Flecha de scroll que aparece */}
-            <g opacity="0" transform="translate(170, 410)">
-              <path d="M 0 0 L 10 20 L 20 0" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.82;0.88;0.9;1" dur="6s" repeatCount="indefinite"/>
-              <animateTransform attributeName="transform" type="translate" values="170,410; 170,415; 170,410" dur="0.8s" repeatCount="indefinite"/>
-            </g>
+            {/* Texto sutil "auto" */}
+            <text x="155" y="165" fill="currentColor" className="text-accent text-xs font-mono opacity-80">auto</text>
           </svg>
         </div>
 
