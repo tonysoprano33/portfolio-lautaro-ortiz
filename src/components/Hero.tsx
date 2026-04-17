@@ -23,122 +23,53 @@ export default function Hero() {
           ORTIZ
         </h1>
 
-        {/* Ilustración - chico elegante apoyado en pared de oficina */}
-        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4">
-          <svg width="320" height="500" viewBox="0 0 320 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
-            {/* Pared de oficina */}
-            <line x1="60" y1="0" x2="60" y2="500" stroke="currentColor" strokeWidth="2" className="text-border"/>
-            {/* Sombra de la pared */}
-            <rect x="0" y="0" width="60" height="500" fill="currentColor" className="text-primary opacity-5"/>
+        {/* Ilustración artística - silueta elegante apoyada */}
+        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-8">
+          <svg width="300" height="450" viewBox="0 0 300 450" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
+            {/* Silueta de persona apoyada - línea continua artística */}
+            <path 
+              d="M 80 400 Q 75 350 80 300 Q 85 250 75 200 Q 70 150 80 120 Q 90 90 110 85 Q 135 80 150 95 Q 165 110 160 140 Q 155 170 140 180 Q 125 190 130 220 Q 135 250 150 280 Q 165 310 170 350 Q 175 390 170 420" 
+              stroke="currentColor" 
+              strokeWidth="3" 
+              fill="none" 
+              className="text-primary"
+              strokeLinecap="round"
+            />
             
-            {/* Chico apoyado en la pared */}
-            <g>
-              {/* Piernas - cruzadas, apoyadas */}
-              <line x1="110" y1="400" x2="110" y2="320" stroke="currentColor" strokeWidth="2.5" className="text-primary"/>
-              <line x1="150" y1="420" x2="150" y2="330" stroke="currentColor" strokeWidth="2.5" className="text-primary"/>
-              <path d="M 110 400 Q 130 420 150 420" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-              
-              {/* Zapatos elegantes */}
-              <ellipse cx="115" cy="430" rx="22" ry="8" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-              <ellipse cx="155" cy="445" rx="22" ry="8" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-              
-              {/* Torso - camisa elegante */}
-              <path d="M 110 320 L 110 220 Q 130 215 150 220 L 150 320" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-              
-              {/* Cuello camisa */}
-              <rect x="118" y="205" width="24" height="20" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-              <line x1="130" y1="205" x2="130" y2="225" stroke="currentColor" strokeWidth="1" className="text-primary opacity-30"/>
-              
-              {/* Cabeza */}
-              <ellipse cx="130" cy="175" rx="32" ry="38" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-              
-              {/* Cabello - estilizado */}
-              <path d="M 100 165 Q 95 140 105 125 Q 130 110 155 125 Q 165 140 160 165" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-              <path d="M 105 135 Q 130 130 155 135" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary opacity-70"/>
-              
-              {/* Ojos - mirando a la izquierda (hacia el nombre) */}
-              <g>
-                {/* Ojo izquierdo */}
-                <ellipse cx="115" cy="172" rx="4" ry="2.5" fill="currentColor" className="text-primary"/>
-                <circle cx="114" cy="172" r="1.5" fill="currentColor" className="text-accent"/>
-                {/* Ojo derecho */}
-                <ellipse cx="135" cy="172" rx="4" ry="2.5" fill="currentColor" className="text-primary"/>
-                <circle cx="134" cy="172" r="1.5" fill="currentColor" className="text-accent"/>
-                
-                {/* Parpadeo ocasional */}
-                <rect x="108" y="168" width="14" height="8" fill="currentColor" className="text-primary opacity-0">
-                  <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.95;0.96;0.97;1" dur="4s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="128" y="168" width="14" height="8" fill="currentColor" className="text-primary opacity-0">
-                  <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.95;0.96;0.97;1" dur="4s" repeatCount="indefinite"/>
-                </rect>
-              </g>
-              
-              {/* Cejas */}
-              <path d="M 110 165 Q 115 162 120 165" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-              <path d="M 130 165 Q 135 162 140 165" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-              
-              {/* Nariz perfil */}
-              <path d="M 125 175 L 122 188 Q 125 192 128 188" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-              
-              {/* Boca neutra/pensativa */}
-              <line x1="120" y1="198" x2="135" y2="198" stroke="currentColor" strokeWidth="1.5" className="text-primary"/>
-              
-              {/* Brazo derecho - apoyado en la pared */}
-              <path d="M 110 230 Q 80 260 75 300" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-              <ellipse cx="72" cy="310" rx="12" ry="10" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-              
-              {/* Brazo izquierdo - en el bolsillo inicialmente */}
-              <g>
-                {/* Estado normal - mano en bolsillo */}
-                <path d="M 150 230 Q 170 280 165 320" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary">
-                  <animate attributeName="d" values="M 150 230 Q 170 280 165 320;M 150 230 Q 170 280 165 320" dur="8s" repeatCount="indefinite"/>
-                </path>
-                <ellipse cx="165" cy="330" rx="12" ry="10" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary">
-                  <animate attributeName="cy" values="330;330" dur="8s" repeatCount="indefinite"/>
-                </ellipse>
-                
-                {/* Animación: de vez en cuando saca el brazo y señala abajo */}
-                <path d="M 150 230 Q 180 300 200 380" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent opacity-0">
-                  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7;0.75;0.85;0.9;1" dur="8s" repeatCount="indefinite"/>
-                  <animate attributeName="d" values="M 150 230 Q 180 300 200 380;M 150 230 Q 180 300 200 380" dur="8s" repeatCount="indefinite"/>
-                </path>
-                
-                {/* Mano señalando abajo */}
-                <g opacity="0">
-                  <ellipse cx="205" cy="395" rx="12" ry="10" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-                  {/* Dedos señalando */}
-                  <path d="M 205 405 L 205 420" stroke="currentColor" strokeWidth="2" className="text-accent"/>
-                  <path d="M 200 410 L 205 420 L 210 410" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-                  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7;0.75;0.85;0.9;1" dur="8s" repeatCount="indefinite"/>
-                </g>
-              </g>
-              
-              {/* Cabeza animación - de vez en cuando mira abajo */}
-              <g opacity="1">
-                <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.7;0.75;0.85;0.9;1" dur="8s" repeatCount="indefinite"/>
-              </g>
-              
-              {/* Cabeza mirando abajo (capa separada que aparece) */}
-              <g opacity="0">
-                {/* Cabeza ligeramente inclinada */}
-                <ellipse cx="130" cy="178" rx="32" ry="38" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-                {/* Ojos mirando abajo */}
-                <ellipse cx="118" cy="180" rx="3" ry="2" fill="currentColor" className="text-primary"/>
-                <ellipse cx="138" cy="180" rx="3" ry="2" fill="currentColor" className="text-primary"/>
-                {/* Cejas mirando abajo */}
-                <path d="M 113 172 Q 118 175 123 172" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-                <path d="M 133 172 Q 138 175 143 172" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-                <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7;0.75;0.85;0.9;1" dur="8s" repeatCount="indefinite"/>
-              </g>
+            {/* Línea de pared/vertical */}
+            <line x1="60" y1="50" x2="60" y2="450" stroke="currentColor" strokeWidth="2" className="text-accent opacity-40" strokeLinecap="round"/>
+            
+            {/* Detalle de mano en bolsillo */}
+            <ellipse cx="135" cy="310" rx="8" ry="12" fill="currentColor" className="text-primary opacity-60"/>
+            
+            {/* Cuello de camisa - detalle accent */}
+            <path d="M 115 200 L 115 220 Q 130 225 145 220 L 145 200" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+            
+            {/* Pelo largo - líneas fluidas */}
+            <path d="M 85 140 Q 70 160 75 200 Q 80 230 70 260" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-60" strokeLinecap="round"/>
+            <path d="M 165 140 Q 180 160 175 200 Q 170 230 180 250" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-40" strokeLinecap="round"/>
+            <path d="M 95 100 Q 110 90 130 95 Q 150 100 155 120" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary" strokeLinecap="round"/>
+            
+            {/* Ojos mirando a la izquierda (hacia el nombre) - simples */}
+            <circle cx="105" cy="125" r="3" fill="currentColor" className="text-accent"/>
+            <circle cx="135" cy="125" r="3" fill="currentColor" className="text-accent"/>
+            
+            {/* Sombra suave */}
+            <ellipse cx="125" cy="435" rx="50" ry="10" fill="currentColor" className="text-primary opacity-10"/>
+            
+            {/* Animación: dedo señalando abajo (ocasional) */}
+            <g opacity="0">
+              <path d="M 160 280 Q 180 320 185 370" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+              <circle cx="188" cy="380" r="5" fill="currentColor" className="text-accent"/>
+              <line x1="188" y1="385" x2="188" y2="395" stroke="currentColor" strokeWidth="2" className="text-accent"/>
+              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.82;0.88;0.9;1" dur="6s" repeatCount="indefinite"/>
             </g>
             
-            {/* Flecha indicando scroll - aparece cuando señala */}
-            <g opacity="0" transform="translate(180, 420)">
-              <path d="M 0 0 L 15 25 L 30 0" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-              <line x1="15" y1="25" x2="15" y2="40" stroke="currentColor" strokeWidth="2" className="text-accent"/>
-              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.7;0.75;0.85;0.9;1" dur="8s" repeatCount="indefinite"/>
-              <animateTransform attributeName="transform" type="translate" values="180,420; 180,425; 180,420" dur="1s" repeatCount="indefinite"/>
+            {/* Flecha de scroll que aparece */}
+            <g opacity="0" transform="translate(170, 410)">
+              <path d="M 0 0 L 10 20 L 20 0" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+              <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.82;0.88;0.9;1" dur="6s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="translate" values="170,410; 170,415; 170,410" dur="0.8s" repeatCount="indefinite"/>
             </g>
           </svg>
         </div>
