@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, FileDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -118,14 +118,24 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA elegante */}
-        <a
-          href="#heroproject"
-          className="group inline-flex items-center gap-4 text-accent border-b-2 border-accent pb-1 text-lg font-medium hover:gap-6 transition-all"
-        >
-          Ver sistema de turnos
-          <ArrowDown className="w-5 h-5" />
-        </a>
+        {/* CTAs */}
+        <div className="flex flex-wrap items-center gap-6">
+          <a
+            href="#heroproject"
+            className="group inline-flex items-center gap-4 text-accent border-b-2 border-accent pb-1 text-lg font-medium hover:gap-6 transition-all"
+          >
+            Ver sistema de turnos
+            <ArrowDown className="w-5 h-5" />
+          </a>
+          <a
+            href="/cv-lautaro-ortiz.pdf"
+            download
+            className="group inline-flex items-center gap-3 text-muted-foreground hover:text-foreground border-b-2 border-muted-foreground hover:border-foreground pb-1 text-lg font-medium transition-all"
+          >
+            <FileDown className="w-5 h-5" />
+            Descargar CV
+          </a>
+        </div>
       </div>
 
     </section>

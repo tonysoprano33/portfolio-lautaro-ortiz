@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, FileDown } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -20,10 +20,19 @@ export default function Contact() {
 
         <a
           href="mailto:tu.email@ejemplo.com"
-          className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity mb-16"
+          className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity mb-6"
         >
           <Mail className="w-5 h-5" />
           tu.email@ejemplo.com
+        </a>
+
+        <a
+          href="/cv-lautaro-ortiz.pdf"
+          download
+          className="inline-flex items-center gap-3 border-2 border-background/30 text-background px-8 py-3 text-base font-medium hover:border-background hover:bg-background hover:text-foreground transition-all mb-12"
+        >
+          <FileDown className="w-5 h-5" />
+          Descargar CV
         </a>
 
         <div className="flex justify-center gap-8 pt-10 border-t border-background/20">
