@@ -2,35 +2,31 @@
 
 export default function Credibility() {
   return (
-    <section className="py-32 sm:py-40 px-6 sm:px-12 lg:px-24 bg-background">
+    <section className="py-16 sm:py-20 px-6 sm:px-12 lg:px-24 bg-background border-y border-border">
       <div className="max-w-5xl mx-auto">
-        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-16">
-          Resultados concretos
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8">
-          <div>
-            <p className="font-display text-6xl sm:text-7xl md:text-8xl font-medium text-primary mb-4">
+        <div className="grid grid-cols-3 gap-8 sm:gap-12">
+          <div className="text-center">
+            <p className="font-display text-4xl sm:text-5xl font-semibold text-accent mb-1">
               15+
             </p>
-            <p className="text-muted-foreground text-base">
-              Proyectos completados
+            <p className="text-muted-foreground text-sm">
+              Proyectos Data
             </p>
           </div>
-          <div>
-            <p className="font-display text-6xl sm:text-7xl md:text-8xl font-medium text-primary mb-4">
-              30<span className="text-accent">%</span>
+          <div className="text-center">
+            <p className="font-display text-4xl sm:text-5xl font-semibold text-accent mb-1">
+              30%
             </p>
-            <p className="text-muted-foreground text-base">
-              Reducción en tiempos de reporte
+            <p className="text-muted-foreground text-sm">
+              Menos tiempo reporting
             </p>
           </div>
-          <div>
-            <p className="font-display text-5xl sm:text-6xl md:text-7xl font-medium text-accent mb-4">
-              SQL
+          <div className="text-center">
+            <p className="font-display text-4xl sm:text-5xl font-semibold text-accent mb-1">
+              &lt;12ms
             </p>
-            <p className="text-muted-foreground text-base">
-              Python · Tableau · Power BI
+            <p className="text-muted-foreground text-sm">
+              Latencia pipeline
             </p>
           </div>
         </div>
