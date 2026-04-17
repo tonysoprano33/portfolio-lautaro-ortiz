@@ -54,3 +54,8 @@
 @keyframes dash {
   to { stroke-dashoffset: -20; }
 }
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

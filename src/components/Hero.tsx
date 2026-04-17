@@ -23,90 +23,76 @@ export default function Hero() {
           ORTIZ
         </h1>
 
-        {/* Ilustración - persona con pelo largo, corte italiano, automatizando */}
+        {/* Ilustración única - Setup estilo 90s, muy personal */}
         <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4">
-          <svg width="340" height="420" viewBox="0 0 340 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
-            {/* Sombra */}
-            <ellipse cx="170" cy="400" rx="70" ry="12" fill="currentColor" className="text-primary opacity-10"/>
+          <svg width="360" height="400" viewBox="0 0 360 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
+            {/* Fondo sutil estilo 90s grid */}
+            <pattern id="grid90s" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-accent opacity-10"/>
+            </pattern>
+            <rect width="360" height="400" fill="url(#grid90s)"/>
             
-            {/* Pelo largo - ondulado */}
-            <path d="M 110 70 Q 90 100 95 140 Q 100 180 110 200" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 230 70 Q 250 100 245 140 Q 240 180 230 200" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 120 60 Q 170 40 220 60" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            {/* Mechones frontales */}
-            <path d="M 140 65 Q 135 90 145 110" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-70"/>
-            <path d="M 200 65 Q 205 90 195 110" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-70"/>
+            {/* Monitor CRT estilo 90s */}
+            <rect x="80" y="60" width="200" height="160" rx="8" stroke="currentColor" strokeWidth="3" fill="none" className="text-primary"/>
+            {/* Pantalla con scanlines */}
+            <rect x="90" y="75" width="180" height="130" rx="4" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent opacity-60"/>
+            {/* Scanlines */}
+            <line x1="90" y1="95" x2="270" y2="95" stroke="currentColor" strokeWidth="0.5" className="text-accent opacity-20"/>
+            <line x1="90" y1="115" x2="270" y2="115" stroke="currentColor" strokeWidth="0.5" className="text-accent opacity-20"/>
+            <line x1="90" y1="135" x2="270" y2="135" stroke="currentColor" strokeWidth="0.5" className="text-accent opacity-20"/>
+            <line x1="90" y1="155" x2="270" y2="155" stroke="currentColor" strokeWidth="0.5" className="text-accent opacity-20"/>
+            <line x1="90" y1="175" x2="270" y2="175" stroke="currentColor" strokeWidth="0.5" className="text-accent opacity-20"/>
+            {/* Cursor parpadeante estilo 90s */}
+            <rect x="110" y="105" width="12" height="20" fill="currentColor" className="text-accent" style={{animation: 'blink 1s step-end infinite'}}/>
+            {/* Código en pantalla */}
+            <text x="130" y="120" fill="currentColor" className="text-accent text-xs font-mono"> automatizar()</text>
+            <text x="110" y="140" fill="currentColor" className="text-accent text-xs font-mono opacity-70"> if (repetido &gt; 2)</text>
+            <text x="130" y="160" fill="currentColor" className="text-accent text-xs font-mono opacity-70"> auto.run()</text>
             
-            {/* Cabeza */}
-            <ellipse cx="170" cy="95" rx="48" ry="58" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Base del monitor */}
+            <rect x="150" y="220" width="60" height="30" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            <rect x="130" y="250" width="100" height="8" rx="2" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
             
-            {/* Ojos - concentrados en la automatización */}
-            <ellipse cx="155" cy="90" rx="5" ry="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <circle cx="155" cy="90" r="2" fill="currentColor" className="text-primary"/>
-            <ellipse cx="185" cy="90" rx="5" ry="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <circle cx="185" cy="90" r="2" fill="currentColor" className="text-primary"/>
+            {/* Teclado mecánico estilo 90s */}
+            <rect x="70" y="280" width="220" height="40" rx="4" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Teclas */}
+            <rect x="85" y="290" width="15" height="12" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-60"/>
+            <rect x="105" y="290" width="15" height="12" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-60"/>
+            <rect x="125" y="290" width="15" height="12" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-60"/>
+            <rect x="145" y="290" width="15" height="12" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-60"/>
+            <rect x="165" y="290" width="100" height="12" rx="2" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-40"/>
+            <rect x="85" y="306" width="180" height="8" rx="2" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-40"/>
             
-            {/* Cejas - pensativas */}
-            <path d="M 148 82 Q 155 78 162 82" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-            <path d="M 178 82 Q 185 78 192 82" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
+            {/* Camisa estilo 90s - cuello alto, oversize */}
+            {/* Cuello alto estilo 90s */}
+            <path d="M 290 180 L 290 220 Q 320 230 350 220 L 350 180" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
+            <line x1="320" y1="200" x2="320" y2="220" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
             
-            {/* Nariz */}
-            <path d="M 170 95 L 168 110 Q 170 114 172 110" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
+            {/* Hombros camisa oversize 90s */}
+            <path d="M 260 240 Q 290 230 320 235 Q 350 230 370 245" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Mangas anchas */}
+            <path d="M 260 240 L 250 320" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            <path d="M 370 245 L 380 310" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Puños */}
+            <rect x="245" y="320" width="20" height="15" rx="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+            <rect x="375" y="310" width="20" height="15" rx="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
             
-            {/* Sonrisa sutil - satisfecho automatizando */}
-            <path d="M 160 122 Q 170 126 180 122" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Taza de café estilo 90s - mug clásica */}
+            <rect x="300" y="260" width="35" height="45" rx="3" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
+            {/* Asa taza */}
+            <path d="M 335 275 Q 350 275 350 290 Q 350 305 335 295" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+            {/* Café dentro */}
+            <ellipse cx="317" cy="265" rx="15" ry="5" fill="currentColor" className="text-accent opacity-40"/>
+            {/* Vapor animado */}
+            <path d="M 310 250 Q 315 240 310 230" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-50" style={{animation: 'float 2.5s ease-in-out infinite'}}/>
+            <path d="M 320 250 Q 325 240 320 235" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-30" style={{animation: 'float 2.5s ease-in-out infinite 0.5s'}}/>
             
-            {/* Cuello */}
-            <rect x="155" y="148" width="30" height="25" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Reloj de pulsera estilo 90s digital */}
+            <rect x="255" y="335" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
+            <text x="258" y="343" fill="currentColor" className="text-primary text-[6px] font-mono">12:42</text>
             
-            {/* Blazer italiano - corte elegante */}
-            {/* Solapas amplias características corte italiano */}
-            <path d="M 115 175 L 170 220 L 115 300" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 225 175 L 170 220 L 225 300" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            {/* Hombros marcados */}
-            <path d="M 115 175 Q 100 180 95 220 L 90 360" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 225 175 Q 240 180 245 220 L 250 360" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            {/* Línea cintura entallada */}
-            <path d="M 90 360 Q 170 380 250 360" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            
-            {/* Camisa blanca asomando */}
-            <polygon points="170,173 160,210 170,230 180,210" fill="currentColor" className="text-primary opacity-10"/>
-            <line x1="170" y1="173" x2="170" y2="230" stroke="currentColor" strokeWidth="1" className="text-primary opacity-30"/>
-            
-            {/* Botón accent */}
-            <circle cx="170" cy="270" r="3" fill="currentColor" className="text-accent"/>
-            
-            {/* Mano derecha - señalando/código (automatizando) */}
-            <path d="M 245 240 Q 270 260 280 290" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <ellipse cx="285" cy="300" rx="12" ry="10" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            {/* Dedos señalando */}
-            <path d="M 290 295 L 300 285" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <path d="M 292 300 L 305 295" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            
-            {/* Símbolos de código flotando - representa automatización */}
-            <text x="310" y="270" fill="currentColor" className="text-accent text-lg font-mono opacity-80" style={{animation: 'fade 2s ease-in-out infinite'}}>{ }</text>
-            <text x="300" y="250" fill="currentColor" className="text-accent text-sm font-mono opacity-60" style={{animation: 'fade 2s ease-in-out infinite 0.3s'}}>//</text>
-            <text x="320" y="290" fill="currentColor" className="text-accent text-xs font-mono opacity-40" style={{animation: 'fade 2s ease-in-out infinite 0.6s'}}>;</text>
-            
-            {/* Laptop/tablet - herramienta de trabajo */}
-            <rect x="100" y="320" width="80" height="50" rx="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent opacity-70"/>
-            <line x1="110" y1="335" x2="170" y2="335" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
-            <line x1="110" y1="345" x2="150" y2="345" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
-            <line x1="110" y1="355" x2="160" y2="355" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
-            {/* Brillo pantalla */}
-            <path d="M 105 325 L 120 340 L 105 355 Z" fill="currentColor" className="text-accent opacity-20"/>
-            
-            {/* Piernas - postura relajada pero elegante */}
-            <line x1="125" y1="375" x2="125" y2="390" stroke="currentColor" strokeWidth="2.5" className="text-primary"/>
-            <line x1="215" y1="375" x2="215" y2="390" stroke="currentColor" strokeWidth="2.5" className="text-primary"/>
-            
-            {/* Zapatos italianos - elegante */}
-            <ellipse cx="115" cy="395" rx="20" ry="8" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-            <ellipse cx="225" cy="395" rx="20" ry="8" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-            
-            {/* Línea de flujo de automatización - de la laptop al aire */}
-            <path d="M 180 345 Q 220 330 260 310" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-40" strokeDasharray="4 4" style={{animation: 'dash 3s linear infinite'}}/>
-            <circle cx="265" cy="308" r="3" fill="currentColor" className="text-accent" style={{animation: 'fade 1s ease-in-out infinite'}}/>
+            {/* Línea de conexión - datos fluyendo */}
+            <path d="M 270 250 Q 290 260 300 280" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-50" strokeDasharray="3 3" style={{animation: 'dash 2s linear infinite'}}/>
           </svg>
         </div>
 
@@ -149,12 +135,6 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Corner detail */}
-      <div className="absolute bottom-6 right-6 sm:bottom-12 sm:right-12">
-        <div className="w-16 h-16 sm:w-24 sm:h-24 border-2 border-accent/30 rounded-full flex items-center justify-center">
-          <span className="text-accent text-xs sm:text-sm font-medium tracking-widest rotate-90">2026</span>
-        </div>
-      </div>
     </section>
   );
 }
