@@ -1,7 +1,7 @@
 "use client";
 
 import { projects } from "@/data/projects";
-import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 export default function Projects() {
   const otherProjects = projects.slice(1);
@@ -15,9 +15,12 @@ export default function Projects() {
 
         <div className="space-y-0">
           {otherProjects.map((project, index) => (
-            <div
+            <a
               key={project.id}
-              className="group py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24"
+              href={project.liveUrl || project.githubUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer"
             >
               <div className="flex justify-between items-start gap-6">
                 <div className="flex-1">
@@ -48,7 +51,7 @@ export default function Projects() {
                     <span className="font-medium text-foreground">Resultados:</span> {project.results}
                   </p>
                   
-                  <div className="flex gap-4">
+                  <div className="flex gap-4" onClick={(e) => e.stopPropagation()}>
                     {project.githubUrl && project.githubUrl !== "#" && (
                       <a
                         href={project.githubUrl}
@@ -60,22 +63,11 @@ export default function Projects() {
                         Ver código
                       </a>
                     )}
-                    {project.liveUrl && project.liveUrl !== "#" && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Ver en vivo
-                      </a>
-                    )}
                   </div>
                 </div>
                 <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 mt-1" />
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

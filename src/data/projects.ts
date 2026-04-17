@@ -32,43 +32,6 @@ export const projects: Project[] = [
   },
   {
     id: "3",
-    title: "Segmentación de Clientes",
-    description: "Análisis de clustering para segmentación de base de clientes basado en comportamiento de compra, frecuencia y valor monetario. Identificación de 5 segmentos distintos con estrategias personalizadas.",
-    tags: ["Clustering", "RFM Analysis", "Customer Analytics"],
-    tools: ["R", "K-means", "ggplot2", "BigQuery"],
-    results: "Incremento del 15% en retención de clientes",
-    githubUrl: "#"
-  },
-  {
-    id: "4",
-    title: "Detección de Anomalías Financieras",
-    description: "Sistema de detección de fraudes y anomalías en transacciones financieras utilizando técnicas de detección de outliers y análisis estadístico avanzado.",
-    tags: ["Fraud Detection", "Statistics", "Anomaly Detection"],
-    tools: ["Python", "PySpark", "AWS", "Elasticsearch"],
-    results: "Detección de $2M en transacciones sospechosas",
-    githubUrl: "#"
-  },
-  {
-    id: "5",
-    title: "Análisis de Sentimiento en Redes Sociales",
-    description: "Procesamiento de lenguaje natural para analizar sentimiento de marca en redes sociales. Extracción de insights sobre percepción de clientes y tendencias de mercado.",
-    tags: ["NLP", "Sentiment Analysis", "Social Media"],
-    tools: ["Python", "NLTK", "Transformers", "MongoDB"],
-    results: "Análisis de 1M+ menciones mensuales",
-    githubUrl: "#",
-    liveUrl: "#"
-  },
-  {
-    id: "6",
-    title: "Optimización de Inventario",
-    description: "Modelo de optimización de stock utilizando análisis de demanda histórica y predicciones. Reducción de costos de almacenamiento y minimización de productos obsoletos.",
-    tags: ["Supply Chain", "Optimization", "Forecasting"],
-    tools: ["Python", "OR-Tools", "Excel VBA", "MySQL"],
-    results: "Reducción del 30% en costos de inventario",
-    githubUrl: "#"
-  },
-  {
-    id: "7",
     title: "NexusData AI",
     description: "Plataforma de inteligencia de datos empresarial con pipeline neural para limpieza de datos de alta fidelidad y extracción de insights estratégicos. Arquitectura con procesamiento en tiempo real y encriptación E2E.",
     tags: ["AI", "Data Pipeline", "Enterprise"],
