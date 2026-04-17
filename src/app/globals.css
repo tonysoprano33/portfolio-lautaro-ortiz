@@ -50,3 +50,7 @@
   0%, 100% { opacity: 0.2; }
   50% { opacity: 0.5; }
 }
+
+@keyframes dash {
+  to { stroke-dashoffset: -20; }
+}

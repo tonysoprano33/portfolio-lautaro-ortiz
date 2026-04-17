@@ -15,153 +15,98 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative lg:pr-[400px]">
-        {/* NOMBRE - extrema dominancia */}
-        <h1 className="font-display text-8xl sm:text-9xl md:text-[10rem] lg:text-[14rem] xl:text-[16rem] font-medium leading-[0.75] tracking-tighter mb-2">
+        {/* NOMBRE - reducido pero impactante */}
+        <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem] font-medium leading-[0.8] tracking-tighter mb-2">
           LAUTARO
         </h1>
-        <h1 className="font-display text-8xl sm:text-9xl md:text-[10rem] lg:text-[14rem] xl:text-[16rem] font-medium leading-[0.75] tracking-tighter mb-8 text-accent">
+        <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem] font-medium leading-[0.8] tracking-tighter mb-8 text-accent">
           ORTIZ
         </h1>
 
-        {/* Ilustración caballero - solo desktop */}
+        {/* Ilustración - persona con pelo largo, corte italiano, automatizando */}
         <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4">
-          <svg width="380" height="480" viewBox="0 0 380 480" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-95">
-            {/* Sombra suave debajo */}
-            <ellipse cx="190" cy="450" rx="80" ry="15" fill="currentColor" className="text-primary opacity-10"/>
+          <svg width="340" height="420" viewBox="0 0 340 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-90">
+            {/* Sombra */}
+            <ellipse cx="170" cy="400" rx="70" ry="12" fill="currentColor" className="text-primary opacity-10"/>
             
-            {/* Sombrero elegante (derby/bowler) */}
-            <ellipse cx="165" cy="35" rx="55" ry="20" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 125 35 L 125 5 Q 125 -10 165 -10 Q 205 -10 205 5 L 205 35" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <ellipse cx="165" cy="5" rx="40" ry="15" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent opacity-80"/>
-            {/* Banda del sombrero */}
-            <path d="M 125 20 Q 165 28 205 20" stroke="currentColor" strokeWidth="3" className="text-accent"/>
+            {/* Pelo largo - ondulado */}
+            <path d="M 110 70 Q 90 100 95 140 Q 100 180 110 200" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            <path d="M 230 70 Q 250 100 245 140 Q 240 180 230 200" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            <path d="M 120 60 Q 170 40 220 60" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Mechones frontales */}
+            <path d="M 140 65 Q 135 90 145 110" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-70"/>
+            <path d="M 200 65 Q 205 90 195 110" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-70"/>
             
-            {/* Cabello */}
-            <path d="M 120 45 Q 110 60 115 80" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-60"/>
-            <path d="M 210 45 Q 220 60 215 80" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-60"/>
+            {/* Cabeza */}
+            <ellipse cx="170" cy="95" rx="48" ry="58" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
             
-            {/* Orejas */}
-            <ellipse cx="118" cy="95" rx="8" ry="12" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <ellipse cx="212" cy="95" rx="8" ry="12" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Ojos - concentrados en la automatización */}
+            <ellipse cx="155" cy="90" rx="5" ry="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            <circle cx="155" cy="90" r="2" fill="currentColor" className="text-primary"/>
+            <ellipse cx="185" cy="90" rx="5" ry="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            <circle cx="185" cy="90" r="2" fill="currentColor" className="text-primary"/>
             
-            {/* Cabeza - más detallada */}
-            <ellipse cx="165" cy="95" rx="55" ry="65" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Cejas - pensativas */}
+            <path d="M 148 82 Q 155 78 162 82" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
+            <path d="M 178 82 Q 185 78 192 82" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
             
-            {/* Cejas refinadas */}
-            <path d="M 135 78 Q 145 73 155 78" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <path d="M 180 75 Q 190 70 195 75" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Nariz */}
+            <path d="M 170 95 L 168 110 Q 170 114 172 110" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
             
-            {/* Ojo izquierdo (expresivo) */}
-            <ellipse cx="145" cy="88" rx="6" ry="4" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <circle cx="145" cy="88" r="2.5" fill="currentColor" className="text-primary"/>
+            {/* Sonrisa sutil - satisfecho automatizando */}
+            <path d="M 160 122 Q 170 126 180 122" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
             
-            {/* Monóculo - ojo derecho (elegante) */}
-            <circle cx="185" cy="85" r="14" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
-            <circle cx="185" cy="85" r="10" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-50"/>
-            <circle cx="185" cy="85" r="3" fill="currentColor" className="text-accent"/>
-            {/* Cadena del monóculo */}
-            <path d="M 199 85 Q 210 100 205 120" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-70"/>
-            <circle cx="205" cy="125" r="3" fill="currentColor" className="text-accent opacity-70"/>
+            {/* Cuello */}
+            <rect x="155" y="148" width="30" height="25" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
             
-            {/* Nariz refinada */}
-            <path d="M 165 95 L 160 115 Q 165 120 170 115" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Blazer italiano - corte elegante */}
+            {/* Solapas amplias características corte italiano */}
+            <path d="M 115 175 L 170 220 L 115 300" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            <path d="M 225 175 L 170 220 L 225 300" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Hombros marcados */}
+            <path d="M 115 175 Q 100 180 95 220 L 90 360" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            <path d="M 225 175 Q 240 180 245 220 L 250 360" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Línea cintura entallada */}
+            <path d="M 90 360 Q 170 380 250 360" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
             
-            {/* Bigote elegante */}
-            <path d="M 150 118 Q 165 112 180 118" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 135 120 Q 125 115 130 110" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary opacity-60"/>
-            <path d="M 195 120 Q 205 115 200 110" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary opacity-60"/>
+            {/* Camisa blanca asomando */}
+            <polygon points="170,173 160,210 170,230 180,210" fill="currentColor" className="text-primary opacity-10"/>
+            <line x1="170" y1="173" x2="170" y2="230" stroke="currentColor" strokeWidth="1" className="text-primary opacity-30"/>
             
-            {/* Sonrisa pensativa refinada */}
-            <path d="M 150 132 Q 165 138 180 132" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 155 136 Q 165 140 175 136" stroke="currentColor" strokeWidth="1" fill="none" className="text-primary opacity-50"/>
+            {/* Botón accent */}
+            <circle cx="170" cy="270" r="3" fill="currentColor" className="text-accent"/>
             
-            {/* Arrugas de expresión (pensativo) */}
-            <path d="M 130 60 Q 140 65 145 60" stroke="currentColor" strokeWidth="1" fill="none" className="text-primary opacity-40"/>
-            <path d="M 185 58 Q 195 63 200 58" stroke="currentColor" strokeWidth="1" fill="none" className="text-primary opacity-40"/>
+            {/* Mano derecha - señalando/código (automatizando) */}
+            <path d="M 245 240 Q 270 260 280 290" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            <ellipse cx="285" cy="300" rx="12" ry="10" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Dedos señalando */}
+            <path d="M 290 295 L 300 285" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            <path d="M 292 300 L 305 295" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
             
-            {/* Cuello con camisa */}
-            <rect x="145" y="155" width="40" height="30" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <line x1="165" y1="155" x2="165" y2="185" stroke="currentColor" strokeWidth="1" className="text-primary opacity-30"/>
+            {/* Símbolos de código flotando - representa automatización */}
+            <text x="310" y="270" fill="currentColor" className="text-accent text-lg font-mono opacity-80" style={{animation: 'fade 2s ease-in-out infinite'}}>{ }</text>
+            <text x="300" y="250" fill="currentColor" className="text-accent text-sm font-mono opacity-60" style={{animation: 'fade 2s ease-in-out infinite 0.3s'}}>//</text>
+            <text x="320" y="290" fill="currentColor" className="text-accent text-xs font-mono opacity-40" style={{animation: 'fade 2s ease-in-out infinite 0.6s'}}>;</text>
             
-            {/* Cuerpo/Esmoquin - más detallado */}
-            <path d="M 100 185 Q 85 200 90 400 L 100 420" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 230 185 Q 245 200 240 400 L 230 420" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
+            {/* Laptop/tablet - herramienta de trabajo */}
+            <rect x="100" y="320" width="80" height="50" rx="3" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent opacity-70"/>
+            <line x1="110" y1="335" x2="170" y2="335" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
+            <line x1="110" y1="345" x2="150" y2="345" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
+            <line x1="110" y1="355" x2="160" y2="355" stroke="currentColor" strokeWidth="1" className="text-accent opacity-50"/>
+            {/* Brillo pantalla */}
+            <path d="M 105 325 L 120 340 L 105 355 Z" fill="currentColor" className="text-accent opacity-20"/>
             
-            {/* Solapas grandes */}
-            <path d="M 100 185 L 165 240 L 100 320" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            <path d="M 230 185 L 165 240 L 230 320" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
+            {/* Piernas - postura relajada pero elegante */}
+            <line x1="125" y1="375" x2="125" y2="390" stroke="currentColor" strokeWidth="2.5" className="text-primary"/>
+            <line x1="215" y1="375" x2="215" y2="390" stroke="currentColor" strokeWidth="2.5" className="text-primary"/>
             
-            {/* Botones de esmoquin */}
-            <circle cx="165" cy="280" r="4" fill="currentColor" className="text-accent"/>
-            <circle cx="165" cy="320" r="4" fill="currentColor" className="text-accent"/>
+            {/* Zapatos italianos - elegante */}
+            <ellipse cx="115" cy="395" rx="20" ry="8" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
+            <ellipse cx="225" cy="395" rx="20" ry="8" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
             
-            {/* Corbata de moño elegante */}
-            <polygon points="155,195 165,215 175,195 165,175" fill="currentColor" className="text-accent"/>
-            <polygon points="160,210 165,230 170,210" fill="currentColor" className="text-accent opacity-70"/>
-            <line x1="165" y1="230" x2="165" y2="260" stroke="currentColor" strokeWidth="3" className="text-accent"/>
-            
-            {/* Bolsillo con pañuelo */}
-            <path d="M 200 240 L 220 240 L 220 260 Q 210 270 200 260 Z" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-            <path d="M 205 245 L 215 245 L 210 265 Z" fill="currentColor" className="text-accent opacity-60"/>
-            
-            {/* Brazo izquierdo (reposando) */}
-            <path d="M 90 200 Q 60 250 70 320" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <ellipse cx="75" cy="330" rx="15" ry="12" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            
-            {/* Brazo derecho (sosteniendo taza) - más natural */}
-            <path d="M 230 200 Q 260 220 255 280" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 255 280 Q 270 300 265 330" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <ellipse cx="265" cy="345" rx="18" ry="15" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary"/>
-            
-            {/* Dedos sosteniendo taza */}
-            <ellipse cx="250" cy="340" rx="5" ry="8" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-            <ellipse cx="280" cy="340" rx="5" ry="8" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-primary"/>
-            
-            {/* Taza de café elegante */}
-            <ellipse cx="285" cy="340" rx="22" ry="14" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
-            <path d="M 263 340 L 263 375 Q 263 395 285 395 Q 307 395 307 375 L 307 340" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
-            <ellipse cx="285" cy="375" rx="22" ry="18" stroke="currentColor" strokeWidth="2" fill="none" className="text-accent"/>
-            
-            {/* Asa de taza elegante */}
-            <path d="M 307 355 Q 325 355 325 375 Q 325 395 307 390" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
-            
-            {/* Café dentro */}
-            <ellipse cx="285" cy="340" rx="18" ry="10" fill="currentColor" className="text-accent opacity-30"/>
-            
-            {/* Vapor del café - múltiples líneas animadas */}
-            <path d="M 275 325 Q 280 310 275 295" stroke="currentColor" strokeWidth="2" fill="none" className="text-muted-foreground opacity-70" style={{animation: 'float 3s ease-in-out infinite'}}>
-              <animate attributeName="d" values="M 275 325 Q 280 310 275 295;M 275 323 Q 270 308 275 293;M 275 325 Q 280 310 275 295" dur="3s" repeatCount="indefinite"/>
-            </path>
-            <path d="M 285 320 Q 290 305 285 290" stroke="currentColor" strokeWidth="2" fill="none" className="text-muted-foreground opacity-50" style={{animation: 'float 3s ease-in-out infinite 0.4s'}}>
-              <animate attributeName="d" values="M 285 320 Q 290 305 285 290;M 285 318 Q 280 303 285 288;M 285 320 Q 290 305 285 290" dur="3s" repeatCount="indefinite"/>
-            </path>
-            <path d="M 295 325 Q 300 310 295 295" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-muted-foreground opacity-40" style={{animation: 'float 3s ease-in-out infinite 0.8s'}}>
-              <animate attributeName="d" values="M 295 325 Q 300 310 295 295;M 295 323 Q 290 308 295 293;M 295 325 Q 300 310 295 295" dur="3s" repeatCount="indefinite"/>
-            </path>
-            
-            {/* Piernas cruzadas - postura elegante */}
-            <path d="M 130 420 Q 140 450 160 460" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 200 420 Q 220 440 240 430" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            <path d="M 160 460 Q 180 470 200 465" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-primary"/>
-            
-            {/* Pantalones */}
-            <line x1="130" y1="420" x2="130" y2="380" stroke="currentColor" strokeWidth="2" className="text-primary"/>
-            <line x1="200" y1="420" x2="200" y2="380" stroke="currentColor" strokeWidth="2" className="text-primary"/>
-            
-            {/* Zapatos elegantes Oxford */}
-            <ellipse cx="155" cy="470" rx="25" ry="10" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
-            <ellipse cx="225" cy="435" rx="25" ry="10" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-accent"/>
-            {/* Detalle de los zapatos */}
-            <path d="M 140 470 Q 155 475 170 470" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-50"/>
-            <path d="M 210 435 Q 225 440 240 435" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-50"/>
-            
-            {/* Líneas de pensamiento - más elaboradas */}
-            <circle cx="320" cy="120" r="4" fill="currentColor" className="text-muted-foreground opacity-50" style={{animation: 'fade 3s ease-in-out infinite'}}/>
-            <circle cx="340" cy="100" r="6" fill="currentColor" className="text-muted-foreground opacity-40" style={{animation: 'fade 3s ease-in-out infinite 0.4s'}}/>
-            <circle cx="365" cy="80" r="8" fill="currentColor" className="text-muted-foreground opacity-30" style={{animation: 'fade 3s ease-in-out infinite 0.8s'}}/>
-            
-            {/* Brillo en el monóculo (reflejo) */}
-            <circle cx="180" cy="80" r="3" fill="currentColor" className="text-accent-foreground opacity-80"/>
+            {/* Línea de flujo de automatización - de la laptop al aire */}
+            <path d="M 180 345 Q 220 330 260 310" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-accent opacity-40" strokeDasharray="4 4" style={{animation: 'dash 3s linear infinite'}}/>
+            <circle cx="265" cy="308" r="3" fill="currentColor" className="text-accent" style={{animation: 'fade 1s ease-in-out infinite'}}/>
           </svg>
         </div>
 
