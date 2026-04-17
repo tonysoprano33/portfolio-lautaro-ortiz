@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative lg:pr-[400px]">
+      <div className="relative lg:pr-[500px]">
         {/* NOMBRE - reducido pero impactante */}
         <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem] font-medium leading-[0.8] tracking-tighter mb-2">
           LAUTARO
@@ -23,64 +23,69 @@ export default function Hero() {
           ORTIZ
         </h1>
 
-        {/* Ilustración única - Símbolo de automatización LO */}
-        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-4">
-          <svg width="280" height="320" viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-70">
-            {/* L inicial - transformándose en loop de automatización */}
+        {/* Ilustración única - Símbolo LO más grande y pro */}
+        <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-8">
+          <svg width="380" height="440" viewBox="0 0 380 440" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
+            {/* Fondo circular sutil */}
+            <circle cx="190" cy="220" r="180" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-10"/>
+            <circle cx="190" cy="220" r="150" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-5"/>
+            
+            {/* L inicial - elegante */}
             <path 
-              d="M 60 80 L 60 200 Q 60 240 100 240 L 140 240" 
+              d="M 80 100 L 80 280 Q 80 320 120 320 L 180 320" 
               stroke="currentColor" 
-              strokeWidth="4" 
+              strokeWidth="6" 
               fill="none" 
               className="text-primary"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             
-            {/* O que se convierte en loop/ciclo de automatización */}
-            <ellipse cx="180" cy="160" rx="50" ry="60" 
+            {/* O - loop de automatización */}
+            <ellipse cx="260" cy="210" rx="70" ry="85" 
               stroke="currentColor" 
-              strokeWidth="4" 
+              strokeWidth="6" 
               fill="none" 
               className="text-accent"
             />
             
-            {/* Flecha de loop dentro del O - representa automatización */}
+            {/* Flecha de loop animada dentro del O */}
             <path 
-              d="M 165 120 Q 210 130 205 170 Q 200 200 160 190" 
+              d="M 235 155 Q 300 170 290 220 Q 280 260 215 245" 
               stroke="currentColor" 
-              strokeWidth="2.5" 
+              strokeWidth="4" 
               fill="none" 
               className="text-accent"
               strokeLinecap="round"
-              strokeDasharray="4 6"
+              strokeDasharray="8 12"
             >
-              <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite"/>
             </path>
             
-            {/* Punto de entrada (datos crudos) */}
-            <circle cx="50" cy="60" r="6" fill="currentColor" className="text-primary opacity-40"/>
-            <line x1="55" y1="65" x2="58" y2="75" stroke="currentColor" strokeWidth="1.5" className="text-primary opacity-40"/>
+            {/* Entrada de datos */}
+            <circle cx="60" cy="70" r="10" fill="currentColor" className="text-primary opacity-50"/>
+            <circle cx="75" cy="85" r="5" fill="currentColor" className="text-primary opacity-30"/>
+            <line x1="70" y1="90" x2="78" y2="110" stroke="currentColor" strokeWidth="2" className="text-primary opacity-40"/>
             
-            {/* Línea de conexión L → O */}
-            <path d="M 140 240 Q 160 240 170 220" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary opacity-50"/>
+            {/* Conexión L → O */}
+            <path d="M 180 320 Q 210 320 225 295" stroke="currentColor" strokeWidth="3" fill="none" className="text-primary opacity-40"/>
             
-            {/* Puntos de proceso (pasos) */}
-            <circle cx="140" cy="160" r="4" fill="currentColor" className="text-accent">
-              <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+            {/* Puntos de proceso */}
+            <circle cx="200" cy="210" r="6" fill="currentColor" className="text-accent">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
             </circle>
-            <circle cx="180" cy="110" r="3" fill="currentColor" className="text-primary opacity-40"/>
-            <circle cx="220" cy="160" r="3" fill="currentColor" className="text-primary opacity-40"/>
-            <circle cx="180" cy="210" r="3" fill="currentColor" className="text-primary opacity-40"/>
+            <circle cx="260" cy="125" r="5" fill="currentColor" className="text-primary opacity-30"/>
+            <circle cx="330" cy="210" r="5" fill="currentColor" className="text-primary opacity-30"/>
+            <circle cx="260" cy="295" r="5" fill="currentColor" className="text-primary opacity-30"/>
             
-            {/* Output/Resultado */}
-            <circle cx="250" cy="160" r="5" fill="currentColor" className="text-accent">
-              <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+            {/* Output */}
+            <circle cx="360" cy="210" r="8" fill="currentColor" className="text-accent">
+              <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
             </circle>
-            <line x1="230" y1="160" x2="245" y2="160" stroke="currentColor" strokeWidth="2" className="text-accent"/>
+            <line x1="330" y1="210" x2="352" y2="210" stroke="currentColor" strokeWidth="3" className="text-accent"/>
             
-            {/* Texto sutil "auto" */}
-            <text x="155" y="165" fill="currentColor" className="text-accent text-xs font-mono opacity-80">auto</text>
+            {/* Texto "auto" centrado */}
+            <text x="235" y="220" fill="currentColor" className="text-accent text-base font-mono font-medium opacity-90">auto</text>
           </svg>
         </div>
 

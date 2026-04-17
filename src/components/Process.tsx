@@ -3,7 +3,7 @@
 export default function Process() {
   return (
     <section id="process" className="py-32 sm:py-40 px-6 sm:px-12 lg:px-24 bg-muted/30">
-      <div>
+      <div className="max-w-5xl mx-auto">
         <p className="text-muted-foreground text-sm tracking-widest uppercase mb-16">
           Cómo trabajo
         </p>

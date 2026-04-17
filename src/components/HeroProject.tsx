@@ -8,7 +8,7 @@ export default function HeroProject() {
       {/* Background gradient accent */}
       <div className="absolute top-0 right-0 w-[60vw] h-[60vw] bg-accent/20 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3" />
       
-      <div className="relative z-10 px-6 sm:px-12 lg:px-24 py-20 sm:py-32">
+      <div className="relative z-10 px-6 sm:px-12 lg:px-24 py-20 sm:py-32 max-w-7xl mx-auto">
         {/* Label */}
         <div className="flex items-center gap-3 mb-12">
           <span className="px-3 py-1 bg-accent/20 text-accent text-xs font-medium tracking-wider uppercase rounded-full">

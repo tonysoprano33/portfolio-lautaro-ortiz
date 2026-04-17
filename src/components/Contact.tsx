@@ -5,7 +5,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 export default function Contact() {
   return (
     <section id="contact" className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 bg-foreground text-background">
-      <div>
+      <div className="max-w-4xl mx-auto">
         <p className="text-background/50 text-sm tracking-widest uppercase mb-8">
           Contacto
         </p>

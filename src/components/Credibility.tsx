@@ -3,7 +3,7 @@
 export default function Credibility() {
   return (
     <section className="py-32 sm:py-40 px-6 sm:px-12 lg:px-24 bg-background">
-      <div>
+      <div className="max-w-5xl mx-auto">
         <p className="text-muted-foreground text-sm tracking-widest uppercase mb-16">
           Resultados concretos
         </p>
