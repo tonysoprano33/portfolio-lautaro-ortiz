@@ -6,7 +6,7 @@ export default function Credibility() {
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-3 gap-8 sm:gap-12">
           <div className="text-center">
-            <p className="font-display text-4xl sm:text-5xl font-semibold text-accent mb-1">
+            <p className="font-display text-5xl sm:text-6xl font-semibold text-accent mb-1">
               15+
             </p>
             <p className="text-muted-foreground text-sm">
@@ -14,7 +14,7 @@ export default function Credibility() {
             </p>
           </div>
           <div className="text-center">
-            <p className="font-display text-4xl sm:text-5xl font-semibold text-accent mb-1">
+            <p className="font-display text-5xl sm:text-6xl font-semibold text-accent mb-1">
               30%
             </p>
             <p className="text-muted-foreground text-sm">
@@ -22,7 +22,7 @@ export default function Credibility() {
             </p>
           </div>
           <div className="text-center">
-            <p className="font-display text-4xl sm:text-5xl font-semibold text-accent mb-1">
+            <p className="font-display text-5xl sm:text-6xl font-semibold text-accent mb-1">
               &lt;12ms
             </p>
             <p className="text-muted-foreground text-sm">
