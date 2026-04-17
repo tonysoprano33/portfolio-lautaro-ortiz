@@ -66,5 +66,15 @@ export const projects: Project[] = [
     tools: ["Python", "OR-Tools", "Excel VBA", "MySQL"],
     results: "Reducción del 30% en costos de inventario",
     githubUrl: "#"
+  },
+  {
+    id: "7",
+    title: "NexusData AI",
+    description: "Plataforma de inteligencia de datos empresarial con pipeline neural para limpieza de datos de alta fidelidad y extracción de insights estratégicos. Arquitectura con procesamiento en tiempo real y encriptación E2E.",
+    tags: ["AI", "Data Pipeline", "Enterprise"],
+    tools: ["GROQ LPU", "React", "TypeScript", "E2E Encryption"],
+    results: "Procesamiento <12ms latencia, 99.9% uptime",
+    githubUrl: "https://github.com/tonysoprano33/nexusdata",
+    liveUrl: "https://nexusdata-gamma.vercel.app/"
   }
 ];
