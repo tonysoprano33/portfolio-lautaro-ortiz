@@ -14,47 +14,51 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div>
-        {/* NOMBRE GIGANTE - protagonista absoluto */}
-        <h1 className="font-display text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-medium leading-[0.8] tracking-tighter mb-4">
-          LAUTARO<br />
-          <span className="text-accent">ORTIZ</span>
+      <div className="relative">
+        {/* NOMBRE - extrema dominancia */}
+        <h1 className="font-display text-8xl sm:text-9xl md:text-[10rem] lg:text-[14rem] xl:text-[16rem] font-medium leading-[0.75] tracking-tighter mb-2">
+          LAUTARO
+        </h1>
+        <h1 className="font-display text-8xl sm:text-9xl md:text-[10rem] lg:text-[14rem] xl:text-[16rem] font-medium leading-[0.75] tracking-tighter mb-8 text-accent">
+          ORTIZ
         </h1>
 
-        {/* Rol claro y grande */}
-        <p className="text-2xl sm:text-3xl md:text-4xl font-medium text-primary mb-6 tracking-wide">
-          Data Analyst & Developer
+        {/* Rol - minimal, elegante */}
+        <p className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground tracking-[0.2em] uppercase mb-12">
+          Analyst · Developer · Automatizador
         </p>
 
-        {/* Impacto inmediato - frase corta potente */}
-        <p className="text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-2xl leading-relaxed mb-12">
-          Construyo sistemas que automatizan lo manual. 
-          Apps reales, usadas todos los días, que ahorran horas.
+        {/* FRASE POSICIONADORA - agresiva y corta */}
+        <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-medium leading-tight max-w-4xl mb-16">
+          Si se repite más de dos veces,<br />
+          <span className="text-accent">debe automatizarse</span>.
         </p>
 
-        {/* Stats de impacto inmediato */}
-        <div className="flex flex-wrap gap-8 sm:gap-12 mb-16">
-          <div>
-            <p className="font-display text-3xl sm:text-4xl font-semibold text-accent">2026</p>
-            <p className="text-muted-foreground text-sm">Proyectos activos</p>
+        {/* Detalle distintivo - eficiencia medida */}
+        <div className="flex items-center gap-6 mb-12">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            <span className="text-muted-foreground text-sm tracking-wider uppercase">3 apps activas</span>
           </div>
-          <div>
-            <p className="font-display text-3xl sm:text-4xl font-semibold">Full Stack</p>
-            <p className="text-muted-foreground text-sm">Next.js · SQL · Python</p>
+          <div className="h-4 w-px bg-border" />
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse delay-75" />
+            <span className="text-muted-foreground text-sm tracking-wider uppercase">2026</span>
           </div>
-          <div>
-            <p className="font-display text-3xl sm:text-4xl font-semibold text-accent">3</p>
-            <p className="text-muted-foreground text-sm">Apps en producción</p>
+          <div className="h-4 w-px bg-border" />
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse delay-150" />
+            <span className="text-muted-foreground text-sm tracking-wider uppercase">Full Stack</span>
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA elegante */}
         <a
           href="#heroproject"
-          className="group inline-flex items-center gap-4 text-accent text-lg sm:text-xl font-medium hover:gap-6 transition-all"
+          className="group inline-flex items-center gap-4 text-accent border-b-2 border-accent pb-1 text-lg font-medium hover:gap-6 transition-all"
         >
-          Ver proyecto principal
-          <ArrowDown className="w-6 h-6 animate-bounce" />
+          Ver sistema de turnos
+          <ArrowDown className="w-5 h-5" />
         </a>
       </div>
 
