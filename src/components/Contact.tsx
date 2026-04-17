@@ -4,29 +4,29 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 bg-foreground text-background">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-foreground text-background">
+      <div className="max-w-4xl mx-auto text-center">
         <p className="text-background/50 text-sm tracking-widest uppercase mb-8">
           Contacto
         </p>
 
-        <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.9] mb-8 max-w-4xl">
+        <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.9] mb-8">
           Trabajemos<br />juntos
         </h2>
 
-        <p className="text-background/60 text-lg sm:text-xl max-w-lg mb-12">
+        <p className="text-background/60 text-lg sm:text-xl max-w-lg mx-auto mb-12">
           ¿Tenés un proyecto donde los datos puedan marcar la diferencia?
         </p>
 
         <a
           href="mailto:tu.email@ejemplo.com"
-          className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity mb-16"
         >
           <Mail className="w-5 h-5" />
           tu.email@ejemplo.com
         </a>
 
-        <div className="flex gap-8 mt-20 pt-10 border-t border-background/20">
+        <div className="flex justify-center gap-8 pt-10 border-t border-background/20">
           <a href="#" className="text-background/40 hover:text-background transition-colors">
             <Linkedin className="w-6 h-6" />
           </a>
@@ -34,6 +34,10 @@ export default function Contact() {
             <Github className="w-6 h-6" />
           </a>
         </div>
+
+        <p className="text-background/30 text-sm mt-12">
+          © 2026 Lautaro Ortiz. Built with Next.js & coffee.
+        </p>
       </div>
     </section>
   );
