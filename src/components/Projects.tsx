@@ -4,7 +4,13 @@ import { projects } from "@/data/projects";
 import { ArrowUpRight, Github } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
 
-function getPreviewSource(project: typeof projects[0]) {
+type PreviewSource = 
+  | { type: "slideshow"; images: string[] }
+  | { type: "local"; src: string }
+  | { type: "microlink"; src: string }
+  | null;
+
+function getPreviewSource(project: typeof projects[0]): PreviewSource {
   // Priority: slideshow > local image > microlink screenshot > null
   if (project.previewSlideshow && project.previewSlideshow.length > 0) {
     return { type: "slideshow", images: project.previewSlideshow };
@@ -95,16 +101,16 @@ export default function Projects() {
                   {/* Project Preview */}
                   <div className="w-full lg:w-72 h-44 bg-muted border border-border rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group">
                     {preview ? (
-                      preview.type === "slideshow" ? (
+                      preview.type === "slideshow" && preview.images ? (
                         <ProjectSlideshow images={preview.images} alt={project.title} />
-                      ) : (
+                      ) : preview.type === "local" || preview.type === "microlink" ? (
                         <img
                           src={preview.src}
                           alt={`${project.title} preview`}
                           className="w-full h-full object-cover"
                           loading="lazy"
                         />
-                      )
+                      ) : null
                     ) : (
                       <div className="text-center p-4">
                         <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-2">
