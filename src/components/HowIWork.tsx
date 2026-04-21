@@ -1,52 +1,69 @@
 "use client";
 
-import { Search, Code2, RefreshCw } from "lucide-react";
+import { Search, Code2, RefreshCw, ArrowRight } from "lucide-react";
 
 const steps = [
   {
     icon: Search,
     number: "01",
-    title: "Detect Problem",
-    description: "Observe friction and inefficiency in real operations",
+    title: "Analyze",
+    subtitle: "Detect friction",
+    description: "Study workflows, identify bottlenecks, measure wasted time",
   },
   {
     icon: Code2,
     number: "02",
-    title: "Build Solution",
-    description: "Design practical software around actual user needs",
+    title: "Build",
+    subtitle: "Software solution",
+    description: "Design tools around real user needs, not assumptions",
   },
   {
     icon: RefreshCw,
     number: "03",
-    title: "Iterate Fast",
-    description: "Use feedback to improve quickly and deliver value",
+    title: "Ship",
+    subtitle: "Iterate & improve",
+    description: "Deploy fast, gather feedback, optimize continuously",
   },
 ];
 
 export default function HowIWork() {
   return (
-    <section className="py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-background">
-      <div className="max-w-5xl mx-auto">
-        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-12">
-          How I Work
-        </p>
+    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-background border-y border-border">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-12">
+          <p className="text-accent text-sm font-medium mb-2">My Process</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-medium">
+            How I Work
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step) => (
-            <div key={step.number} className="relative">
-              <div className="flex items-start gap-4">
-                <span className="text-accent text-sm font-semibold mt-1">
-                  {step.number}
-                </span>
-                <div>
-                  <step.icon className="w-6 h-6 text-accent mb-3" />
-                  <h3 className="font-display text-xl font-semibold mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {step.description}
-                  </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          {steps.map((step, index) => (
+            <div key={step.number} className="group relative">
+              {/* Connector line */}
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 left-full w-full h-px">
+                  <ArrowRight className="absolute right-0 top-1/2 -translate-y-1/2 text-border w-4 h-4" />
                 </div>
+              )}
+              
+              <div className="bg-muted/30 border border-border p-6 hover:border-accent/50 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-accent font-display text-2xl font-bold">
+                    {step.number}
+                  </span>
+                  <step.icon className="w-5 h-5 text-accent" />
+                </div>
+                
+                <h3 className="font-display text-xl font-semibold mb-1">
+                  {step.title}
+                </h3>
+                <p className="text-accent text-sm font-medium mb-3">
+                  {step.subtitle}
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}

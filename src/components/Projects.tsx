@@ -5,10 +5,13 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 sm:py-40 px-6 sm:px-12 lg:px-24 bg-background">
+    <section id="projects" className="py-20 sm:py-28 px-6 sm:px-12 lg:px-24 bg-background">
       <div className="max-w-5xl mx-auto">
-        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-8">
+        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-4">
           Featured Projects
+        </p>
+        <p className="text-muted-foreground text-sm mb-10">
+          Projects built for real clinics and business operations.
         </p>
 
         <div className="space-y-0">
@@ -20,7 +23,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="group block py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer"
             >
-              <div className="flex justify-between items-start gap-6">
+              <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
                 <div className="flex-1">
                   <div className="flex items-baseline gap-4 mb-3">
                     <span className="text-accent text-sm font-medium">0{index + 1}</span>
@@ -50,16 +53,40 @@ export default function Projects() {
                     <span className="font-medium text-foreground">Resultados:</span> {project.results}
                   </p>
                   
-                  <div className="flex gap-4" onClick={(e) => e.stopPropagation()}>
-                    {project.githubUrl && project.githubUrl !== "#" && (
-                      <span className="inline-flex items-center gap-2 text-sm text-muted-foreground group-hover:text-accent transition-colors">
-                        <Github className="w-4 h-4" />
-                        Ver código →
-                      </span>
+                  <div className="flex gap-4 mt-4" onClick={(e) => e.stopPropagation()}>
+                    <a
+                      href={project.githubUrl || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      View Code
+                    </a>
+                    {project.liveUrl && project.liveUrl !== "#" && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        <ArrowUpRight className="w-4 h-4" />
+                        Live Demo
+                      </a>
                     )}
                   </div>
                 </div>
-                <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 mt-1" />
+                
+                {/* Project Preview Placeholder */}
+                <div className="w-full lg:w-64 h-40 bg-muted border border-border rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <div className="text-center p-4">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-2">
+                      <ArrowUpRight className="w-6 h-6 text-accent" />
+                    </div>
+                    <p className="text-xs text-muted-foreground">Dashboard Preview</p>
+                    <p className="text-[10px] text-muted-foreground/60 mt-1">Screenshot coming soon</p>
+                  </div>
+                </div>
               </div>
             </a>
           ))}
