@@ -36,7 +36,12 @@ export const projects: Project[] = [
     results: "Zero double-bookings, 50+ weekly appointments managed",
     githubUrl: "#",
     liveUrl: "#",
-    previewImage: "/projects/dental-system.png"
+    previewSlideshow: [
+      "/projects/turnos/Captura de pantalla 2026-04-21 145859.png",
+      "/projects/turnos/Captura de pantalla 2026-04-21 150013.png",
+      "/projects/turnos/Captura de pantalla 2026-04-21 150130.png",
+      "/projects/turnos/Captura de pantalla 2026-04-21 150212.png"
+    ]
   },
   {
     id: "3",
