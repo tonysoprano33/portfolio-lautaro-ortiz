@@ -8,7 +8,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   previewImage?: string;
-  previewSlideshow?: string[];
+  previewSlideshow?: Array<{ src: string; caption: string }>;
 }
 
 export const projects: Project[] = [
@@ -22,10 +22,19 @@ export const projects: Project[] = [
     githubUrl: "#",
     liveUrl: "#",
     previewSlideshow: [
-      "/projects/01-interfaz-principal.png",
-      "/projects/02-formulario-completo.png",
-      "/projects/03-generacion-exitosa.png"
-    ] as string[]
+      { 
+        src: "/projects/01-interfaz-principal.png", 
+        caption: "Dashboard principal: Lista de pacientes con búsqueda instantánea y filtros por fecha" 
+      },
+      { 
+        src: "/projects/02-formulario-completo.png", 
+        caption: "Formulario inteligente: Auto-completado de datos médicos con validación en tiempo real" 
+      },
+      { 
+        src: "/projects/03-generacion-exitosa.png", 
+        caption: "Generación de reporte: PDF clínico generado en <30 segundos listo para imprimir" 
+      }
+    ]
   },
   {
     id: "2",
@@ -37,10 +46,22 @@ export const projects: Project[] = [
     githubUrl: "#",
     liveUrl: "#",
     previewSlideshow: [
-      "/projects/turnos/Captura de pantalla 2026-04-21 145859.png",
-      "/projects/turnos/Captura de pantalla 2026-04-21 150013.png",
-      "/projects/turnos/Captura de pantalla 2026-04-21 150130.png",
-      "/projects/turnos/Captura de pantalla 2026-04-21 150212.png"
+      { 
+        src: "/projects/turnos/Captura de pantalla 2026-04-21 145859.png", 
+        caption: "Dashboard principal: Vista general de la agenda del día con estadísticas de turnos" 
+      },
+      { 
+        src: "/projects/turnos/Captura de pantalla 2026-04-21 150013.png", 
+        caption: "Lista de pacientes: Gestión de citas con indicadores de llegada y estado" 
+      },
+      { 
+        src: "/projects/turnos/Captura de pantalla 2026-04-21 150130.png", 
+        caption: "Formulario de paciente: Registro completo con historial y datos de contacto" 
+      },
+      { 
+        src: "/projects/turnos/Captura de pantalla 2026-04-21 150212.png", 
+        caption: "Calendario de turnos: Vista semanal con disponibilidad y bloqueos de horarios" 
+      }
     ]
   },
   {

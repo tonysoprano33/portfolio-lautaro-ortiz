@@ -5,7 +5,7 @@ import { ArrowUpRight, Github } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
 
 type PreviewSource = 
-  | { type: "slideshow"; images: string[] }
+  | { type: "slideshow"; images: Array<{ src: string; caption: string }> }
   | { type: "local"; src: string }
   | { type: "microlink"; src: string }
   | null;
