@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, FileDown, Mail, Github } from "lucide-react";
+import { ArrowDown, Github } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -110,21 +110,6 @@ export default function Hero() {
           >
             <Github className="w-4 h-4" />
             View GitHub
-          </a>
-          <a
-            href="/cv-lautaro-ortiz.pdf"
-            download
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground px-6 py-3 font-medium transition-colors"
-          >
-            <FileDown className="w-4 h-4" />
-            Download CV
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground px-6 py-3 font-medium transition-colors"
-          >
-            <Mail className="w-4 h-4" />
-            Contact Me
           </a>
         </div>
       </div>

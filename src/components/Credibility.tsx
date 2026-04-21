@@ -25,11 +25,11 @@ const metrics = [
 
 export default function Credibility() {
   return (
-    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-foreground text-background">
+    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <p className="text-background/50 text-sm font-medium mb-2">Impact</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-medium text-background">
+          <p className="text-accent text-sm font-medium mb-2">Impact</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-medium">
             Results That Matter
           </h2>
         </div>
@@ -40,10 +40,10 @@ export default function Credibility() {
               <p className="font-display text-4xl sm:text-5xl font-bold text-accent mb-2">
                 {metric.value}
               </p>
-              <p className="text-background/80 text-sm font-medium mb-1">
+              <p className="text-foreground text-sm font-medium mb-1">
                 {metric.label}
               </p>
-              <p className="text-background/50 text-xs">
+              <p className="text-muted-foreground text-xs">
                 {metric.context}
               </p>
             </div>

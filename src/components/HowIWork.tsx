@@ -28,7 +28,7 @@ const steps = [
 
 export default function HowIWork() {
   return (
-    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-background border-y border-border">
+    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-muted/10">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <p className="text-accent text-sm font-medium mb-2">My Process</p>

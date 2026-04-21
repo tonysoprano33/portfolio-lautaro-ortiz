@@ -17,7 +17,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-muted/20">
+    <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="mb-10">
           <p className="text-accent text-sm font-medium mb-2">Toolkit</p>
