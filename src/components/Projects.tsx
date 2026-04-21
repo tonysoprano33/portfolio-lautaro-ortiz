@@ -16,12 +16,9 @@ export default function Projects() {
 
         <div className="space-y-0">
           {projects.map((project, index) => (
-            <a
+            <div
               key={project.id}
-              href={project.liveUrl || project.githubUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer"
+              className="group py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24"
             >
               <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
                 <div className="flex-1">
@@ -49,11 +46,11 @@ export default function Projects() {
                     {project.tools.join(" · ")}
                   </div>
                   
-                  <p className="text-sm text-muted-foreground mb-3">
+                  <p className="text-sm text-muted-foreground mb-4">
                     <span className="font-medium text-foreground">Resultados:</span> {project.results}
                   </p>
                   
-                  <div className="flex gap-4 mt-4" onClick={(e) => e.stopPropagation()}>
+                  <div className="flex gap-4">
                     <a
                       href={project.githubUrl || "#"}
                       target="_blank"
@@ -88,7 +85,7 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
