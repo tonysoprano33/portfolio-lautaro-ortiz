@@ -5,7 +5,73 @@ import { ArrowDown, FileDown, Mail } from "lucide-react";
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-20 relative overflow-hidden">
-      <div className="max-w-4xl">
+      {/* LO Illustration - right side */}
+      <div className="hidden lg:block absolute top-1/2 right-12 -translate-y-1/2">
+        <svg width="300" height="350" viewBox="0 0 380 440" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
+          {/* Fondo circular sutil */}
+          <circle cx="190" cy="220" r="180" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-10"/>
+          <circle cx="190" cy="220" r="150" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-5"/>
+          
+          {/* L inicial - elegante */}
+          <path 
+            d="M 80 100 L 80 280 Q 80 320 120 320 L 180 320" 
+            stroke="currentColor" 
+            strokeWidth="6" 
+            fill="none" 
+            className="text-primary"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          
+          {/* O - loop de automatización */}
+          <ellipse cx="260" cy="210" rx="70" ry="85" 
+            stroke="currentColor" 
+            strokeWidth="6" 
+            fill="none" 
+            className="text-accent"
+          />
+          
+          {/* Flecha de loop animada dentro del O */}
+          <path 
+            d="M 235 155 Q 300 170 290 220 Q 280 260 215 245" 
+            stroke="currentColor" 
+            strokeWidth="4" 
+            fill="none" 
+            className="text-accent"
+            strokeLinecap="round"
+            strokeDasharray="8 12"
+          >
+            <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite"/>
+          </path>
+          
+          {/* Entrada de datos */}
+          <circle cx="60" cy="70" r="10" fill="currentColor" className="text-primary opacity-50"/>
+          <circle cx="75" cy="85" r="5" fill="currentColor" className="text-primary opacity-30"/>
+          <line x1="70" y1="90" x2="78" y2="110" stroke="currentColor" strokeWidth="2" className="text-primary opacity-40"/>
+          
+          {/* Conexión L → O */}
+          <path d="M 180 320 Q 210 320 225 295" stroke="currentColor" strokeWidth="3" fill="none" className="text-primary opacity-40"/>
+          
+          {/* Puntos de proceso */}
+          <circle cx="200" cy="210" r="6" fill="currentColor" className="text-accent">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="260" cy="125" r="5" fill="currentColor" className="text-primary opacity-30"/>
+          <circle cx="330" cy="210" r="5" fill="currentColor" className="text-primary opacity-30"/>
+          <circle cx="260" cy="295" r="5" fill="currentColor" className="text-primary opacity-30"/>
+          
+          {/* Output */}
+          <circle cx="360" cy="210" r="8" fill="currentColor" className="text-accent">
+            <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <line x1="330" y1="210" x2="352" y2="210" stroke="currentColor" strokeWidth="3" className="text-accent"/>
+          
+          {/* Texto "auto" centrado */}
+          <text x="235" y="220" fill="currentColor" className="text-accent text-base font-mono font-medium opacity-90">auto</text>
+        </svg>
+      </div>
+
+      <div className="max-w-4xl relative z-10">
         {/* Name */}
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-medium mb-6">
           Lautaro Ortiz
