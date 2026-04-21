@@ -31,7 +31,7 @@ export default function Hero() {
             className="text-accent"
           />
           
-          {/* Flecha de loop animada dentro del O */}
+          {/* Flecha de loop dentro del O */}
           <path 
             d="M 235 155 Q 300 170 290 220 Q 280 260 215 245" 
             stroke="currentColor" 
@@ -40,9 +40,7 @@ export default function Hero() {
             className="text-accent"
             strokeLinecap="round"
             strokeDasharray="8 12"
-          >
-            <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite"/>
-          </path>
+          />
           
           {/* Entrada de datos */}
           <circle cx="60" cy="70" r="10" fill="currentColor" className="text-primary opacity-50"/>
@@ -53,17 +51,13 @@ export default function Hero() {
           <path d="M 180 320 Q 210 320 225 295" stroke="currentColor" strokeWidth="3" fill="none" className="text-primary opacity-40"/>
           
           {/* Puntos de proceso */}
-          <circle cx="200" cy="210" r="6" fill="currentColor" className="text-accent">
-            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
-          </circle>
+          <circle cx="200" cy="210" r="6" fill="currentColor" className="text-accent opacity-60"/>
           <circle cx="260" cy="125" r="5" fill="currentColor" className="text-primary opacity-30"/>
           <circle cx="330" cy="210" r="5" fill="currentColor" className="text-primary opacity-30"/>
           <circle cx="260" cy="295" r="5" fill="currentColor" className="text-primary opacity-30"/>
           
           {/* Output */}
-          <circle cx="360" cy="210" r="8" fill="currentColor" className="text-accent">
-            <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
-          </circle>
+          <circle cx="360" cy="210" r="10" fill="currentColor" className="text-accent opacity-80"/>
           <line x1="330" y1="210" x2="352" y2="210" stroke="currentColor" strokeWidth="3" className="text-accent"/>
           
           {/* Texto "auto" centrado */}
