@@ -2,10 +2,21 @@
 
 import { projects } from "@/data/projects";
 import { ArrowUpRight, Github } from "lucide-react";
+import ProjectSlideshow from "./ProjectSlideshow";
 
-function getMicrolinkUrl(url: string) {
-  if (!url || url === "#") return null;
-  return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&embed=screenshot.url`;
+function getPreviewSource(project: typeof projects[0]) {
+  // Priority: slideshow > local image > microlink screenshot > null
+  if (project.previewSlideshow && project.previewSlideshow.length > 0) {
+    return { type: "slideshow", images: project.previewSlideshow };
+  }
+  if (project.previewImage) return { type: "local", src: project.previewImage };
+  if (project.liveUrl && project.liveUrl !== "#") {
+    return { 
+      type: "microlink", 
+      src: `https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&embed=screenshot.url` 
+    };
+  }
+  return null;
 }
 
 export default function Projects() {
@@ -21,7 +32,7 @@ export default function Projects() {
 
         <div className="space-y-0">
           {projects.map((project, index) => {
-            const previewUrl = getMicrolinkUrl(project.liveUrl || "");
+            const preview = getPreviewSource(project);
             return (
               <div
                 key={project.id}
@@ -82,14 +93,18 @@ export default function Projects() {
                   </div>
                   
                   {/* Project Preview */}
-                  <div className="w-full lg:w-72 h-44 bg-muted border border-border rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
-                    {previewUrl ? (
-                      <img
-                        src={previewUrl}
-                        alt={`${project.title} preview`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
+                  <div className="w-full lg:w-72 h-44 bg-muted border border-border rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group">
+                    {preview ? (
+                      preview.type === "slideshow" ? (
+                        <ProjectSlideshow images={preview.images} alt={project.title} />
+                      ) : (
+                        <img
+                          src={preview.src}
+                          alt={`${project.title} preview`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      )
                     ) : (
                       <div className="text-center p-4">
                         <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-2">

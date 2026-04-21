@@ -7,6 +7,8 @@ export interface Project {
   results: string;
   githubUrl?: string;
   liveUrl?: string;
+  previewImage?: string;
+  previewSlideshow?: string[];
 }
 
 export const projects: Project[] = [
@@ -18,7 +20,12 @@ export const projects: Project[] = [
     tools: ["Python", "FastAPI", "PostgreSQL", "Docker"],
     results: "Reports reduced from 15+ min to <30 seconds",
     githubUrl: "#",
-    liveUrl: "#"
+    liveUrl: "#",
+    previewSlideshow: [
+      "/projects/01-interfaz-principal.png",
+      "/projects/02-formulario-completo.png",
+      "/projects/03-generacion-exitosa.png"
+    ] as string[]
   },
   {
     id: "2",
@@ -28,7 +35,8 @@ export const projects: Project[] = [
     tools: ["Next.js", "Supabase", "TypeScript", "PWA"],
     results: "Zero double-bookings, 50+ weekly appointments managed",
     githubUrl: "#",
-    liveUrl: "#"
+    liveUrl: "#",
+    previewImage: "/projects/dental-system.png"
   },
   {
     id: "3",
