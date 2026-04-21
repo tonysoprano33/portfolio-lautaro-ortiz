@@ -4,17 +4,15 @@ import { projects } from "@/data/projects";
 import { ArrowUpRight, Github } from "lucide-react";
 
 export default function Projects() {
-  const otherProjects = projects.slice(1);
-
   return (
     <section id="projects" className="py-32 sm:py-40 px-6 sm:px-12 lg:px-24 bg-background">
       <div className="max-w-5xl mx-auto">
         <p className="text-muted-foreground text-sm tracking-widest uppercase mb-8">
-          Más proyectos
+          Featured Projects
         </p>
 
         <div className="space-y-0">
-          {otherProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <a
               key={project.id}
               href={project.liveUrl || project.githubUrl || "#"}
@@ -25,7 +23,7 @@ export default function Projects() {
               <div className="flex justify-between items-start gap-6">
                 <div className="flex-1">
                   <div className="flex items-baseline gap-4 mb-3">
-                    <span className="text-accent text-sm font-medium">0{index + 2}</span>
+                    <span className="text-accent text-sm font-medium">0{index + 1}</span>
                     <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-medium group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>

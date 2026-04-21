@@ -12,31 +12,31 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Análisis Predictivo de Ventas",
-    description: "Modelo de machine learning para predecir tendencias de ventas trimestrales utilizando series temporales y regresión. Implementación de pipeline ETL automatizado para procesar datos de múltiples fuentes.",
-    tags: ["Machine Learning", "Time Series", "Python"],
-    tools: ["Python", "Scikit-learn", "Pandas", "PostgreSQL", "Tableau"],
-    results: "Reducción del 25% en errores de forecast",
+    title: "Respiratory Report Generator",
+    description: "Automated medical report generation system for respiratory clinics. Processes patient data and generates clinical reports in under 30 seconds, replacing 15+ minute manual workflows.",
+    tags: ["Healthcare", "Automation", "PDF Generation"],
+    tools: ["Python", "FastAPI", "PostgreSQL", "Docker"],
+    results: "Reports reduced from 15+ min to <30 seconds",
     githubUrl: "#",
     liveUrl: "#"
   },
   {
     id: "2",
-    title: "Dashboard de KPIs Operativos",
-    description: "Desarrollo de dashboard interactivo en tiempo real para monitoreo de métricas clave de rendimiento. Integración con APIs internas y automatización de reportes semanales.",
-    tags: ["Dashboard", "ETL", "Data Visualization"],
-    tools: ["Power BI", "SQL Server", "Python", "REST APIs"],
-    results: "Ahorro de 20 horas semanales en reporting",
+    title: "Dental Office Management System",
+    description: "Real-time scheduling, patient management, and analytics platform for dental clinics. Replaced paper workflows with automated notifications, online booking, and operational dashboards.",
+    tags: ["SaaS", "Scheduling", "Analytics"],
+    tools: ["Next.js", "Supabase", "TypeScript", "PWA"],
+    results: "Zero double-bookings, 50+ weekly appointments managed",
     githubUrl: "#",
     liveUrl: "#"
   },
   {
     id: "3",
     title: "NexusData AI",
-    description: "Plataforma de inteligencia de datos empresarial con pipeline neural para limpieza de datos de alta fidelidad y extracción de insights estratégicos. Arquitectura con procesamiento en tiempo real y encriptación E2E.",
+    description: "AI-powered data intelligence platform that transforms raw files into actionable dashboards, business insights, and predictive analytics for enterprise operations.",
     tags: ["AI", "Data Pipeline", "Enterprise"],
-    tools: ["GROQ LPU", "React", "TypeScript", "E2E Encryption"],
-    results: "Procesamiento <12ms latencia, 99.9% uptime",
+    tools: ["React", "TypeScript", "Python", "GROQ LPU"],
+    results: "Processing <12ms latency, 99.9% uptime",
     githubUrl: "https://github.com/tonysoprano33/nexusdata",
     liveUrl: "https://nexusdata-gamma.vercel.app/"
   }
