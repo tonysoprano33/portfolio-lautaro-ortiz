@@ -27,9 +27,9 @@ function getPreviewSource(project: typeof projects[0]): PreviewSource {
 }
 
 // Map project ID to translation key
-const projectKeyMap: Record<string, "respiratory" | "dental" | "nexus"> = {
+const projectKeyMap: Record<string, "respiratory" | "excel" | "nexus"> = {
   "1": "respiratory",
-  "2": "dental", 
+  "2": "excel", 
   "3": "nexus",
 };
 
@@ -93,15 +93,17 @@ export default function Projects() {
                     </p>
                     
                     <div className="flex gap-4">
-                      <a
-                        href={project.githubUrl || "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        <Github className="w-4 h-4" />
-                        {t.projects.viewCode}
-                      </a>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          <Github className="w-4 h-4" />
+                          {t.projects.viewCode}
+                        </a>
+                      )}
                       {project.liveUrl && project.liveUrl !== "#" && (
                         <a
                           href={project.liveUrl}

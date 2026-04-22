@@ -6,19 +6,19 @@ import { useLocale } from "./LocaleProvider";
 
 const turnosImages = [
   { 
-    src: "/projects/turnos/Captura de pantalla 2026-04-21 145859.png", 
+    src: "/projects/turnos/dashboard-main.png", 
     caption: "Dashboard: Daily agenda with appointment statistics" 
   },
   { 
-    src: "/projects/turnos/Captura de pantalla 2026-04-21 150013.png", 
+    src: "/projects/turnos/patient-list.png", 
     caption: "Patient list: Appointment management with arrival indicators" 
   },
   { 
-    src: "/projects/turnos/Captura de pantalla 2026-04-21 150130.png", 
+    src: "/projects/turnos/patient-form.png", 
     caption: "Patient form: Complete registration with history and contact data" 
   },
   { 
-    src: "/projects/turnos/Captura de pantalla 2026-04-21 150212.png", 
+    src: "/projects/turnos/calendar-weekly.png", 
     caption: "Calendar: Weekly view with availability and time blocks" 
   }
 ];

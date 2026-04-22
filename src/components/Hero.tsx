@@ -87,7 +87,7 @@ export default function Hero() {
 
         {/* Key phrase */}
         <p className="text-base sm:text-lg font-medium mb-12 border-l-2 border-accent pl-4">
-          I don&apos;t just analyze problems — I build the solution.
+          {t.hero.tagline}
         </p>
 
         {/* CTAs */}

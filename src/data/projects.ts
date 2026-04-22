@@ -19,8 +19,8 @@ export const projects: Project[] = [
     tags: ["Healthcare", "Automation", "PDF Generation"],
     tools: ["Python", "FastAPI", "PostgreSQL", "Docker"],
     results: "Reports reduced from 15+ min to <30 seconds",
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/tonysoprano33/espiro-informes",
+    liveUrl: null,
     previewSlideshow: [
       { 
         src: "/projects/01-interfaz-principal.png", 
@@ -38,31 +38,14 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Dental Office Management System",
-    description: "Real-time scheduling, patient management, and analytics platform for dental clinics. Replaced paper workflows with automated notifications, online booking, and operational dashboards.",
-    tags: ["SaaS", "Scheduling", "Analytics"],
-    tools: ["Next.js", "Supabase", "TypeScript", "PWA"],
-    results: "Zero double-bookings, 50+ weekly appointments managed",
-    githubUrl: "#",
-    liveUrl: "#",
-    previewSlideshow: [
-      { 
-        src: "/projects/turnos/Captura de pantalla 2026-04-21 145859.png", 
-        caption: "Dashboard principal: Vista general de la agenda del día con estadísticas de turnos" 
-      },
-      { 
-        src: "/projects/turnos/Captura de pantalla 2026-04-21 150013.png", 
-        caption: "Lista de pacientes: Gestión de citas con indicadores de llegada y estado" 
-      },
-      { 
-        src: "/projects/turnos/Captura de pantalla 2026-04-21 150130.png", 
-        caption: "Formulario de paciente: Registro completo con historial y datos de contacto" 
-      },
-      { 
-        src: "/projects/turnos/Captura de pantalla 2026-04-21 150212.png", 
-        caption: "Calendario de turnos: Vista semanal con disponibilidad y bloqueos de horarios" 
-      }
-    ]
+    title: "Clinic Management Excel System",
+    description: "Custom Excel solution with VBA automation sold to dental clinic. Manages patient records, appointment tracking, and financial reporting. Used daily by clinic staff.",
+    tags: ["Excel", "VBA", "Automation", "Sold Product"],
+    tools: ["Excel", "VBA Macros", "Power Query", "Data Validation"],
+    results: "Sold to clinic, used by 3+ staff members daily",
+    githubUrl: null,
+    liveUrl: null,
+    previewImage: "/projects/excel-clinic-demo.png"
   },
   {
     id: "3",

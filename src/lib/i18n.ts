@@ -7,6 +7,7 @@ export const translations = {
       role: "Industrial Engineer",
       headline: "From chaos to operations that run themselves.",
       subheadline: "I build internal tools, automation systems, and data workflows for businesses that can't afford to stop.",
+      tagline: "I don't just analyze problems — I build the solution.",
       ctaProjects: "View Projects",
       ctaGitHub: "View GitHub",
     },
@@ -91,10 +92,10 @@ export const translations = {
         description: "Automated medical report generation system for respiratory clinics. Processes patient data and generates clinical reports in under 30 seconds, replacing 15+ minute manual workflows.",
         results: "Reports reduced from 15+ min to <30 seconds",
       },
-      dental: {
-        title: "Dental Office Management System",
-        description: "Real-time scheduling, patient management, and analytics platform for dental clinics. Replaced paper workflows with automated notifications, online booking, and operational dashboards.",
-        results: "Zero double-bookings, 50+ weekly appointments managed",
+      excel: {
+        title: "Clinic Management Excel System",
+        description: "Custom Excel solution with VBA automation sold to dental clinic. Manages patient records, appointment tracking, and financial reporting. Used daily by clinic staff.",
+        results: "Sold to clinic, used by 3+ staff members daily",
       },
       nexus: {
         title: "NexusData AI",
@@ -109,6 +110,7 @@ export const translations = {
       role: "Ingeniero Industrial",
       headline: "Del caos a operaciones que se manejan solas.",
       subheadline: "Construyo herramientas internas, sistemas de automatización y flujos de datos para negocios que no pueden detenerse.",
+      tagline: "No solo analizo problemas — construyo la solución.",
       ctaProjects: "Ver Proyectos",
       ctaGitHub: "Ver GitHub",
     },
@@ -193,10 +195,10 @@ export const translations = {
         description: "Sistema automatizado de generación de reportes médicos para clínicas respiratorias. Procesa datos de pacientes y genera reportes clínicos en menos de 30 segundos, reemplazando flujos manuales de 15+ minutos.",
         results: "Reportes reducidos de 15+ min a <30 segundos",
       },
-      dental: {
-        title: "Sistema de Gestión Dental",
-        description: "Plataforma de agendamiento en tiempo real, gestión de pacientes y analytics para clínicas dentales. Reemplazó flujos en papel con notificaciones automatizadas, reservas online y dashboards operacionales.",
-        results: "Cero doble reserva, 50+ turnos semanales gestionados",
+      excel: {
+        title: "Sistema Excel para Clínica",
+        description: "Solución Excel personalizada con automatización VBA vendida a clínica dental. Gestiona fichas de pacientes, seguimiento de turnos e informes financieros. Usado diariamente por el personal.",
+        results: "Vendido a clínica, usado por 3+ empleados diariamente",
       },
       nexus: {
         title: "NexusData AI",
