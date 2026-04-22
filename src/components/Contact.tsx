@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Linkedin, Github, FileDown, ArrowRight, Check, Copy } from "lucide-react";
+import { Mail, Linkedin, Github, FileDown, Calendar, ArrowRight, Check, Copy } from "lucide-react";
 import { useLocale } from "./LocaleProvider";
 
 export default function Contact() {
@@ -9,14 +9,13 @@ export default function Contact() {
   const { t, locale } = useLocale();
   const email = t.contact.email;
 
-  const handleEmailClick = async (e: React.MouseEvent) => {
-    // Try to copy to clipboard as fallback
+  const handleEmailClick = async () => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.log("Clipboard write failed, relying on mailto:");
+      console.log("Clipboard write failed");
     }
   };
 
@@ -36,39 +35,40 @@ export default function Contact() {
         </p>
 
         <div className="flex flex-col items-center gap-4 mb-12">
-          {/* Email with copy feedback */}
-          <div className="flex flex-col items-center gap-2">
-            <a
-              href={`mailto:${email}`}
-              onClick={handleEmailClick}
-              className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
-            >
-              <Mail className="w-5 h-5" />
-              {t.contact.cta}
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <button
-              onClick={handleEmailClick}
-              className="inline-flex items-center gap-2 text-background/60 hover:text-background text-sm transition-colors"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-green-400" />
-                  <span>{t.contact.copySuccess}</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4" />
-                  <span>{email} — {t.contact.copyHint}</span>
-                </>
-              )}
-            </button>
-          </div>
+          {/* Primary CTA: Book a call */}
+          <a
+            href={t.contact.calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
+          >
+            <Calendar className="w-5 h-5" />
+            {t.contact.ctaPrimary}
+            <ArrowRight className="w-5 h-5" />
+          </a>
+
+          {/* Secondary CTA: Email */}
+          <button
+            onClick={handleEmailClick}
+            className="inline-flex items-center gap-2 text-background/60 hover:text-background text-sm transition-colors"
+          >
+            {copied ? (
+              <>
+                <Check className="w-4 h-4 text-green-400" />
+                <span>{t.contact.copySuccess}</span>
+              </>
+            ) : (
+              <>
+                <Mail className="w-4 h-4" />
+                <span>{t.contact.ctaSecondary}</span>
+              </>
+            )}
+          </button>
 
           <a
             href="/cv-lautaro-ortiz.pdf"
             download
-            className="inline-flex items-center gap-3 border-2 border-background/30 text-background px-8 py-3 text-base font-medium hover:border-background hover:bg-background hover:text-foreground transition-all"
+            className="inline-flex items-center gap-3 border-2 border-background/30 text-background px-8 py-3 text-base font-medium hover:border-background hover:bg-background hover:text-foreground transition-all mt-4"
           >
             <FileDown className="w-5 h-5" />
             {t.contact.downloadCV}
