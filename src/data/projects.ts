@@ -20,7 +20,7 @@ export const projects: Project[] = [
     tools: ["Python", "FastAPI", "PostgreSQL", "Docker"],
     results: "Reports reduced from 15+ min to <30 seconds",
     githubUrl: "https://github.com/tonysoprano33/espiro-informes",
-    liveUrl: null,
+    liveUrl: undefined,
     previewSlideshow: [
       { 
         src: "/projects/01-interfaz-principal.png", 
@@ -43,8 +43,8 @@ export const projects: Project[] = [
     tags: ["Excel", "VBA", "Automation", "Sold Product"],
     tools: ["Excel", "VBA Macros", "Power Query", "Data Validation"],
     results: "Sold to clinic, used by 3+ staff members daily",
-    githubUrl: null,
-    liveUrl: null,
+    githubUrl: undefined,
+    liveUrl: undefined,
     previewImage: "/projects/excel-clinic-demo.png"
   },
   {
