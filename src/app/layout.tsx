@@ -18,6 +18,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Lautaro Ortiz | Data Analyst Portfolio",
   description: "Portfolio profesional de Lautaro Ortiz - Data Analyst & Business Intelligence Specialist",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
