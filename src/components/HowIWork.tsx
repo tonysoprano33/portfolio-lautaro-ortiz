@@ -34,9 +34,9 @@ export default function HowIWork() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative items-stretch">
           {steps.map((step, index) => (
-            <div key={step.number} className="group relative">
+            <div key={step.number} className="group relative flex flex-col h-full">
               {/* Connector line */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-8 left-full w-full h-px">
@@ -44,7 +44,7 @@ export default function HowIWork() {
                 </div>
               )}
               
-              <div className="bg-muted/30 border border-border p-6 hover:border-accent/50 transition-colors">
+              <div className="bg-muted/30 border border-border p-6 hover:border-accent/50 transition-colors flex flex-col flex-grow">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-accent font-display text-2xl font-bold">
                     {step.number}
