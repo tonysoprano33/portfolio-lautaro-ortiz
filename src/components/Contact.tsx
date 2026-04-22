@@ -1,8 +1,23 @@
 "use client";
 
-import { Mail, Linkedin, Github, FileDown, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Mail, Linkedin, Github, FileDown, ArrowRight, Check, Copy } from "lucide-react";
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+  const email = "johnsopranojr@outlook.com";
+
+  const handleEmailClick = async (e: React.MouseEvent) => {
+    // Try to copy to clipboard as fallback
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.log("Clipboard write failed, relying on mailto:");
+    }
+  };
+
   return (
     <section id="contact" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-foreground text-background">
       <div className="max-w-4xl mx-auto text-center">
@@ -15,18 +30,38 @@ export default function Contact() {
         </h2>
 
         <p className="text-background/60 text-lg sm:text-xl max-w-lg mx-auto mb-12">
-          I don't just analyze problems — I build the solution.
+          I don&apos;t just analyze problems — I build the solution.
         </p>
 
         <div className="flex flex-col items-center gap-4 mb-12">
-          <a
-            href="mailto:johnsopranojr@outlook.com"
-            className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
-          >
-            <Mail className="w-5 h-5" />
-            Contact Me
-            <ArrowRight className="w-5 h-5" />
-          </a>
+          {/* Email with copy feedback */}
+          <div className="flex flex-col items-center gap-2">
+            <a
+              href={`mailto:${email}`}
+              onClick={handleEmailClick}
+              className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
+            >
+              <Mail className="w-5 h-5" />
+              Contact Me
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <button
+              onClick={handleEmailClick}
+              className="inline-flex items-center gap-2 text-background/60 hover:text-background text-sm transition-colors"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-4 h-4 text-green-400" />
+                  <span>Copied to clipboard!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4" />
+                  <span>{email} — Click to copy</span>
+                </>
+              )}
+            </button>
+          </div>
 
           <a
             href="/cv-lautaro-ortiz.pdf"

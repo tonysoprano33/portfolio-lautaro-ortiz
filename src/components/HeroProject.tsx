@@ -1,6 +1,26 @@
 "use client";
 
 import { ArrowUpRight, Smartphone, Bell, Calendar, Users } from "lucide-react";
+import ProjectSlideshow from "./ProjectSlideshow";
+
+const turnosImages = [
+  { 
+    src: "/projects/turnos/Captura de pantalla 2026-04-21 145859.png", 
+    caption: "Dashboard principal: Vista general de la agenda del día con estadísticas de turnos" 
+  },
+  { 
+    src: "/projects/turnos/Captura de pantalla 2026-04-21 150013.png", 
+    caption: "Lista de pacientes: Gestión de citas con indicadores de llegada y estado" 
+  },
+  { 
+    src: "/projects/turnos/Captura de pantalla 2026-04-21 150130.png", 
+    caption: "Formulario de paciente: Registro completo con historial y datos de contacto" 
+  },
+  { 
+    src: "/projects/turnos/Captura de pantalla 2026-04-21 150212.png", 
+    caption: "Calendario de turnos: Vista semanal con disponibilidad y bloqueos de horarios" 
+  }
+];
 
 export default function HeroProject() {
   return (
@@ -14,7 +34,7 @@ export default function HeroProject() {
           <span className="px-3 py-1 bg-accent/20 text-accent text-xs font-medium tracking-wider uppercase rounded-full">
             Proyecto Destacado
           </span>
-          <span className="text-muted-foreground text-sm">2024</span>
+          <span className="text-muted-foreground text-sm">En producción</span>
         </div>
 
         {/* HEADLINE MASIVO */}
@@ -30,30 +50,44 @@ export default function HeroProject() {
         </p>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16 border-t border-border pt-12">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-16 border-t border-border pt-12">
+          <div>
+            <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
+              71+
+            </p>
+            <p className="text-muted-foreground text-sm">Pacientes registrados</p>
+          </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
               50+
             </p>
-            <p className="text-muted-foreground text-sm">Turnos semanales gestionados</p>
+            <p className="text-muted-foreground text-sm">Turnos semanales</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-2">
               0
             </p>
-            <p className="text-muted-foreground text-sm">Doble reserva desde la implementación</p>
+            <p className="text-muted-foreground text-sm">Doble reserva</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-2">
               3s
             </p>
-            <p className="text-muted-foreground text-sm">Notificación de paciente listo</p>
+            <p className="text-muted-foreground text-sm">Notificación instantánea</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
               PWA
             </p>
-            <p className="text-muted-foreground text-sm">Instalada en móviles, sin app stores</p>
+            <p className="text-muted-foreground text-sm">App instalable</p>
+          </div>
+        </div>
+
+        {/* Slideshow Preview */}
+        <div className="mb-16">
+          <p className="text-muted-foreground text-sm mb-4">Vistas de la aplicación</p>
+          <div className="w-full h-80 lg:h-96 bg-muted border border-border rounded-lg overflow-hidden group">
+            <ProjectSlideshow images={turnosImages} alt="Sistema de turnos" />
           </div>
         </div>
 
@@ -95,7 +129,7 @@ export default function HeroProject() {
           className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 font-medium hover:opacity-90 transition-opacity"
         >
           <Smartphone className="w-5 h-5" />
-          Ver demostración
+          Ver todos los proyectos
           <ArrowUpRight className="w-5 h-5" />
         </a>
       </div>
