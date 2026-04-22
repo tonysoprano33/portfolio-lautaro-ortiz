@@ -83,6 +83,24 @@ export const translations = {
     footer: {
       copyright: "© 2026 Lautaro Ortiz",
     },
+    // Project details
+    projectDetails: {
+      respiratory: {
+        title: "Respiratory Report Generator",
+        description: "Automated medical report generation system for respiratory clinics. Processes patient data and generates clinical reports in under 30 seconds, replacing 15+ minute manual workflows.",
+        results: "Reports reduced from 15+ min to <30 seconds",
+      },
+      dental: {
+        title: "Dental Office Management System",
+        description: "Real-time scheduling, patient management, and analytics platform for dental clinics. Replaced paper workflows with automated notifications, online booking, and operational dashboards.",
+        results: "Zero double-bookings, 50+ weekly appointments managed",
+      },
+      nexus: {
+        title: "NexusData AI",
+        description: "AI-powered data intelligence platform that transforms raw files into actionable dashboards, business insights, and predictive analytics for enterprise operations.",
+        results: "Processing <12ms latency, 99.9% uptime",
+      },
+    },
   },
   es: {
     // Hero
@@ -165,6 +183,24 @@ export const translations = {
     // Footer
     footer: {
       copyright: "© 2026 Lautaro Ortiz",
+    },
+    // Project details
+    projectDetails: {
+      respiratory: {
+        title: "Generador de Reportes Respiratorios",
+        description: "Sistema automatizado de generación de reportes médicos para clínicas respiratorias. Procesa datos de pacientes y genera reportes clínicos en menos de 30 segundos, reemplazando flujos manuales de 15+ minutos.",
+        results: "Reportes reducidos de 15+ min a <30 segundos",
+      },
+      dental: {
+        title: "Sistema de Gestión Dental",
+        description: "Plataforma de agendamiento en tiempo real, gestión de pacientes y analytics para clínicas dentales. Reemplazó flujos en papel con notificaciones automatizadas, reservas online y dashboards operacionales.",
+        results: "Cero doble reserva, 50+ turnos semanales gestionados",
+      },
+      nexus: {
+        title: "NexusData AI",
+        description: "Plataforma de inteligencia de datos impulsada por IA que transforma archivos raw en dashboards accionables, insights de negocio y analytics predictivos para operaciones empresariales.",
+        results: "Procesamiento <12ms latencia, 99.9% uptime",
+      },
     },
   },
 };

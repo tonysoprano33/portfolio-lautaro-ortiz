@@ -26,8 +26,15 @@ function getPreviewSource(project: typeof projects[0]): PreviewSource {
   return null;
 }
 
+// Map project ID to translation key
+const projectKeyMap: Record<string, "respiratory" | "dental" | "nexus"> = {
+  "1": "respiratory",
+  "2": "dental", 
+  "3": "nexus",
+};
+
 export default function Projects() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
 
   return (
     <section id="projects" className="py-20 sm:py-28 px-6 sm:px-12 lg:px-24 bg-background">
@@ -42,6 +49,14 @@ export default function Projects() {
         <div className="space-y-0">
           {projects.map((project, index) => {
             const preview = getPreviewSource(project);
+            const projectKey = projectKeyMap[project.id];
+            
+            // Get translations safely
+            const details = projectKey ? (t as any).projectDetails?.[projectKey] : null;
+            const projectTitle = details?.title || project.title;
+            const projectDesc = details?.description || project.description;
+            const projectResults = details?.results || project.results;
+            
             return (
               <div
                 key={project.id}
@@ -52,12 +67,12 @@ export default function Projects() {
                     <div className="flex items-baseline gap-4 mb-3">
                       <span className="text-accent text-sm font-medium">0{index + 1}</span>
                       <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-medium group-hover:text-accent transition-colors">
-                        {project.title}
+                        {projectTitle}
                       </h3>
                     </div>
                     
                     <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mb-4">
-                      {project.description}
+                      {projectDesc}
                     </p>
                     
                     <div className="flex flex-wrap gap-2 mb-3">
@@ -74,7 +89,7 @@ export default function Projects() {
                     </div>
                     
                     <p className="text-sm text-muted-foreground mb-4">
-                      <span className="font-medium text-foreground">{t.projects.results}</span> {project.results}
+                      <span className="font-medium text-foreground">{t.projects.results}</span> {projectResults}
                     </p>
                     
                     <div className="flex gap-4">
