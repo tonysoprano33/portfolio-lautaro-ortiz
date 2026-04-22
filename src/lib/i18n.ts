@@ -72,16 +72,14 @@ export const translations = {
     },
     // Contact
     contact: {
-      title: "Let's Talk",
-      headline: "Got a process eating 2+ hours of your week?",
-      subheadline: "Book a free 15-min call. I'll show you exactly how to cut it down to 5 minutes — or your money back (it's free anyway).",
-      ctaPrimary: "Book Free Strategy Call",
-      ctaSecondary: "Or send me an email",
+      title: "Contact",
+      headline: "Looking for someone who can turn messy operations into efficient tools?",
+      subheadline: "I don't just analyze problems — I build the solution.",
+      cta: "Contact Me",
       email: "johnsopranojr@outlook.com",
-      copySuccess: "Copied!",
-      copyHint: "Click to copy email",
+      copySuccess: "Copied to clipboard!",
+      copyHint: "Click to copy",
       downloadCV: "Download CV",
-      calendlyUrl: "https://calendly.com/johnsopranojr/15min",
     },
     // Footer
     footer: {
@@ -177,16 +175,14 @@ export const translations = {
     },
     // Contact
     contact: {
-      title: "Hablemos",
-      headline: "¿Tenés un proceso que te roba 2+ horas por semana?",
-      subheadline: "Agendá una llamada gratuita de 15 min. Te muestro exactamente cómo reducirlo a 5 minutos — o te devuelvo el dinero (es gratis igual).",
-      ctaPrimary: "Agendar llamada gratuita",
-      ctaSecondary: "O escribime directo",
+      title: "Contacto",
+      headline: "¿Buscás alguien que pueda convertir operaciones caóticas en herramientas eficientes?",
+      subheadline: "No solo analizo problemas — construyo la solución.",
+      cta: "Contactarme",
       email: "johnsopranojr@outlook.com",
-      copySuccess: "¡Copiado!",
-      copyHint: "Clic para copiar email",
+      copySuccess: "¡Copiado al portapapeles!",
+      copyHint: "Clic para copiar",
       downloadCV: "Descargar CV",
-      calendlyUrl: "https://calendly.com/johnsopranojr/15min",
     },
     // Footer
     footer: {
