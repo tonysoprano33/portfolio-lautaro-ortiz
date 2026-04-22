@@ -2,27 +2,30 @@
 
 import { ArrowUpRight, Smartphone, Bell, Calendar, Users } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
+import { useLocale } from "./LocaleProvider";
 
 const turnosImages = [
   { 
     src: "/projects/turnos/Captura de pantalla 2026-04-21 145859.png", 
-    caption: "Dashboard principal: Vista general de la agenda del día con estadísticas de turnos" 
+    caption: "Dashboard: Daily agenda with appointment statistics" 
   },
   { 
     src: "/projects/turnos/Captura de pantalla 2026-04-21 150013.png", 
-    caption: "Lista de pacientes: Gestión de citas con indicadores de llegada y estado" 
+    caption: "Patient list: Appointment management with arrival indicators" 
   },
   { 
     src: "/projects/turnos/Captura de pantalla 2026-04-21 150130.png", 
-    caption: "Formulario de paciente: Registro completo con historial y datos de contacto" 
+    caption: "Patient form: Complete registration with history and contact data" 
   },
   { 
     src: "/projects/turnos/Captura de pantalla 2026-04-21 150212.png", 
-    caption: "Calendario de turnos: Vista semanal con disponibilidad y bloqueos de horarios" 
+    caption: "Calendar: Weekly view with availability and time blocks" 
   }
 ];
 
 export default function HeroProject() {
+  const { t } = useLocale();
+
   return (
     <section id="heroproject" className="min-h-screen bg-background text-foreground relative overflow-hidden">
       {/* Background gradient accent - abajo izquierda */}
@@ -32,21 +35,20 @@ export default function HeroProject() {
         {/* Label */}
         <div className="flex items-center gap-3 mb-12">
           <span className="px-3 py-1 bg-accent/20 text-accent text-xs font-medium tracking-wider uppercase rounded-full">
-            Proyecto Destacado
+            {t.heroProject.badge}
           </span>
-          <span className="text-muted-foreground text-sm">En producción</span>
+          <span className="text-muted-foreground text-sm">{t.heroProject.status}</span>
         </div>
 
         {/* HEADLINE MASIVO */}
         <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-[0.85] mb-8 max-w-6xl">
-          Sistema de turnos<br />
-          <span className="text-accent">sin llamadas</span>
+          {t.heroProject.headline}<br />
+          <span className="text-accent">{t.heroProject.headlineAccent}</span>
         </h2>
 
         {/* Subheadline propio */}
         <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-          "La secretaria marca el ingreso, la doctora recibe la notificación. 
-          Nada de interrupciones, nada de papel."
+          {t.heroProject.quote}
         </p>
 
         {/* Stats grid */}
@@ -55,39 +57,39 @@ export default function HeroProject() {
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
               71+
             </p>
-            <p className="text-muted-foreground text-sm">Pacientes registrados</p>
+            <p className="text-muted-foreground text-sm">{t.heroProject.statPatients}</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
               50+
             </p>
-            <p className="text-muted-foreground text-sm">Turnos semanales</p>
+            <p className="text-muted-foreground text-sm">{t.heroProject.statWeekly}</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-2">
               0
             </p>
-            <p className="text-muted-foreground text-sm">Doble reserva</p>
+            <p className="text-muted-foreground text-sm">{t.heroProject.statDouble}</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-2">
               3s
             </p>
-            <p className="text-muted-foreground text-sm">Notificación instantánea</p>
+            <p className="text-muted-foreground text-sm">{t.heroProject.statNotification}</p>
           </div>
           <div>
             <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
               PWA
             </p>
-            <p className="text-muted-foreground text-sm">App instalable</p>
+            <p className="text-muted-foreground text-sm">{t.heroProject.statPWA}</p>
           </div>
         </div>
 
         {/* Slideshow Preview */}
         <div className="mb-16">
-          <p className="text-muted-foreground text-sm mb-4">Vistas de la aplicación</p>
+          <p className="text-muted-foreground text-sm mb-4">{t.heroProject.screenshotsTitle}</p>
           <div className="w-full h-80 lg:h-96 bg-muted border border-border rounded-lg overflow-hidden group">
-            <ProjectSlideshow images={turnosImages} alt="Sistema de turnos" />
+            <ProjectSlideshow images={turnosImages} alt={t.heroProject.headline} />
           </div>
         </div>
 
@@ -95,18 +97,18 @@ export default function HeroProject() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
           <div className="bg-muted/50 dark:bg-white/5 border border-border p-6">
             <Bell className="w-8 h-8 text-accent mb-4" />
-            <h3 className="text-lg font-medium mb-2">Notificaciones en tiempo real</h3>
-            <p className="text-muted-foreground text-sm">Telegram + Push nativas. La doctora sabe sin mirar el teléfono.</p>
+            <h3 className="text-lg font-medium mb-2">{t.heroProject.featureNotifications}</h3>
+            <p className="text-muted-foreground text-sm">{t.heroProject.featureNotificationsDesc}</p>
           </div>
           <div className="bg-muted/50 dark:bg-white/5 border border-border p-6">
             <Calendar className="w-8 h-8 text-accent mb-4" />
-            <h3 className="text-lg font-medium mb-2">Agenda sincronizada</h3>
-            <p className="text-muted-foreground text-sm">Secretaría y consultorio siempre actualizados. Sin Excel.</p>
+            <h3 className="text-lg font-medium mb-2">{t.heroProject.featureAgenda}</h3>
+            <p className="text-muted-foreground text-sm">{t.heroProject.featureAgendaDesc}</p>
           </div>
           <div className="bg-muted/50 dark:bg-white/5 border border-border p-6">
             <Users className="w-8 h-8 text-accent mb-4" />
-            <h3 className="text-lg font-medium mb-2">Fichas centralizadas</h3>
-            <p className="text-muted-foreground text-sm">Historial, odontograma, evolución. Todo en un lugar.</p>
+            <h3 className="text-lg font-medium mb-2">{t.heroProject.featureRecords}</h3>
+            <p className="text-muted-foreground text-sm">{t.heroProject.featureRecordsDesc}</p>
           </div>
         </div>
 
@@ -129,7 +131,7 @@ export default function HeroProject() {
           className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 font-medium hover:opacity-90 transition-opacity"
         >
           <Smartphone className="w-5 h-5" />
-          Ver todos los proyectos
+          {t.heroProject.cta}
           <ArrowUpRight className="w-5 h-5" />
         </a>
       </div>

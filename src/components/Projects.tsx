@@ -3,6 +3,7 @@
 import { projects } from "@/data/projects";
 import { ArrowUpRight, Github } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
+import { useLocale } from "./LocaleProvider";
 
 type PreviewSource = 
   | { type: "slideshow"; images: Array<{ src: string; caption: string }> }
@@ -26,14 +27,16 @@ function getPreviewSource(project: typeof projects[0]): PreviewSource {
 }
 
 export default function Projects() {
+  const { t } = useLocale();
+
   return (
     <section id="projects" className="py-20 sm:py-28 px-6 sm:px-12 lg:px-24 bg-background">
       <div className="max-w-5xl mx-auto">
         <p className="text-muted-foreground text-sm tracking-widest uppercase mb-4">
-          Featured Projects
+          {t.projects.title}
         </p>
         <p className="text-muted-foreground text-sm mb-10">
-          Projects built for real clinics and business operations.
+          {t.projects.subtitle}
         </p>
 
         <div className="space-y-0">
@@ -66,12 +69,12 @@ export default function Projects() {
                     </div>
                     
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mb-2">
-                      <span className="font-medium text-foreground">Stack:</span>
+                      <span className="font-medium text-foreground">{t.projects.stack}</span>
                       {project.tools.join(" · ")}
                     </div>
                     
                     <p className="text-sm text-muted-foreground mb-4">
-                      <span className="font-medium text-foreground">Resultados:</span> {project.results}
+                      <span className="font-medium text-foreground">{t.projects.results}</span> {project.results}
                     </p>
                     
                     <div className="flex gap-4">
@@ -82,7 +85,7 @@ export default function Projects() {
                         className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
                       >
                         <Github className="w-4 h-4" />
-                        View Code
+                        {t.projects.viewCode}
                       </a>
                       {project.liveUrl && project.liveUrl !== "#" && (
                         <a
@@ -92,7 +95,7 @@ export default function Projects() {
                           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
                         >
                           <ArrowUpRight className="w-4 h-4" />
-                          Live Demo
+                          {t.projects.liveDemo}
                         </a>
                       )}
                     </div>
@@ -116,7 +119,7 @@ export default function Projects() {
                         <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-2">
                           <ArrowUpRight className="w-6 h-6 text-accent" />
                         </div>
-                        <p className="text-xs text-muted-foreground">Preview unavailable</p>
+                        <p className="text-xs text-muted-foreground">{t.projects.previewUnavailable}</p>
                       </div>
                     )}
                   </div>

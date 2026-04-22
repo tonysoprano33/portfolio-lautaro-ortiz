@@ -1,8 +1,11 @@
 "use client";
 
 import { ArrowDown, Github } from "lucide-react";
+import { useLocale } from "./LocaleProvider";
 
 export default function Hero() {
+  const { t } = useLocale();
+
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-20 relative overflow-hidden">
       {/* LO Illustration - right side */}
@@ -73,18 +76,18 @@ export default function Hero() {
 
         {/* Main headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-medium leading-tight mb-6">
-          I Build Software That Solves{" "}
-          <span className="text-accent">Real Operational Problems</span>
+          {t.hero.headline.split(" ").slice(0, -2).join(" ")}{" "}
+          <span className="text-accent">{t.hero.headline.split(" ").slice(-2).join(" ")}</span>
         </h2>
 
         {/* Subtext */}
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl">
-          Python, Data, Automation & Web Apps focused on real business impact.
+          {t.hero.subheadline}
         </p>
 
         {/* Key phrase */}
         <p className="text-base sm:text-lg font-medium mb-12 border-l-2 border-accent pl-4">
-          I don't just analyze problems — I build the solution.
+          I don&apos;t just analyze problems — I build the solution.
         </p>
 
         {/* CTAs */}
@@ -93,7 +96,7 @@ export default function Hero() {
             href="#projects"
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 font-medium hover:opacity-90 transition-opacity"
           >
-            View Projects
+            {t.hero.ctaProjects}
             <ArrowDown className="w-4 h-4" />
           </a>
           <a
@@ -103,7 +106,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background transition-all"
           >
             <Github className="w-4 h-4" />
-            View GitHub
+            {t.hero.ctaGitHub}
           </a>
         </div>
       </div>
