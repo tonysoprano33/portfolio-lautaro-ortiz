@@ -70,6 +70,18 @@ export const translations = {
       metric4Label: "Patients in active dental system",
       quote: "\"I don't just analyze problems — I build the solution.\"",
     },
+    // Why Me
+    whyMe: {
+      title: "Why Me",
+      headline: "Not another developer who disappears after shipping.",
+      builtToSell: "Built to Sell",
+      builtToSellDesc: "I don't just build demos. I shipped an Excel system to a real clinic that their staff uses daily.",
+      speed: "Speed of Execution",
+      speedDesc: "The report generator went from idea to clinic deployment in 3 weeks. I prototype fast and iterate with real users.",
+      fullStack: "End-to-End",
+      fullStackDesc: "From VBA macros to React frontends to Python backends. One person who can own the whole solution.",
+      trust: "Technologies I've shipped to production:",
+    },
     // Contact
     contact: {
       title: "Contact",
@@ -98,9 +110,9 @@ export const translations = {
         results: "Sold to clinic, used by 3+ staff members daily",
       },
       nexus: {
-        title: "NexusData AI",
-        description: "AI-powered data intelligence platform that transforms raw files into actionable dashboards, business insights, and predictive analytics for enterprise operations.",
-        results: "Processing <12ms latency, 99.9% uptime",
+        title: "NexusData AI (Proof of Concept)",
+        description: "Experimental AI platform exploring LLM-powered data analysis. Converts CSV/Excel into automated insights using Groq LPU for sub-second inference. Built to validate AI integration patterns.",
+        results: "Prototype achieving <100ms inference, exploring production patterns",
       },
     },
   },
@@ -173,6 +185,18 @@ export const translations = {
       metric4Label: "Pacientes en sistema dental activo",
       quote: "\"No solo analizo problemas — construyo la solución.\"",
     },
+    // Why Me
+    whyMe: {
+      title: "Por Qué Yo",
+      headline: "No es otro dev que desaparece después de entregar.",
+      builtToSell: "Hecho Para Vender",
+      builtToSellDesc: "No solo armo demos. Vendí un sistema Excel a una clínica real que usan todos los días.",
+      speed: "Velocidad de Ejecución",
+      speedDesc: "El generador de reportes pasó de idea a clínica en 3 semanas. Prototipo rápido e itero con usuarios reales.",
+      fullStack: "De Punta a Punta",
+      fullStackDesc: "Desde macros VBA hasta frontends React y backends Python. Una persona que puede llevar toda la solución.",
+      trust: "Tecnologías que mandé a producción:",
+    },
     // Contact
     contact: {
       title: "Contacto",
@@ -201,9 +225,9 @@ export const translations = {
         results: "Vendido a clínica, usado por 3+ empleados diariamente",
       },
       nexus: {
-        title: "NexusData AI",
-        description: "Plataforma de inteligencia de datos impulsada por IA que transforma archivos raw en dashboards accionables, insights de negocio y analytics predictivos para operaciones empresariales.",
-        results: "Procesamiento <12ms latencia, 99.9% uptime",
+        title: "NexusData AI (Proof of Concept)",
+        description: "Plataforma experimental de IA explorando análisis de datos con LLMs. Convierte CSV/Excel en insights automatizados usando Groq LPU para inferencia en milisegundos. Construido para validar patrones de integración con IA.",
+        results: "Prototipo con inferencia <100ms, explorando patrones de producción",
       },
     },
   },
