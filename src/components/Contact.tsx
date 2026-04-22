@@ -20,7 +20,7 @@ export default function Contact() {
 
         <div className="flex flex-col items-center gap-4 mb-12">
           <a
-            href="mailto:tu.email@ejemplo.com"
+            href="mailto:johnsopranojr@outlook.com"
             className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
           >
             <Mail className="w-5 h-5" />
@@ -39,10 +39,20 @@ export default function Contact() {
         </div>
 
         <div className="flex justify-center gap-8 pt-10 border-t border-background/20">
-          <a href="#" className="text-background/40 hover:text-background transition-colors">
+          <a 
+            href="https://www.linkedin.com/in/lautaro-ortiz-b79866235/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-background/40 hover:text-background transition-colors"
+          >
             <Linkedin className="w-6 h-6" />
           </a>
-          <a href="#" className="text-background/40 hover:text-background transition-colors">
+          <a 
+            href="https://github.com/tonysoprano33" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-background/40 hover:text-background transition-colors"
+          >
             <Github className="w-6 h-6" />
           </a>
         </div>
