@@ -73,7 +73,7 @@ export const translations = {
     // Why Me
     whyMe: {
       title: "Why Me",
-      headline: "Not another developer who disappears after shipping.",
+      headline: "Pragmatic solutions, not perfect demos.",
       builtToSell: "Built to Sell",
       builtToSellDesc: "I don't just build demos. I shipped an Excel system to a real clinic that their staff uses daily.",
       speed: "Speed of Execution",
@@ -85,9 +85,9 @@ export const translations = {
     // Contact
     contact: {
       title: "Contact",
-      headline: "Looking for someone who can turn messy operations into efficient tools?",
-      subheadline: "I don't just analyze problems — I build the solution.",
-      cta: "Contact Me",
+      headline: "Need someone to automate manual processes?",
+      subheadline: "I build internal tools and automation systems. If it sounds like what you need, send me an email and we'll talk.",
+      cta: "Send Email",
       email: "johnsopranojr@outlook.com",
       copySuccess: "Copied to clipboard!",
       copyHint: "Click to copy",
@@ -188,7 +188,7 @@ export const translations = {
     // Why Me
     whyMe: {
       title: "Por Qué Yo",
-      headline: "No es otro dev que desaparece después de entregar.",
+      headline: "Soluciones pragmáticas, no demos perfectas.",
       builtToSell: "Hecho Para Vender",
       builtToSellDesc: "No solo armo demos. Vendí un sistema Excel a una clínica real que usan todos los días.",
       speed: "Velocidad de Ejecución",
@@ -200,9 +200,9 @@ export const translations = {
     // Contact
     contact: {
       title: "Contacto",
-      headline: "¿Buscás alguien que pueda convertir operaciones caóticas en herramientas eficientes?",
-      subheadline: "No solo analizo problemas — construyo la solución.",
-      cta: "Contactarme",
+      headline: "¿Necesitás alguien que automatice procesos manuales?",
+      subheadline: "Construyo herramientas internas y sistemas de automatización. Si te sirve lo que hago, escribime y vemos si encajo.",
+      cta: "Enviar email",
       email: "johnsopranojr@outlook.com",
       copySuccess: "¡Copiado al portapapeles!",
       copyHint: "Clic para copiar",
