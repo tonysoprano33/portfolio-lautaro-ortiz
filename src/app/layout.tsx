@@ -27,6 +27,28 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getTheme() {
+                  const stored = localStorage.getItem('theme');
+                  if (stored === 'dark' || stored === 'light') return stored;
+                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+                  return 'light';
+                }
+                const theme = getTheme();
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased bg-background text-primary transition-colors duration-300">
         <Providers>
           <LocaleProvider>

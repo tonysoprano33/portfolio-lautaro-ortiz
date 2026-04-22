@@ -30,6 +30,7 @@ export const translations = {
       featureRecords: "Centralized records",
       featureRecordsDesc: "History, odontogram, evolution. Everything in one place.",
       cta: "View all projects",
+      viewCode: "View Code",
     },
     // Projects
     projects: {
@@ -131,6 +132,7 @@ export const translations = {
       featureRecords: "Fichas centralizadas",
       featureRecordsDesc: "Historial, odontograma, evolución. Todo en un lugar.",
       cta: "Ver todos los proyectos",
+      viewCode: "Ver Código",
     },
     // Projects
     projects: {

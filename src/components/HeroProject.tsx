@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Smartphone, Bell, Calendar, Users } from "lucide-react";
+import { ArrowUpRight, Smartphone, Bell, Calendar, Users, Github } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
@@ -125,15 +125,27 @@ export default function HeroProject() {
           <span>PWA</span>
         </div>
 
-        {/* CTA */}
-        <a
-          href="#projects"
-          className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 font-medium hover:opacity-90 transition-opacity"
-        >
-          <Smartphone className="w-5 h-5" />
-          {t.heroProject.cta}
-          <ArrowUpRight className="w-5 h-5" />
-        </a>
+        {/* CTAs */}
+        <div className="flex flex-wrap gap-4">
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 font-medium hover:opacity-90 transition-opacity"
+          >
+            <Smartphone className="w-5 h-5" />
+            {t.heroProject.cta}
+            <ArrowUpRight className="w-5 h-5" />
+          </a>
+          <a
+            href="https://github.com/tonysoprano33/consultorio-dental"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 border-2 border-foreground text-foreground px-8 py-4 font-medium hover:bg-foreground hover:text-background transition-all"
+          >
+            <Github className="w-5 h-5" />
+            {t.heroProject.viewCode}
+            <ArrowUpRight className="w-5 h-5" />
+          </a>
+        </div>
       </div>
     </section>
   );
