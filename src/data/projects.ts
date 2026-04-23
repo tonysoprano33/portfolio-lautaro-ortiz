@@ -14,6 +14,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
+    title: "NexusData AI",
+    description: "AI-powered data intelligence platform that transforms raw files into actionable dashboards, business insights, and predictive analytics for enterprise operations.",
+    tags: ["AI", "Data Pipeline", "Enterprise"],
+    tools: ["React", "TypeScript", "Python", "GROQ LPU"],
+    results: "Processing <12ms latency, 99.9% uptime",
+    githubUrl: "https://github.com/tonysoprano33/nexusdata",
+    liveUrl: "https://nexusdata-gamma.vercel.app/"
+  },
+  {
+    id: "2",
     title: "Spirometry Report Generator",
     description: "Desktop application for generating medical spirometry reports. Uses CustomTkinter for the UI and generates Word documents with patient data. Includes Excel batch loading for processing multiple patients at once.",
     tags: ["Healthcare", "Desktop App", "Document Generation"],
@@ -37,7 +47,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "2",
+    id: "3",
     title: "Clinic Management Excel System",
     description: "Custom Excel solution with VBA automation sold to dental clinic. Manages patient records, appointment tracking, and financial reporting. Used daily by clinic staff.",
     tags: ["Excel", "VBA", "Automation", "Sold Product"],
@@ -46,15 +56,5 @@ export const projects: Project[] = [
     githubUrl: undefined,
     liveUrl: undefined,
     previewImage: "/projects/excel-clinic-demo.png"
-  },
-  {
-    id: "3",
-    title: "NexusData AI",
-    description: "AI-powered data intelligence platform that transforms raw files into actionable dashboards, business insights, and predictive analytics for enterprise operations.",
-    tags: ["AI", "Data Pipeline", "Enterprise"],
-    tools: ["React", "TypeScript", "Python", "GROQ LPU"],
-    results: "Processing <12ms latency, 99.9% uptime",
-    githubUrl: "https://github.com/tonysoprano33/nexusdata",
-    liveUrl: "https://nexusdata-gamma.vercel.app/"
   }
 ];

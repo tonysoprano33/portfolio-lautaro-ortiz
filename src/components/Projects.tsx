@@ -28,9 +28,9 @@ function getPreviewSource(project: typeof projects[0]): PreviewSource {
 
 // Map project ID to translation key
 const projectKeyMap: Record<string, "respiratory" | "excel" | "nexus"> = {
-  "1": "respiratory",
-  "2": "excel", 
-  "3": "nexus",
+  "1": "nexus",
+  "2": "respiratory", 
+  "3": "excel",
 };
 
 export default function Projects() {
