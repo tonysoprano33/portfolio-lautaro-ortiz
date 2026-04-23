@@ -55,6 +55,6 @@ export const projects: Project[] = [
     tools: ["React", "TypeScript", "Python", "GROQ LPU"],
     results: "Processing <12ms latency, 99.9% uptime",
     githubUrl: "https://github.com/tonysoprano33/nexusdata",
-    liveUrl: "https://nexusdata-ai.vercel.app/"
+    liveUrl: "https://nexusdata-gamma.vercel.app/"
   }
 ];

@@ -20,7 +20,7 @@ function getPreviewSource(project: typeof projects[0]): PreviewSource {
   if (project.liveUrl && project.liveUrl !== "#") {
     return { 
       type: "microlink", 
-      src: `https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&embed=screenshot.url` 
+      src: `https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&embed=screenshot.url&wait=5000` 
     };
   }
   return null;
