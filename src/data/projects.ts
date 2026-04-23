@@ -14,10 +14,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Respiratory Report Generator",
-    description: "Automated medical report generation system for respiratory clinics. Processes patient data and generates clinical reports in under 30 seconds, replacing 15+ minute manual workflows.",
-    tags: ["Healthcare", "Automation", "PDF Generation"],
-    tools: ["Python", "FastAPI", "PostgreSQL", "Docker"],
+    title: "Spirometry Report Generator",
+    description: "Desktop application for generating medical spirometry reports. Uses CustomTkinter for the UI and generates Word documents with patient data. Includes Excel batch loading for processing multiple patients at once.",
+    tags: ["Healthcare", "Desktop App", "Document Generation"],
+    tools: ["Python", "CustomTkinter", "python-docx", "pandas", "openpyxl"],
     results: "Reports reduced from 15+ min to <30 seconds",
     githubUrl: "https://github.com/tonysoprano33/espiro-informes",
     liveUrl: undefined,

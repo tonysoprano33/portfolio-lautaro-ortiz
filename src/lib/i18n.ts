@@ -100,8 +100,8 @@ export const translations = {
     // Project details
     projectDetails: {
       respiratory: {
-        title: "Respiratory Report Generator",
-        description: "Automated medical report generation system for respiratory clinics. Processes patient data and generates clinical reports in under 30 seconds, replacing 15+ minute manual workflows.",
+        title: "Spirometry Report Generator",
+        description: "Desktop application for generating medical spirometry reports. Uses CustomTkinter for the UI and generates Word documents with patient data. Includes Excel batch loading for processing multiple patients at once.",
         results: "Reports reduced from 15+ min to <30 seconds",
       },
       excel: {
@@ -215,8 +215,8 @@ export const translations = {
     // Project details
     projectDetails: {
       respiratory: {
-        title: "Generador de Reportes Respiratorios",
-        description: "Sistema automatizado de generación de reportes médicos para clínicas respiratorias. Procesa datos de pacientes y genera reportes clínicos en menos de 30 segundos, reemplazando flujos manuales de 15+ minutos.",
+        title: "Generador de Informes de Espirometría",
+        description: "Aplicación de escritorio para generar informes médicos de espirometría. Usa CustomTkinter para la interfaz y genera documentos Word con datos del paciente. Incluye carga por lotes desde Excel para procesar múltiples pacientes.",
         results: "Reportes reducidos de 15+ min a <30 segundos",
       },
       excel: {
