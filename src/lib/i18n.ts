@@ -105,9 +105,9 @@ export const translations = {
         results: "Reports reduced from 15+ min to <30 seconds",
       },
       excel: {
-        title: "Clinic Management Excel System",
-        description: "Custom Excel solution with VBA automation sold to dental clinic. Manages patient records, appointment tracking, and financial reporting. Used daily by clinic staff.",
-        results: "Sold to clinic, used by 3+ staff members daily",
+        title: "Medical Clinic Management System",
+        description: "Production-ready Excel solution for medical clinic appointment scheduling and financial tracking. Features dual-shift system (morning/afternoon), automated balance calculations, and real-time dashboards. Sold and deployed to clinic with 2 secretaries actively using it daily.",
+        results: "60% reduction in appointment tracking time, 3,000+ annual appointments managed",
       },
       nexus: {
         title: "NexusData AI (Proof of Concept)",
@@ -220,9 +220,9 @@ export const translations = {
         results: "Reportes reducidos de 15+ min a <30 segundos",
       },
       excel: {
-        title: "Sistema Excel para Clínica",
-        description: "Solución Excel personalizada con automatización VBA vendida a clínica dental. Gestiona fichas de pacientes, seguimiento de turnos e informes financieros. Usado diariamente por el personal.",
-        results: "Vendido a clínica, usado por 3+ empleados diariamente",
+        title: "Sistema de Gestión para Clínica Médica",
+        description: "Solución Excel lista para producción para programación de citas médicas y seguimiento financiero. Sistema de doble turno (mañana/tarde), cálculos de balance automáticos y dashboards en tiempo real. Vendido y desplegado en clínica con 2 secretarias usándolo activamente.",
+        results: "60% de reducción en tiempo de seguimiento de citas, 3,000+ citas anuales gestionadas",
       },
       nexus: {
         title: "NexusData AI (Proof of Concept)",

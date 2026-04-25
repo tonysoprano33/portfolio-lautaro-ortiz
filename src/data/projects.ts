@@ -48,13 +48,38 @@ export const projects: Project[] = [
   },
   {
     id: "3",
-    title: "Clinic Management Excel System",
-    description: "Custom Excel solution with VBA automation sold to dental clinic. Manages patient records, appointment tracking, and financial reporting. Used daily by clinic staff.",
-    tags: ["Excel", "VBA", "Automation", "Sold Product"],
-    tools: ["Excel", "VBA Macros", "Power Query", "Data Validation"],
-    results: "Sold to clinic, used by 3+ staff members daily",
-    githubUrl: undefined,
+    title: "Medical Clinic Management System",
+    description: "Production-ready Excel solution for medical clinic appointment scheduling and financial tracking. Features dual-shift system (morning/afternoon), automated balance calculations, and real-time dashboards. Sold and deployed to clinic with 2 secretaries actively using it daily.",
+    tags: ["Excel", "Healthcare", "Financial Tracking", "Sold Product"],
+    tools: ["Excel", "Advanced Formulas", "Conditional Formatting", "Data Validation"],
+    results: "60% reduction in appointment tracking time, 3,000+ annual appointments managed",
+    githubUrl: "https://github.com/tonysoprano33/Excel-Clinica",
     liveUrl: undefined,
-    previewImage: "/projects/excel-clinic-demo.png"
+    previewSlideshow: [
+      {
+        src: "/projects/excel-clinica/01-menu-principal.png",
+        caption: "Main menu: Central navigation hub with emoji-enhanced interface for quick access"
+      },
+      {
+        src: "/projects/excel-clinica/02-vista-mes.png",
+        caption: "Monthly overview: Aggregated daily data with automatic totals and navigation"
+      },
+      {
+        src: "/projects/excel-clinica/03-vista-dia.png",
+        caption: "Daily view: Complete appointment records with date header and navigation"
+      },
+      {
+        src: "/projects/excel-clinica/04-turno-manana.png",
+        caption: "Morning shift: Patient tracking with payments, prices, and automatic totals"
+      },
+      {
+        src: "/projects/excel-clinica/05-turno-tarde.png",
+        caption: "Afternoon shift: Same structure maintaining consistency across the system"
+      },
+      {
+        src: "/projects/excel-clinica/06-estadisticas.png",
+        caption: "Statistics dashboard: Annual performance metrics and clinic overview"
+      }
+    ]
   }
 ];
