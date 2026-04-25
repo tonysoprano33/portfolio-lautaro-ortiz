@@ -20,7 +20,25 @@ export const projects: Project[] = [
     tools: ["React", "TypeScript", "Python", "GROQ LPU"],
     results: "Processing <12ms latency, 99.9% uptime",
     githubUrl: "https://github.com/tonysoprano33/nexusdata",
-    liveUrl: "https://nexusdata-gamma.vercel.app/"
+    liveUrl: "https://nexusdata-gamma.vercel.app/",
+    previewSlideshow: [
+      {
+        src: "/projects/nexus/dashboard.png",
+        caption: "Dashboard: Main interface with data visualization and navigation"
+      },
+      {
+        src: "/projects/nexus/data-upload.png",
+        caption: "Data Upload: Interface for importing CSV and Excel files"
+      },
+      {
+        src: "/projects/nexus/chat-interface.png",
+        caption: "Chat Interface: AI-powered conversational data analysis"
+      },
+      {
+        src: "/projects/nexus/insights.png",
+        caption: "Insights: Automated business insights and analytics dashboard"
+      }
+    ]
   },
   {
     id: "2",

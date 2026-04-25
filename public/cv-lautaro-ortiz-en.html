@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lautaro Ortiz - CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.4;
+      color: #1a1a1a;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 15mm 18mm;
+    }
+    h1 {
+      font-size: 22pt;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #000;
+    }
+    .headline {
+      font-size: 11pt;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .contact {
+      font-size: 9.5pt;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    h2 {
+      font-size: 11pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 14px 0 8px 0;
+      color: #000;
+    }
+    .job {
+      margin-bottom: 10px;
+    }
+    .job-title {
+      font-weight: 600;
+      font-size: 10.5pt;
+    }
+    .job-meta {
+      font-size: 9.5pt;
+      color: #666;
+      margin-bottom: 3px;
+    }
+    .job-desc {
+      font-size: 10pt;
+      color: #333;
+      padding-left: 12px;
+    }
+    .job-desc li {
+      margin-bottom: 2px;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      font-size: 9.5pt;
+    }
+    .skill-category {
+      font-weight: 600;
+    }
+    .project {
+      margin-bottom: 8px;
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 10.5pt;
+    }
+    .project-title a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .project-meta {
+      font-size: 9pt;
+      color: #666;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 18px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    @media print {
+      body { padding: 10mm 15mm; }
+      a { color: #2563eb !important; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Lautaro Ortiz</h1>
+  <div class="headline">Industrial Engineer | Data & Automation Specialist</div>
+  
+  <div class="contact">
+    Buenos Aires, Argentina | 
+    <a href="mailto:johnsopranojr@outlook.com">johnsopranojr@outlook.com</a> | 
+    <a href="https://www.linkedin.com/in/lautaro-ortiz-b79866235/">linkedin.com/in/lautaro-ortiz</a> | 
+    <a href="https://github.com/tonysoprano33">github.com/tonysoprano33</a>
+  </div>
+
+  <h2>Professional Summary</h2>
+  <p style="font-size: 10pt; margin-bottom: 10px;">
+    Industrial Engineer specialized in building internal tools and automation systems for healthcare and business operations. 
+    Proven track record of shipping production-ready solutions: sold and deployed an Excel-based clinic management system 
+    used daily by medical staff. Fast execution from idea to deployment (3 weeks for medical report generator).
+  </p>
+
+  <h2>Experience</h2>
+  
+  <div class="job">
+    <div class="job-title">Automation & Data Systems Developer</div>
+    <div class="job-meta">Freelance | 2025–Present</div>
+    <ul class="job-desc">
+      <li>Built and sold production Excel system for medical clinic appointment scheduling and financial tracking</li>
+      <li>Developed Python desktop app generating medical spirometry reports, reducing documentation time from 15+ min to 30 seconds</li>
+      <li>Created AI-powered data analysis prototype using LLMs for automated business insights from CSV/Excel files</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-title">Data Analyst / Process Optimization</div>
+    <div class="job-meta">Medical Clinic Operations | 2021–2025</div>
+    <ul class="job-desc">
+      <li>Identified workflow inefficiencies in 3,000+ annual appointment tracking process</li>
+      <li>Designed and deployed automated solutions saving 60% time in daily operations</li>
+      <li>Managed end-to-end implementation: problem identification → solution → training → deployment</li>
+    </ul>
+  </div>
+
+  <h2>Featured Projects</h2>
+  
+  <div class="project">
+    <div class="project-title">
+      <a href="https://github.com/tonysoprano33/Excel-Clinica">Medical Clinic Management System</a> — Excel Solution (SOLD)
+    </div>
+    <div class="project-meta">Production system tracking 3,000+ appointments/year with dual-shift scheduling and automated financial reporting</div>
+  </div>
+
+  <div class="project">
+    <div class="project-title">
+      <a href="https://github.com/tonysoprano33/espiro-informes">Spirometry Report Generator</a> — Python Desktop App
+    </div>
+    <div class="project-meta">CustomTkinter + python-docx app generating Word reports with Excel batch processing. Deployed in hospital.</div>
+  </div>
+
+  <div class="project">
+    <div class="project-title">
+      <a href="https://github.com/tonysoprano33/nexusdata">NexusData AI</a> — Full-Stack Prototype
+    </div>
+    <div class="project-meta">React + Python platform exploring LLM-powered data analysis with <100ms inference using Groq LPU</div>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <span><span class="skill-category">Languages:</span> Python, TypeScript, SQL, VBA</span>
+    <span><span class="skill-category">Frontend:</span> React, Next.js, Tailwind CSS, CustomTkinter</span>
+    <span><span class="skill-category">Backend:</span> Python (FastAPI), PostgreSQL, Supabase</span>
+    <span><span class="skill-category">Data:</span> pandas, Excel Advanced, Power Query, python-docx</span>
+    <span><span class="skill-category">Tools:</span> Docker, Git, Vercel, AI Integration (LLMs)</span>
+  </div>
+
+  <h2>Education</h2>
+  <div style="font-size: 10pt;">
+    <strong>Industrial Engineering</strong> — Universidad Tecnológica Nacional (UTN), Argentina<br>
+    <span style="color: #666; font-size: 9.5pt;">Completed</span>
+  </div>
+
+  <h2>Languages</h2>
+  <div style="font-size: 10pt;">
+    Spanish (Native) · English (Professional Working Proficiency)
+  </div>
+
+  <div style="margin-top: 15px; font-size: 8.5pt; color: #888; text-align: center;">
+    Full portfolio: <a href="https://portfolio-lautaro-ortiz.vercel.app">portfolio-lautaro-ortiz.vercel.app</a>
+  </div>
+</body>
+</html>

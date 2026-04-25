@@ -11,9 +11,18 @@ type PreviewSource =
   | { type: "microlink"; src: string }
   | null;
 
-function getPreviewSource(project: typeof projects[0]): PreviewSource {
+function getPreviewSource(project: typeof projects[0], t: any): PreviewSource {
   // Priority: slideshow > local image > microlink screenshot > null
   if (project.previewSlideshow && project.previewSlideshow.length > 0) {
+    // For Nexus, use translated captions
+    if (project.id === "1" && t.projectDetails?.nexus?.slides) {
+      const slides = t.projectDetails.nexus.slides;
+      const translatedImages = project.previewSlideshow.map((img, index) => ({
+        src: img.src,
+        caption: slides[index] || img.caption
+      }));
+      return { type: "slideshow", images: translatedImages };
+    }
     return { type: "slideshow", images: project.previewSlideshow };
   }
   if (project.previewImage) return { type: "local", src: project.previewImage };
@@ -48,7 +57,7 @@ export default function Projects() {
 
         <div className="space-y-0">
           {projects.map((project, index) => {
-            const preview = getPreviewSource(project);
+            const preview = getPreviewSource(project, t);
             const projectKey = projectKeyMap[project.id];
             
             // Get translations safely

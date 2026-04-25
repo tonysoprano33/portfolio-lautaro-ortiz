@@ -113,6 +113,12 @@ export const translations = {
         title: "NexusData AI (Proof of Concept)",
         description: "Experimental AI platform exploring LLM-powered data analysis. Converts CSV/Excel into automated insights using Groq LPU for sub-second inference. Built to validate AI integration patterns.",
         results: "Prototype achieving <100ms inference, exploring production patterns",
+        slides: [
+          "Dashboard: Main interface with data visualization and navigation",
+          "Data Upload: Interface for importing CSV and Excel files",
+          "Chat Interface: AI-powered conversational data analysis",
+          "Insights: Automated business insights and analytics dashboard"
+        ]
       },
     },
   },
@@ -228,6 +234,12 @@ export const translations = {
         title: "NexusData AI (Proof of Concept)",
         description: "Plataforma experimental de IA explorando análisis de datos con LLMs. Convierte CSV/Excel en insights automatizados usando Groq LPU para inferencia en milisegundos. Construido para validar patrones de integración con IA.",
         results: "Prototipo con inferencia <100ms, explorando patrones de producción",
+        slides: [
+          "Dashboard: Interfaz principal con visualización de datos y navegación",
+          "Carga de Datos: Interfaz para importar archivos CSV y Excel",
+          "Chat Interactivo: Análisis de datos conversacional con IA",
+          "Insights: Dashboard de insights y análisis automatizados"
+        ]
       },
     },
   },
