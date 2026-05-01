@@ -2,52 +2,53 @@
 
 import { useLocale } from "./LocaleProvider";
 
-const metrics = [
-  {
-    value: "<30s",
-    labelKey: "metric1Label",
-    contextKey: "metric1Context",
-  },
-  {
-    value: "50+",
-    labelKey: "metric2Label",
-    contextKey: "metric2Context",
-  },
-  {
-    value: "3",
-    labelKey: "metric3Label",
-    contextKey: "metric3Context",
-  },
-  {
-    value: "<12ms",
-    labelKey: "metric4Label",
-    contextKey: "metric4Context",
-  },
-] as const;
-
 export default function Credibility() {
   const { t, locale } = useLocale();
-
-  // Manual mapping since we need to access nested keys
-  const getLabel = (key: string) => {
-    switch (key) {
-      case "metric1Label": return locale === "es" ? "Generación de reportes médicos" : "Medical report generation";
-      case "metric2Label": return locale === "es" ? "Turnos semanales gestionados" : "Weekly appointments managed";
-      case "metric3Label": return locale === "es" ? "Sistemas en producción" : "Live production systems";
-      case "metric4Label": return locale === "es" ? "Tiempo de respuesta API" : "API response time";
-      default: return "";
-    }
-  };
-
-  const getContext = (key: string) => {
-    switch (key) {
-      case "metric1Context": return locale === "es" ? "De 15+ min a <30 seg" : "Down from 15+ minutes";
-      case "metric2Context": return locale === "es" ? "Cero doble reserva" : "Zero double-bookings";
-      case "metric3Context": return locale === "es" ? "Clínicas usándolo diariamente" : "Clinics using daily";
-      case "metric4Context": return locale === "es" ? "Plataforma de analytics enterprise" : "Enterprise analytics platform";
-      default: return "";
-    }
-  };
+  const metrics = locale === "es"
+    ? [
+        {
+          value: "100+",
+          label: "Pacientes registrados",
+          context: "Sistema odontológico en uso diario",
+        },
+        {
+          value: "300+",
+          label: "Informes de espirometría",
+          context: "Generados con mi herramienta",
+        },
+        {
+          value: "3",
+          label: "Usuarios diarios",
+          context: "Doctora + 2 secretarias",
+        },
+        {
+          value: "min",
+          label: "Tiempo de informes",
+          context: "Trabajo reducido de horas a minutos",
+        },
+      ]
+    : [
+        {
+          value: "100+",
+          label: "Registered patients",
+          context: "Dental system used daily",
+        },
+        {
+          value: "300+",
+          label: "Spirometry reports",
+          context: "Generated with my tool",
+        },
+        {
+          value: "3",
+          label: "Daily users",
+          context: "Doctor + 2 secretaries",
+        },
+        {
+          value: "min",
+          label: "Report turnaround",
+          context: "Work reduced from hours to minutes",
+        },
+      ];
 
   return (
     <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-muted/30">
@@ -66,10 +67,10 @@ export default function Credibility() {
                 {metric.value}
               </p>
               <p className="text-foreground text-sm font-medium mb-1">
-                {getLabel(metric.labelKey)}
+                {metric.label}
               </p>
               <p className="text-muted-foreground text-xs">
-                {getContext(metric.contextKey)}
+                {metric.context}
               </p>
             </div>
           ))}

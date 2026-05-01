@@ -16,8 +16,32 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Lautaro Ortiz | Data Analyst Portfolio",
-  description: "Portfolio profesional de Lautaro Ortiz - Data Analyst & Business Intelligence Specialist",
+  metadataBase: new URL("https://lautaro-ortiz-portfolio.vercel.app"),
+  applicationName: "Lautaro Ortiz Portfolio",
+  title: {
+    default: "Lautaro Ortiz | Internal Tools & Data Automation",
+    template: "%s | Lautaro Ortiz",
+  },
+  description: "Portfolio de Lautaro Ortiz: análisis de problemas operativos, herramientas internas, automatización, dashboards y sistemas usados en operaciones reales.",
+  authors: [{ name: "Lautaro Ortiz" }],
+  creator: "Lautaro Ortiz",
+  keywords: [
+    "Lautaro Ortiz",
+    "data analyst",
+    "internal tools",
+    "automation",
+    "Next.js",
+    "Python",
+    "business intelligence",
+    "Argentina",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.svg",
   },

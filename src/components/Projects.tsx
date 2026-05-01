@@ -1,6 +1,9 @@
 "use client";
 
 import { projects } from "@/data/projects";
+import type { Project } from "@/data/projects";
+import type { TranslationBundle } from "@/lib/i18n";
+import type { MouseEvent } from "react";
 import { ArrowUpRight, BookOpen, Github } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
@@ -11,15 +14,23 @@ type PreviewSource =
   | { type: "microlink"; src: string }
   | null;
 
-function getPreviewSource(project: typeof projects[0], t: any): PreviewSource {
+type ProjectKey = "agenda" | "respiratory" | "excel" | "nexus";
+type ProjectDetails = TranslationBundle["projectDetails"][ProjectKey];
+
+function getTranslatedSlides(details: ProjectDetails | null): string[] | undefined {
+  if (details && "slides" in details && Array.isArray(details.slides)) {
+    return details.slides as string[];
+  }
+  return undefined;
+}
+
+function getPreviewSource(project: Project, translatedSlides?: string[]): PreviewSource {
   // Priority: slideshow > local image > microlink screenshot > null
   if (project.previewSlideshow && project.previewSlideshow.length > 0) {
-    // For Nexus, use translated captions
-    if (project.id === "1" && t.projectDetails?.nexus?.slides) {
-      const slides = t.projectDetails.nexus.slides;
+    if (translatedSlides && translatedSlides.length > 0) {
       const translatedImages = project.previewSlideshow.map((img, index) => ({
         src: img.src,
-        caption: slides[index] || img.caption
+        caption: translatedSlides[index] || img.caption
       }));
       return { type: "slideshow", images: translatedImages };
     }
@@ -36,17 +47,29 @@ function getPreviewSource(project: typeof projects[0], t: any): PreviewSource {
 }
 
 // Map project ID to translation key
-const projectKeyMap: Record<string, "respiratory" | "excel" | "nexus"> = {
+const projectKeyMap: Record<string, ProjectKey> = {
   "1": "nexus",
-  "2": "respiratory", 
-  "3": "excel",
+  "2": "agenda",
+  "3": "respiratory",
+  "4": "excel",
 };
 
-export default function Projects() {
+interface ProjectsProps {
+  selectedProjectId: string;
+  onSelectProject: (projectId: string) => void;
+}
+
+export default function Projects({ selectedProjectId, onSelectProject }: ProjectsProps) {
   const { t } = useLocale();
+  const secondaryProjects = projects.filter((project) => project.id !== selectedProjectId);
+
+  const handleProjectClick = (event: MouseEvent<HTMLDivElement>, projectId: string) => {
+    if ((event.target as HTMLElement).closest("a,button")) return;
+    onSelectProject(projectId);
+  };
 
   return (
-    <section id="projects" className="py-20 sm:py-28 px-6 sm:px-12 lg:px-24 bg-background">
+    <section id="projects" className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-background">
       <div className="max-w-5xl mx-auto">
         <p className="text-muted-foreground text-sm tracking-widest uppercase mb-4">
           {t.projects.title}
@@ -56,12 +79,12 @@ export default function Projects() {
         </p>
 
         <div className="space-y-0">
-          {projects.map((project, index) => {
-            const preview = getPreviewSource(project, t);
+          {secondaryProjects.map((project) => {
             const projectKey = projectKeyMap[project.id];
             
             // Get translations safely
-            const details = projectKey ? (t as any).projectDetails?.[projectKey] : null;
+            const details = projectKey ? t.projectDetails[projectKey] : null;
+            const preview = getPreviewSource(project, getTranslatedSlides(details));
             const projectTitle = details?.title || project.title;
             const projectDesc = details?.description || project.description;
             const projectResults = details?.results || project.results;
@@ -69,12 +92,21 @@ export default function Projects() {
             return (
               <div
                 key={project.id}
-                className="group py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24"
+                role="button"
+                tabIndex={0}
+                onClick={(event) => handleProjectClick(event, project.id)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    onSelectProject(project.id);
+                  }
+                }}
+                className="group py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
                   <div className="flex-1">
                     <div className="flex items-baseline gap-4 mb-3">
-                      <span className="text-accent text-sm font-medium">0{index + 1}</span>
+                      <span className="text-accent text-sm font-medium">0{project.id}</span>
                       <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-medium group-hover:text-accent transition-colors">
                         {projectTitle}
                       </h3>
@@ -102,6 +134,14 @@ export default function Projects() {
                     </p>
                     
                     <div className="flex gap-4">
+                      <button
+                        type="button"
+                        onClick={() => onSelectProject(project.id)}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-foreground transition-colors"
+                      >
+                        <ArrowUpRight className="w-4 h-4" />
+                        {t.projects.promote}
+                      </button>
                       {project.githubUrl && (
                         <a
                           href={project.githubUrl}
@@ -142,7 +182,7 @@ export default function Projects() {
                   <div className="w-full lg:w-72 h-44 bg-muted border border-border rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group">
                     {preview ? (
                       preview.type === "slideshow" && preview.images ? (
-                        <ProjectSlideshow images={preview.images} alt={project.title} />
+                        <ProjectSlideshow images={preview.images} alt={project.title} labels={t.projects} />
                       ) : preview.type === "local" || preview.type === "microlink" ? (
                         <img
                           src={preview.src}

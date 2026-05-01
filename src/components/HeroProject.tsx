@@ -1,150 +1,215 @@
 "use client";
 
-import { ArrowUpRight, Smartphone, Bell, Calendar, Users, Github } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, ExternalLink, Github } from "lucide-react";
+import { projects } from "@/data/projects";
+import type { TranslationBundle } from "@/lib/i18n";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
-const turnosImages = [
-  { 
-    src: "/projects/turnos/dashboard-main.png", 
-    caption: "Dashboard: Daily agenda with appointment statistics" 
-  },
-  { 
-    src: "/projects/turnos/patient-list.png", 
-    caption: "Patient list: Appointment management with arrival indicators" 
-  },
-  { 
-    src: "/projects/turnos/patient-form.png", 
-    caption: "Patient form: Complete registration with history and contact data" 
-  },
-  { 
-    src: "/projects/turnos/calendar-weekly.png", 
-    caption: "Calendar: Weekly view with availability and time blocks" 
-  }
-];
+type ProjectKey = "agenda" | "respiratory" | "excel" | "nexus";
 
-export default function HeroProject() {
+const projectKeyMap: Record<string, ProjectKey> = {
+  "1": "nexus",
+  "2": "agenda",
+  "3": "respiratory",
+  "4": "excel",
+};
+
+interface HeroProjectProps {
+  projectId: string;
+  onSelectProject: (projectId: string) => void;
+}
+
+function getTranslatedSlides(
+  project: (typeof projects)[number],
+  details: TranslationBundle["projectDetails"][ProjectKey]
+) {
+  const slides = "slides" in details ? details.slides : undefined;
+
+  return (project.previewSlideshow || []).map((image, index) => ({
+    ...image,
+    caption: slides?.[index] || image.caption,
+  }));
+}
+
+export default function HeroProject({ projectId, onSelectProject }: HeroProjectProps) {
   const { t } = useLocale();
+  const project = projects.find((item) => item.id === projectId) || projects[0];
+  const projectKey = projectKeyMap[project.id] || "nexus";
+  const details = t.projectDetails[projectKey];
+  const spotlight = details.spotlight;
+  const images = getTranslatedSlides(project, details);
+  const primaryHref = project.liveUrl || project.githubUrl;
+  const primaryLabel = project.liveUrl ? spotlight.primaryCta : t.heroProject.viewCode;
+  const showCodeLink = project.githubUrl && project.liveUrl;
+  const selectedIndex = projects.findIndex((item) => item.id === project.id);
+  const previousProject = projects[(selectedIndex - 1 + projects.length) % projects.length];
+  const nextProject = projects[(selectedIndex + 1) % projects.length];
+  const displayTitle = spotlight.displayTitle;
+  const isLongTitle = displayTitle.length > 24;
 
   return (
-    <section id="heroproject" className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      {/* Background gradient accent - abajo izquierda */}
-      <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] bg-accent/10 dark:bg-accent/20 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/3" />
-      
-      <div className="relative z-10 px-6 sm:px-12 lg:px-24 py-20 sm:py-32 max-w-7xl mx-auto">
-        {/* Label */}
-        <div className="flex items-center gap-3 mb-12">
-          <span className="px-3 py-1 bg-accent/20 text-accent text-xs font-medium tracking-wider uppercase rounded-full">
-            {t.heroProject.badge}
-          </span>
-          <span className="text-muted-foreground text-sm">{t.heroProject.status}</span>
-        </div>
+    <section id="heroproject" className="min-h-screen lg:h-screen lg:min-h-[860px] bg-background text-foreground border-y border-border overflow-hidden relative">
+      <div className="min-h-screen lg:h-full px-6 sm:px-10 lg:px-12 xl:px-14 2xl:px-16 pt-10 pb-24 lg:pb-20 max-w-[1840px] mx-auto flex items-center">
+        <div className="w-full lg:h-full flex flex-col justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(560px,1.1fr)_minmax(560px,1fr)] xl:grid-cols-[minmax(640px,1.08fr)_minmax(620px,1fr)] gap-8 lg:gap-10 xl:gap-14 items-center">
+            <div>
+            <div className="flex flex-wrap items-center gap-3 mb-4 lg:mb-5">
+              <span className="px-3 py-1 bg-accent/15 text-accent text-xs font-medium tracking-wider uppercase rounded-full">
+                {t.heroProject.badge}
+              </span>
+              <span className="text-muted-foreground text-sm">{spotlight.status}</span>
+            </div>
 
-        {/* HEADLINE MASIVO */}
-        <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-[0.85] mb-8 max-w-6xl">
-          {t.heroProject.headline}<br />
-          <span className="text-accent">{t.heroProject.headlineAccent}</span>
-        </h2>
-
-        {/* Subheadline propio */}
-        <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-3xl mb-16 leading-relaxed">
-          {t.heroProject.quote}
-        </p>
-
-        {/* Stats grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-16 border-t border-border pt-12">
-          <div>
-            <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
-              71+
+            <p className="text-accent text-sm sm:text-base font-medium mb-3 lg:mb-4">
+              {spotlight.kicker}
             </p>
-            <p className="text-muted-foreground text-sm">{t.heroProject.statPatients}</p>
-          </div>
-          <div>
-            <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
-              50+
-            </p>
-            <p className="text-muted-foreground text-sm">{t.heroProject.statWeekly}</p>
-          </div>
-          <div>
-            <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-2">
-              0
-            </p>
-            <p className="text-muted-foreground text-sm">{t.heroProject.statDouble}</p>
-          </div>
-          <div>
-            <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-2">
-              3s
-            </p>
-            <p className="text-muted-foreground text-sm">{t.heroProject.statNotification}</p>
-          </div>
-          <div>
-            <p className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-accent mb-2">
-              PWA
-            </p>
-            <p className="text-muted-foreground text-sm">{t.heroProject.statPWA}</p>
-          </div>
-        </div>
 
-        {/* Slideshow Preview */}
-        <div className="mb-16">
-          <p className="text-muted-foreground text-sm mb-4">{t.heroProject.screenshotsTitle}</p>
-          <div className="w-full h-80 lg:h-96 bg-muted border border-border rounded-lg overflow-hidden group">
-            <ProjectSlideshow images={turnosImages} alt={t.heroProject.headline} />
-          </div>
-        </div>
+            <h2
+              className={`font-display font-medium leading-[0.95] lg:leading-[0.92] mb-4 lg:mb-6 lg:min-h-[2.05em] max-w-[780px] ${
+                isLongTitle
+                  ? "text-4xl sm:text-5xl xl:text-6xl"
+                  : "text-4xl sm:text-5xl xl:text-7xl"
+              }`}
+            >
+              {displayTitle}
+              <br />
+              <span className="text-accent">{spotlight.headlineAccent}</span>
+            </h2>
 
-        {/* Features visual */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
-          <div className="bg-muted/50 dark:bg-white/5 border border-border p-6">
-            <Bell className="w-8 h-8 text-accent mb-4" />
-            <h3 className="text-lg font-medium mb-2">{t.heroProject.featureNotifications}</h3>
-            <p className="text-muted-foreground text-sm">{t.heroProject.featureNotificationsDesc}</p>
-          </div>
-          <div className="bg-muted/50 dark:bg-white/5 border border-border p-6">
-            <Calendar className="w-8 h-8 text-accent mb-4" />
-            <h3 className="text-lg font-medium mb-2">{t.heroProject.featureAgenda}</h3>
-            <p className="text-muted-foreground text-sm">{t.heroProject.featureAgendaDesc}</p>
-          </div>
-          <div className="bg-muted/50 dark:bg-white/5 border border-border p-6">
-            <Users className="w-8 h-8 text-accent mb-4" />
-            <h3 className="text-lg font-medium mb-2">{t.heroProject.featureRecords}</h3>
-            <p className="text-muted-foreground text-sm">{t.heroProject.featureRecordsDesc}</p>
-          </div>
-        </div>
+            <p className="text-base sm:text-lg xl:text-2xl text-muted-foreground leading-relaxed mb-5 lg:mb-7 max-w-[760px] lg:min-h-[4.2em]">
+              {spotlight.quote}
+            </p>
 
-        {/* Tech stack */}
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground mb-12">
-          <span>Next.js</span>
-          <span className="text-muted-foreground/50">·</span>
-          <span>Supabase</span>
-          <span className="text-muted-foreground/50">·</span>
-          <span>TypeScript</span>
-          <span className="text-muted-foreground/50">·</span>
-          <span>Telegram Bot API</span>
-          <span className="text-muted-foreground/50">·</span>
-          <span>PWA</span>
-        </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-4 mb-5 lg:mb-7 max-w-[760px] lg:min-h-[76px]">
+              {spotlight.stats.slice(0, 4).map((stat) => (
+                <div key={stat.label} className="border-l-2 border-accent pl-4">
+                  <p className="font-display text-3xl sm:text-4xl font-semibold text-accent leading-none mb-2">
+                    {stat.value}
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-snug">{stat.label}</p>
+                </div>
+              ))}
+            </div>
 
-        {/* CTAs */}
-        <div className="flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 font-medium hover:opacity-90 transition-opacity"
-          >
-            <Smartphone className="w-5 h-5" />
-            {t.heroProject.cta}
-            <ArrowUpRight className="w-5 h-5" />
-          </a>
-          <a
-            href="https://github.com/tonysoprano33/consultorio-dental"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 border-2 border-foreground text-foreground px-8 py-4 font-medium hover:bg-foreground hover:text-background transition-all"
-          >
-            <Github className="w-5 h-5" />
-            {t.heroProject.viewCode}
-            <ArrowUpRight className="w-5 h-5" />
-          </a>
+            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-5 lg:mb-7 max-w-[760px] lg:min-h-[116px]">
+              {spotlight.proofPoints.slice(0, 4).map((point) => (
+                <div key={point} className="flex gap-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                  <span>{point}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden sm:flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-6 lg:mb-7 lg:min-h-[22px]">
+              {project.tools.map((item, index) => (
+                <span key={item} className="flex items-center gap-x-4">
+                  <span>{item}</span>
+                  {index < project.tools.length - 1 && <span className="text-muted-foreground/50">·</span>}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-2 lg:mb-0">
+              {primaryHref && (
+                <a
+                  href={primaryHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 font-medium hover:opacity-90 transition-opacity"
+                >
+                  {project.liveUrl ? <ExternalLink className="w-4 h-4" /> : <Github className="w-4 h-4" />}
+                  {primaryLabel}
+                </a>
+              )}
+              {project.caseStudyUrl && (
+                <a
+                  href={project.caseStudyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background transition-all"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  {t.projects.caseStudy}
+                </a>
+              )}
+              {showCodeLink && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-muted-foreground px-1 py-3 font-medium hover:text-accent transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  {t.heroProject.viewCode}
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
+            </div>
+
+            </div>
+
+            <div className="relative lg:justify-self-end w-full">
+              <div className="absolute -inset-4 bg-accent/10 blur-3xl" aria-hidden="true" />
+              <div className="relative">
+                <div className="flex items-center justify-between gap-4 mb-3">
+                  <p className="text-muted-foreground text-sm">{spotlight.screenshotsTitle}</p>
+                  <div className="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="h-2 w-2 rounded-full bg-green-500" />
+                    <span>{spotlight.status}</span>
+                  </div>
+                </div>
+                <div className="w-full lg:w-[min(100%,780px)] xl:w-[min(100%,860px)] h-[34vh] sm:h-[42vh] lg:h-[58vh] min-h-[240px] sm:min-h-[320px] lg:min-h-[460px] max-h-[640px] bg-muted border border-border rounded-lg overflow-hidden shadow-2xl group">
+                  {images.length > 0 ? (
+                    <ProjectSlideshow images={images} alt={details.title} labels={t.projects} />
+                  ) : (
+                    <div className="flex h-full items-center justify-center text-muted-foreground">
+                      {t.projects.previewUnavailable}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute left-1/2 bottom-8 -translate-x-1/2 z-20">
+            <div className="flex items-center gap-5 text-muted-foreground bg-background/80 backdrop-blur-sm px-3 py-2">
+              <button
+                type="button"
+                onClick={() => onSelectProject(previousProject.id)}
+                className="inline-flex h-10 w-10 items-center justify-center border border-border hover:border-accent hover:text-accent transition-colors"
+                aria-label={t.heroProject.previousProject}
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+
+              <div className="flex items-center gap-2" aria-label={t.heroProject.projectProgress}>
+                {projects.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => onSelectProject(item.id)}
+                    className={`h-2.5 rounded-full transition-all ${
+                      item.id === project.id
+                        ? "w-7 bg-accent"
+                        : "w-2.5 bg-border hover:bg-accent/50"
+                    }`}
+                    aria-label={`${t.heroProject.viewProject} ${projectKeyMap[item.id] ? t.projectDetails[projectKeyMap[item.id]].title : item.title}`}
+                    aria-current={item.id === project.id ? "true" : undefined}
+                  />
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => onSelectProject(nextProject.id)}
+                className="inline-flex h-10 w-10 items-center justify-center border border-border hover:border-accent hover:text-accent transition-colors"
+                aria-label={t.heroProject.nextProject}
+              >
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

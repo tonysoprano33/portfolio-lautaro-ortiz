@@ -64,7 +64,7 @@ export default function Contact() {
           </div>
 
           <a
-            href={locale === "es" ? "/cv-lautaro-ortiz-es.pdf" : "/cv-lautaro-ortiz.pdf"}
+            href={locale === "es" ? "/cv-lautaro-ortiz-esp.pdf" : "/cv-lautaro-ortiz.pdf"}
             download
             className="inline-flex items-center gap-3 border-2 border-background/30 text-background px-8 py-3 text-base font-medium hover:border-background hover:bg-background hover:text-foreground transition-all"
           >

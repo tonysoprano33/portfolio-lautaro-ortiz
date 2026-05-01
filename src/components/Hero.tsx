@@ -10,7 +10,16 @@ export default function Hero() {
     <section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-20 relative overflow-hidden">
       {/* LO Illustration - right side */}
       <div className="hidden lg:block absolute top-1/2 right-12 -translate-y-1/2">
-        <svg width="300" height="350" viewBox="0 0 380 440" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80">
+        <svg
+          width="300"
+          height="350"
+          viewBox="0 0 380 440"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="opacity-80"
+          aria-hidden="true"
+          focusable="false"
+        >
           {/* Fondo circular sutil */}
           <circle cx="190" cy="220" r="180" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-10"/>
           <circle cx="190" cy="220" r="150" stroke="currentColor" strokeWidth="1" fill="none" className="text-accent opacity-5"/>

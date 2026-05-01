@@ -20,6 +20,11 @@ build
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+dev-server.*.log
+
+# Local verification artifacts
+*.tsbuildinfo
+review-*.png
 
 # IDE
 .vscode
@@ -33,5 +38,4 @@ Thumbs.db
 
 # Vercel
 .vercel
-
 

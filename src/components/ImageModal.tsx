@@ -2,6 +2,12 @@
 
 import { useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import type { TranslationBundle } from "@/lib/i18n";
+
+type ModalLabels = Pick<
+  TranslationBundle["projects"],
+  "previousImage" | "nextImage" | "zoomImage" | "modalHelp"
+>;
 
 interface ImageModalProps {
   images: Array<{ src: string; caption: string }>;
@@ -10,6 +16,7 @@ interface ImageModalProps {
   onClose: () => void;
   onNext: () => void;
   onPrevious: () => void;
+  labels: ModalLabels;
 }
 
 export default function ImageModal({
@@ -19,6 +26,7 @@ export default function ImageModal({
   onClose,
   onNext,
   onPrevious,
+  labels,
 }: ImageModalProps) {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -46,6 +54,9 @@ export default function ImageModal({
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={currentImage.caption}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
       onClick={onClose}
     >
@@ -74,14 +85,14 @@ export default function ImageModal({
             <button
               onClick={onPrevious}
               className="absolute left-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors"
-              aria-label="Previous image"
+              aria-label={labels.previousImage}
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={onNext}
               className="absolute right-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors"
-              aria-label="Next image"
+              aria-label={labels.nextImage}
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -107,7 +118,7 @@ export default function ImageModal({
           />
           <div className="absolute top-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
             <ZoomIn className="w-3 h-3" />
-            Click to zoom
+            {labels.zoomImage}
           </div>
         </div>
 
@@ -117,7 +128,7 @@ export default function ImageModal({
             {currentImage.caption}
           </p>
           <p className="text-white/60 text-sm">
-            Use arrow keys to navigate, ESC to close, click image to zoom
+            {labels.modalHelp}
           </p>
         </div>
 

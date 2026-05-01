@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     id: "1",
     title: "NexusData AI",
-    description: "Portfolio demo that turns messy CSV, Excel, or JSON files into cleaned data, quality checks, executive summaries, charts, business recommendations, and downloadable reports.",
+    description: "AI-assisted data workflow that turns messy CSV, Excel, or JSON files into cleaned data, quality checks, executive summaries, charts, business recommendations, dataset chat, and downloadable reports.",
     tags: ["AI", "Data Analysis", "Automation"],
     tools: ["Next.js", "TypeScript", "FastAPI", "Python", "Pandas"],
     results: "One-click demo: upload, clean, analyze, explain, and export",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
       },
       {
         src: "/projects/nexus/chat-interface.png",
-        caption: "Dataset Q&A: ask business questions about the analyzed file"
+        caption: "Dataset chat: ask business questions about the analyzed file"
       },
       {
         src: "/projects/nexus/insights.png",
@@ -44,11 +44,39 @@ export const projects: Project[] = [
   },
   {
     id: "2",
+    title: "Dental Appointment & Patient System",
+    description: "Production PWA used daily by one doctor and two secretaries. It replaced paper notes and manual scheduling with patient profiles, payments, insurance coverage, odontograms, workday calendar configuration, occupied-day tracking, and constant feedback from real users.",
+    tags: ["Healthcare", "PWA", "Operations", "Production"],
+    tools: ["Next.js", "Supabase", "TypeScript", "Telegram Bot API", "PWA"],
+    results: "100+ registered patients, daily use by doctor and 2 secretaries, paper workflow replaced by instant updates",
+    githubUrl: "https://github.com/tonysoprano33/consultorio-dental",
+    liveUrl: undefined,
+    previewSlideshow: [
+      {
+        src: "/projects/turnos/dashboard-main.png",
+        caption: "Dashboard: daily agenda, appointment stats, and operational overview"
+      },
+      {
+        src: "/projects/turnos/patient-list.png",
+        caption: "Patient list: search, appointment state, arrival indicators, and records"
+      },
+      {
+        src: "/projects/turnos/patient-form.png",
+        caption: "Patient profile: personal data, history, coverage, payments, and clinical notes"
+      },
+      {
+        src: "/projects/turnos/calendar-weekly.png",
+        caption: "Calendar: workdays, availability, occupied slots, and scheduling"
+      }
+    ]
+  },
+  {
+    id: "3",
     title: "Spirometry Report Generator",
-    description: "Desktop application for generating medical spirometry reports. Uses CustomTkinter for the UI and generates Word documents with patient data. Includes Excel batch loading for processing multiple patients at once.",
+    description: "Desktop application I use in my own work to generate medical spirometry reports. It loads patient data, validates fields, and creates Word documents in minutes instead of hours.",
     tags: ["Healthcare", "Desktop App", "Document Generation"],
     tools: ["Python", "CustomTkinter", "python-docx", "pandas", "openpyxl"],
-    results: "Reports reduced from 15+ min to <30 seconds",
+    results: "300+ reports generated, reducing work from hours to minutes",
     githubUrl: "https://github.com/tonysoprano33/espiro-informes",
     liveUrl: undefined,
     previewSlideshow: [
@@ -67,7 +95,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "3",
+    id: "4",
     title: "Medical Clinic Management System",
     description: "Production-ready Excel solution for medical clinic appointment scheduling and financial tracking. Features dual-shift system (morning/afternoon), automated balance calculations, and real-time dashboards. Sold and deployed to clinic with 2 secretaries actively using it daily.",
     tags: ["Excel", "Healthcare", "Financial Tracking", "Sold Product"],
