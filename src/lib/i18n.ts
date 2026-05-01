@@ -41,6 +41,7 @@ export const translations = {
       results: "Results:",
       viewCode: "View Code",
       liveDemo: "Live Demo",
+      caseStudy: "Case Study",
       previewUnavailable: "Preview unavailable",
     },
     // HowIWork
@@ -110,14 +111,14 @@ export const translations = {
         results: "60% reduction in appointment tracking time, 3,000+ annual appointments managed",
       },
       nexus: {
-        title: "NexusData AI (Proof of Concept)",
-        description: "Experimental AI platform exploring LLM-powered data analysis. Converts CSV/Excel into automated insights using Groq LPU for sub-second inference. Built to validate AI integration patterns.",
-        results: "Prototype achieving <100ms inference, exploring production patterns",
+        title: "NexusData AI",
+        description: "Portfolio demo that turns messy CSV, Excel, or JSON files into cleaned data, quality checks, executive summaries, charts, business recommendations, and downloadable reports.",
+        results: "One-click demo: upload, clean, analyze, explain, and export",
         slides: [
-          "Dashboard: Main interface with data visualization and navigation",
-          "Data Upload: Interface for importing CSV and Excel files",
-          "Chat Interface: AI-powered conversational data analysis",
-          "Insights: Automated business insights and analytics dashboard"
+          "Dashboard: executive overview, quality score, charts, and recommendations",
+          "Data Upload: import CSV, Excel, or JSON, or run the prepared demo dataset",
+          "Dataset Q&A: ask business questions about the analyzed file",
+          "Insights: cleaning log, raw vs cleaned comparison, and analyst notes"
         ]
       },
     },
@@ -162,6 +163,7 @@ export const translations = {
       results: "Resultados:",
       viewCode: "Ver Código",
       liveDemo: "Demo en Vivo",
+      caseStudy: "Caso de Estudio",
       previewUnavailable: "Vista previa no disponible",
     },
     // HowIWork
@@ -231,14 +233,14 @@ export const translations = {
         results: "60% de reducción en tiempo de seguimiento de citas, 3,000+ citas anuales gestionadas",
       },
       nexus: {
-        title: "NexusData AI (Proof of Concept)",
-        description: "Plataforma experimental de IA explorando análisis de datos con LLMs. Convierte CSV/Excel en insights automatizados usando Groq LPU para inferencia en milisegundos. Construido para validar patrones de integración con IA.",
-        results: "Prototipo con inferencia <100ms, explorando patrones de producción",
+        title: "NexusData AI",
+        description: "Demo de portfolio que convierte archivos CSV, Excel o JSON desordenados en datos limpios, controles de calidad, resumen ejecutivo, graficos, recomendaciones de negocio y reportes descargables.",
+        results: "Demo en un clic: subir, limpiar, analizar, explicar y exportar",
         slides: [
-          "Dashboard: Interfaz principal con visualización de datos y navegación",
-          "Carga de Datos: Interfaz para importar archivos CSV y Excel",
-          "Chat Interactivo: Análisis de datos conversacional con IA",
-          "Insights: Dashboard de insights y análisis automatizados"
+          "Dashboard: resumen ejecutivo, score de calidad, graficos y recomendaciones",
+          "Carga de datos: importar CSV, Excel o JSON, o correr el dataset demo",
+          "Preguntas al dataset: consultas de negocio sobre el archivo analizado",
+          "Insights: log de limpieza, raw vs cleaned y notas de analista"
         ]
       },
     },

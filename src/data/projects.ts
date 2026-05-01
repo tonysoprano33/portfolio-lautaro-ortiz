@@ -7,6 +7,7 @@ export interface Project {
   results: string;
   githubUrl?: string;
   liveUrl?: string;
+  caseStudyUrl?: string;
   previewImage?: string;
   previewSlideshow?: Array<{ src: string; caption: string }>;
 }
@@ -15,28 +16,29 @@ export const projects: Project[] = [
   {
     id: "1",
     title: "NexusData AI",
-    description: "AI-powered data intelligence platform that transforms raw files into actionable dashboards, business insights, and predictive analytics for enterprise operations.",
-    tags: ["AI", "Data Pipeline", "Enterprise"],
-    tools: ["React", "TypeScript", "Python", "GROQ LPU"],
-    results: "Processing <12ms latency, 99.9% uptime",
+    description: "Portfolio demo that turns messy CSV, Excel, or JSON files into cleaned data, quality checks, executive summaries, charts, business recommendations, and downloadable reports.",
+    tags: ["AI", "Data Analysis", "Automation"],
+    tools: ["Next.js", "TypeScript", "FastAPI", "Python", "Pandas"],
+    results: "One-click demo: upload, clean, analyze, explain, and export",
     githubUrl: "https://github.com/tonysoprano33/nexusdata",
-    liveUrl: "https://nexusdata-gamma.vercel.app/",
+    liveUrl: "https://nexusdata-ai-dashboard.vercel.app/",
+    caseStudyUrl: "https://nexusdata-ai-dashboard.vercel.app/case-study",
     previewSlideshow: [
       {
         src: "/projects/nexus/dashboard.png",
-        caption: "Dashboard: Main interface with data visualization and navigation"
+        caption: "Dashboard: executive overview, quality score, charts, and recommendations"
       },
       {
         src: "/projects/nexus/data-upload.png",
-        caption: "Data Upload: Interface for importing CSV and Excel files"
+        caption: "Data Upload: import CSV, Excel, or JSON, or run the prepared demo dataset"
       },
       {
         src: "/projects/nexus/chat-interface.png",
-        caption: "Chat Interface: AI-powered conversational data analysis"
+        caption: "Dataset Q&A: ask business questions about the analyzed file"
       },
       {
         src: "/projects/nexus/insights.png",
-        caption: "Insights: Automated business insights and analytics dashboard"
+        caption: "Insights: cleaning log, raw vs cleaned comparison, and analyst notes"
       }
     ]
   },

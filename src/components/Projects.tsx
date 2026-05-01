@@ -1,7 +1,7 @@
 "use client";
 
 import { projects } from "@/data/projects";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, BookOpen, Github } from "lucide-react";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
@@ -43,7 +43,7 @@ const projectKeyMap: Record<string, "respiratory" | "excel" | "nexus"> = {
 };
 
 export default function Projects() {
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
 
   return (
     <section id="projects" className="py-20 sm:py-28 px-6 sm:px-12 lg:px-24 bg-background">
@@ -122,6 +122,17 @@ export default function Projects() {
                         >
                           <ArrowUpRight className="w-4 h-4" />
                           {t.projects.liveDemo}
+                        </a>
+                      )}
+                      {project.caseStudyUrl && (
+                        <a
+                          href={project.caseStudyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          <BookOpen className="w-4 h-4" />
+                          {t.projects.caseStudy}
                         </a>
                       )}
                     </div>
