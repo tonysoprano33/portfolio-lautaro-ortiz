@@ -5,7 +5,6 @@ import type { Project } from "@/data/projects";
 import type { TranslationBundle } from "@/lib/i18n";
 import type { MouseEvent } from "react";
 import { ArrowUpRight, BookOpen, Github } from "lucide-react";
-import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
 type PreviewSource = 
@@ -54,13 +53,29 @@ const projectKeyMap: Record<string, ProjectKey> = {
   "4": "excel",
 };
 
+const tagLabels: Record<string, Record<string, string>> = {
+  es: {
+    AI: "IA",
+    "Data Analysis": "Análisis de datos",
+    Automation: "Automatización",
+    Healthcare: "Salud",
+    Operations: "Operaciones",
+    Production: "Producción",
+    "Desktop App": "App de escritorio",
+    "Document Generation": "Generación de documentos",
+    "Financial Tracking": "Finanzas",
+    "Sold Product": "Producto vendido",
+  },
+  en: {},
+};
+
 interface ProjectsProps {
   selectedProjectId: string;
   onSelectProject: (projectId: string) => void;
 }
 
 export default function Projects({ selectedProjectId, onSelectProject }: ProjectsProps) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const secondaryProjects = projects.filter((project) => project.id !== selectedProjectId);
 
   const handleProjectClick = (event: MouseEvent<HTMLDivElement>, projectId: string) => {
@@ -69,14 +84,21 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
   };
 
   return (
-    <section id="projects" className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 bg-background">
+    <section id="projects" className="py-12 sm:py-24 px-6 sm:px-12 lg:px-24 bg-background">
       <div className="max-w-5xl mx-auto">
-        <p className="text-muted-foreground text-sm tracking-widest uppercase mb-4">
-          {t.projects.title}
-        </p>
-        <p className="text-muted-foreground text-sm mb-10">
-          {t.projects.subtitle}
-        </p>
+        <div className="mb-10 sm:mb-12">
+          <p className="text-accent text-sm font-medium tracking-widest uppercase mb-3">
+            {t.projects.title}
+          </p>
+          <div className="max-w-2xl">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight mb-3">
+              {t.projects.heading}
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              {t.projects.subtitle}
+            </p>
+          </div>
+        </div>
 
         <div className="space-y-0">
           {secondaryProjects.map((project) => {
@@ -101,7 +123,7 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                     onSelectProject(project.id);
                   }
                 }}
-                className="group py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="group py-10 sm:py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
                   <div className="flex-1">
@@ -112,28 +134,28 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                       </h3>
                     </div>
                     
-                    <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mb-4">
+                    <p className="hidden sm:block text-muted-foreground text-base leading-relaxed max-w-2xl mb-4">
                       {projectDesc}
                     </p>
                     
-                    <div className="flex flex-wrap gap-2 mb-3">
+                    <div className="hidden sm:flex flex-wrap gap-2 mb-3">
                       {project.tags.map((tag) => (
                         <span key={tag} className="px-2 py-1 bg-accent/10 text-accent text-xs rounded">
-                          {tag}
+                          {tagLabels[locale]?.[tag] || tag}
                         </span>
                       ))}
                     </div>
                     
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mb-2">
+                    <div className="hidden sm:flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mb-2">
                       <span className="font-medium text-foreground">{t.projects.stack}</span>
-                      {project.tools.join(" · ")}
+                      {project.tools.join(", ")}
                     </div>
                     
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-muted-foreground mb-4 max-w-2xl">
                       <span className="font-medium text-foreground">{t.projects.results}</span> {projectResults}
                     </p>
                     
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap gap-x-4 gap-y-2">
                       <button
                         type="button"
                         onClick={() => onSelectProject(project.id)}
@@ -147,7 +169,7 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                          className="hidden sm:inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
                         >
                           <Github className="w-4 h-4" />
                           {t.projects.viewCode}
@@ -158,7 +180,7 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                          className="hidden sm:inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
                         >
                           <ArrowUpRight className="w-4 h-4" />
                           {t.projects.liveDemo}
@@ -167,8 +189,8 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                       {project.caseStudyUrl && (
                         <a
                           href={project.caseStudyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target={project.caseStudyUrl.startsWith("/") ? undefined : "_blank"}
+                          rel={project.caseStudyUrl.startsWith("/") ? undefined : "noopener noreferrer"}
                           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
                         >
                           <BookOpen className="w-4 h-4" />
@@ -179,16 +201,23 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                   </div>
                   
                   {/* Project Preview */}
-                  <div className="w-full lg:w-72 h-44 bg-muted border border-border rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden group">
+                  <div className="hidden sm:flex w-full lg:w-72 h-44 bg-muted border border-border rounded-lg items-center justify-center flex-shrink-0 overflow-hidden group">
                     {preview ? (
                       preview.type === "slideshow" && preview.images ? (
-                        <ProjectSlideshow images={preview.images} alt={project.title} labels={t.projects} />
+                        <img
+                          src={preview.images[0].src}
+                          alt={`${projectTitle} preview`}
+                          className="w-full h-full object-cover object-left-top"
+                          loading="eager"
+                          decoding="async"
+                        />
                       ) : preview.type === "local" || preview.type === "microlink" ? (
                         <img
                           src={preview.src}
                           alt={`${project.title} preview`}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
+                          className="w-full h-full object-cover object-left-top"
+                          loading="eager"
+                          decoding="async"
                         />
                       ) : null
                     ) : (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import type { TranslationBundle } from "@/lib/i18n";
 
@@ -28,6 +28,8 @@ export default function ImageModal({
   onPrevious,
   labels,
 }: ImageModalProps) {
+  const [isZoomed, setIsZoomed] = useState(false);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -47,6 +49,10 @@ export default function ImageModal({
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, handleKeyDown]);
+
+  useEffect(() => {
+    setIsZoomed(false);
+  }, [currentIndex, isOpen]);
 
   if (!isOpen || images.length === 0) return null;
 
@@ -104,17 +110,10 @@ export default function ImageModal({
           <img
             src={currentImage.src}
             alt={currentImage.caption}
-            className="max-h-[70vh] max-w-full object-contain rounded-lg shadow-2xl cursor-zoom-in hover:scale-105 transition-transform duration-300"
-            onClick={(e) => {
-              const img = e.currentTarget;
-              if (img.classList.contains("scale-150")) {
-                img.classList.remove("scale-150", "cursor-zoom-out");
-                img.classList.add("cursor-zoom-in");
-              } else {
-                img.classList.add("scale-150", "cursor-zoom-out");
-                img.classList.remove("cursor-zoom-in");
-              }
-            }}
+            className={`max-h-[70vh] max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-300 ${
+              isZoomed ? "scale-150 cursor-zoom-out" : "cursor-zoom-in"
+            }`}
+            onClick={() => setIsZoomed((value) => !value)}
           />
           <div className="absolute top-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
             <ZoomIn className="w-3 h-3" />

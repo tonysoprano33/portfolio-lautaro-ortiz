@@ -1,23 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { Mail, Linkedin, Github, FileDown, ArrowRight, Check, Copy } from "lucide-react";
+import { Mail, Linkedin, Github, FileDown, ArrowRight } from "lucide-react";
 import { useLocale } from "./LocaleProvider";
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
   const { t, locale } = useLocale();
   const email = t.contact.email;
-
-  const handleEmailClick = async (e: React.MouseEvent) => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.log("Clipboard write failed, relying on mailto:");
-    }
-  };
 
   return (
     <section id="contact" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-foreground text-background">
@@ -38,29 +26,13 @@ export default function Contact() {
           <div className="flex flex-col items-center gap-2">
             <a
               href={`mailto:${email}`}
-              onClick={handleEmailClick}
               className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="w-5 h-5" />
               {t.contact.cta}
               <ArrowRight className="w-5 h-5" />
             </a>
-            <button
-              onClick={handleEmailClick}
-              className="inline-flex items-center gap-2 text-background/60 hover:text-background text-sm transition-colors"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-green-400" />
-                  <span>{t.contact.copySuccess}</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4" />
-                  <span>{email} — {t.contact.copyHint}</span>
-                </>
-              )}
-            </button>
+            <p className="text-background/50 text-sm">{email}</p>
           </div>
 
           <a

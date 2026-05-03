@@ -46,14 +46,13 @@ export default function HeroProject({ projectId, onSelectProject }: HeroProjectP
   const previousProject = projects[(selectedIndex - 1 + projects.length) % projects.length];
   const nextProject = projects[(selectedIndex + 1) % projects.length];
   const displayTitle = spotlight.displayTitle;
-  const isLongTitle = displayTitle.length > 24;
 
   return (
-    <section id="heroproject" className="min-h-screen lg:h-screen lg:min-h-[860px] bg-background text-foreground border-y border-border overflow-hidden relative">
+    <section id="heroproject" className="min-h-screen lg:h-screen lg:min-h-[860px] bg-background text-foreground border-b border-border overflow-hidden relative [overflow-anchor:none]">
       <div className="min-h-screen lg:h-full px-6 sm:px-10 lg:px-12 xl:px-14 2xl:px-16 pt-10 pb-24 lg:pb-20 max-w-[1840px] mx-auto flex items-center">
         <div className="w-full lg:h-full flex flex-col justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(560px,1.1fr)_minmax(560px,1fr)] xl:grid-cols-[minmax(640px,1.08fr)_minmax(620px,1fr)] gap-8 lg:gap-10 xl:gap-14 items-center">
-            <div>
+            <div className="lg:min-h-[690px] lg:flex lg:flex-col lg:justify-center">
             <div className="flex flex-wrap items-center gap-3 mb-4 lg:mb-5">
               <span className="px-3 py-1 bg-accent/15 text-accent text-xs font-medium tracking-wider uppercase rounded-full">
                 {t.heroProject.badge}
@@ -61,27 +60,23 @@ export default function HeroProject({ projectId, onSelectProject }: HeroProjectP
               <span className="text-muted-foreground text-sm">{spotlight.status}</span>
             </div>
 
-            <p className="text-accent text-sm sm:text-base font-medium mb-3 lg:mb-4">
+            <p className="text-accent text-sm sm:text-base font-medium mb-3 lg:mb-4 lg:h-6">
               {spotlight.kicker}
             </p>
 
             <h2
-              className={`font-display font-medium leading-[0.95] lg:leading-[0.92] mb-4 lg:mb-6 lg:min-h-[2.05em] max-w-[780px] ${
-                isLongTitle
-                  ? "text-4xl sm:text-5xl xl:text-6xl"
-                  : "text-4xl sm:text-5xl xl:text-7xl"
-              }`}
+              className="font-display font-medium leading-[0.95] lg:leading-[0.92] mb-4 lg:mb-6 lg:h-[128px] xl:h-[154px] max-w-[780px] text-4xl sm:text-5xl xl:text-6xl"
             >
               {displayTitle}
               <br />
               <span className="text-accent">{spotlight.headlineAccent}</span>
             </h2>
 
-            <p className="text-base sm:text-lg xl:text-2xl text-muted-foreground leading-relaxed mb-5 lg:mb-7 max-w-[760px] lg:min-h-[4.2em]">
+            <p className="text-base sm:text-lg xl:text-xl text-muted-foreground leading-relaxed mb-5 lg:mb-7 max-w-[760px] lg:h-[112px] overflow-hidden">
               {spotlight.quote}
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-4 mb-5 lg:mb-7 max-w-[760px] lg:min-h-[76px]">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-4 mb-5 lg:mb-7 max-w-[760px] lg:h-[82px]">
               {spotlight.stats.slice(0, 4).map((stat) => (
                 <div key={stat.label} className="border-l-2 border-accent pl-4">
                   <p className="font-display text-3xl sm:text-4xl font-semibold text-accent leading-none mb-2">
@@ -92,7 +87,7 @@ export default function HeroProject({ projectId, onSelectProject }: HeroProjectP
               ))}
             </div>
 
-            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-5 lg:mb-7 max-w-[760px] lg:min-h-[116px]">
+            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-5 lg:mb-7 max-w-[760px] lg:h-[118px] overflow-hidden">
               {spotlight.proofPoints.slice(0, 4).map((point) => (
                 <div key={point} className="flex gap-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
@@ -101,16 +96,16 @@ export default function HeroProject({ projectId, onSelectProject }: HeroProjectP
               ))}
             </div>
 
-            <div className="hidden sm:flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-6 lg:mb-7 lg:min-h-[22px]">
+            <div className="hidden sm:flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-6 lg:mb-7 lg:h-[24px] overflow-hidden">
               {project.tools.map((item, index) => (
                 <span key={item} className="flex items-center gap-x-4">
                   <span>{item}</span>
-                  {index < project.tools.length - 1 && <span className="text-muted-foreground/50">·</span>}
+                  {index < project.tools.length - 1 && <span className="text-muted-foreground/50">/</span>}
                 </span>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3 mb-2 lg:mb-0">
+            <div className="flex flex-wrap gap-3 mb-2 lg:mb-0 lg:h-[54px]">
               {primaryHref && (
                 <a
                   href={primaryHref}
@@ -125,8 +120,8 @@ export default function HeroProject({ projectId, onSelectProject }: HeroProjectP
               {project.caseStudyUrl && (
                 <a
                   href={project.caseStudyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={project.caseStudyUrl.startsWith("/") ? undefined : "_blank"}
+                  rel={project.caseStudyUrl.startsWith("/") ? undefined : "noopener noreferrer"}
                   className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-6 py-3 font-medium hover:bg-foreground hover:text-background transition-all"
                 >
                   <BookOpen className="w-4 h-4" />

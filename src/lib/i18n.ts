@@ -4,10 +4,10 @@ export const translations = {
   en: {
     // Hero
     hero: {
-      role: "Python Developer & Data Analyst Student",
-      headline: "From chaos to operations that run themselves.",
-      subheadline: "I analyze operational problems, then build the tools, automations, and data workflows that solve them.",
-      tagline: "I like both sides of the work: understanding the problem and shipping the system that fixes it.",
+      role: "Python Developer, Data Analysis, Automation",
+      headline: "Practical software for operational work.",
+      subheadline: "I observe real workflows, find where time gets lost, and build internal tools, automations, and data systems that make daily work clearer.",
+      tagline: "I focus on useful systems: tools that replace manual steps, organize information, and keep working after the demo.",
       ctaProjects: "View Projects",
       ctaGitHub: "View GitHub",
     },
@@ -54,14 +54,15 @@ export const translations = {
     },
     // Projects
     projects: {
-      title: "More Projects",
-      subtitle: "Additional projects with real users, measurable impact, and operational context.",
+      title: "Project Overview",
+      heading: "Quick scan of the portfolio.",
+      subtitle: "Compare the projects and open any of them in the large view.",
       stack: "Stack:",
       results: "Results:",
       viewCode: "View Code",
       liveDemo: "Live Demo",
       caseStudy: "Case Study",
-      promote: "View as spotlight",
+      promote: "View larger",
       previewUnavailable: "Preview unavailable",
       expandImage: "Expand image",
       previousImage: "Previous image",
@@ -81,29 +82,30 @@ export const translations = {
     },
     // ProfileWork
     profileWork: {
-      eyebrow: "Profile & Workflow",
-      title: "I analyze the workflow, then build the tool.",
-      intro: "I'm Lautaro Ortiz, a Python-focused developer and aspiring Data Analyst based in Argentina. I have experience solving real operational problems by observing how people work, identifying friction, and building software that makes daily tasks clearer and faster.",
-      pillars: [
+      eyebrow: "About Me",
+      title: "My way of building solutions",
+      intro: "I don't start with technology. First I observe how the person works, detect where time gets lost, and then build a useful, simple, and measurable tool.",
+      stepsTitle: "How I work",
+      steps: [
         {
-          title: "Understand",
-          description: "I observe the task, listen to the user, ask questions, and find where time, information, or coordination gets lost.",
+          title: "Observe",
+          description: "I understand the real workflow and detect friction.",
         },
         {
           title: "Build",
-          description: "I turn the problem into a practical tool: automation, dashboards, internal apps, reports, or data workflows.",
+          description: "I create a practical tool to solve it.",
         },
         {
           title: "Measure",
-          description: "I care about usefulness: less manual work, cleaner information, faster reports, and tools people actually use.",
+          description: "I look for less time, fewer errors, and more order.",
         },
       ],
-      stackTitle: "Tools I use to solve these problems",
-      stack: ["Python", "Pandas", "SQL", "Excel", "Next.js", "TypeScript", "Supabase", "Automation", "Applied AI", "Internal Tools"],
+      stackTitle: "Stack / tools",
+      stack: ["Python", "Pandas", "SQL", "Excel", "Next.js", "TypeScript", "Supabase", "Automation", "Applied AI"],
       metrics: [
-        { value: "100+", label: "patients in active system" },
+        { value: "100+", label: "patients managed" },
         { value: "300+", label: "reports generated" },
-        { value: "3", label: "real systems shipped" },
+        { value: "3", label: "real systems in use" },
       ],
     },
     // HowIWork
@@ -164,7 +166,7 @@ export const translations = {
     projectDetails: {
       agenda: {
         title: "Dental Appointment & Patient System",
-        description: "Production PWA used daily by one doctor and two secretaries. It replaced paper notes and manual scheduling with patient profiles, payments, insurance coverage, odontograms, workday calendar configuration, occupied-day tracking, and constant feedback from real users.",
+        description: "Production PWA for one doctor and two secretaries. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
         results: "100+ registered patients, daily use by doctor and 2 secretaries, paper workflow replaced by instant updates",
         spotlight: {
           status: "In production",
@@ -188,15 +190,18 @@ export const translations = {
           primaryCta: "View project",
         },
         slides: [
-          "Dashboard: daily agenda, appointment stats, and operational overview",
-          "Patient list: search, appointment state, arrival indicators, and records",
-          "Patient profile: personal data, history, coverage, payments, and clinical notes",
-          "Calendar: workdays, availability, occupied slots, and scheduling",
+          "Control panel: appointment metrics, patient activity, and monthly operations",
+          "Calendar: monthly schedule, workdays, and occupied days",
+          "Patient list: searchable records, coverage, profile access, and clinical history",
+          "Patient profile: visits, payments, odontogram, images, and clinical context",
+          "Clinical history: structured medical fields ready to print or save",
+          "Alerts: push, email, and Telegram configuration for arrival notifications",
+          "Odontogram: dental state stored inside the patient profile",
         ],
       },
       respiratory: {
         title: "Spirometry Report Generator",
-        description: "Desktop application I use in my own work to generate medical spirometry reports. It loads patient data, validates fields, and creates Word documents in minutes instead of hours.",
+        description: "Desktop app I use at work to generate spirometry reports from patient data and create Word documents in minutes.",
         results: "300+ reports generated, reducing work from hours to minutes",
         spotlight: {
           status: "Used in my work",
@@ -222,14 +227,14 @@ export const translations = {
       },
       excel: {
         title: "Medical Clinic Management System",
-        description: "Production-ready Excel solution for medical clinic appointment scheduling and financial tracking. Features dual-shift system (morning/afternoon), automated balance calculations, and real-time dashboards. Sold and deployed to clinic with 2 secretaries actively using it daily.",
+        description: "Production Excel system for clinic appointments and finance, with morning/afternoon shifts, automatic balances, and monthly visibility.",
         results: "60% reduction in appointment tracking time, 3,000+ annual appointments managed",
         spotlight: {
           status: "Sold product",
           kicker: "Excel system for clinic operations",
           displayTitle: "Clinic Excel system",
           headlineAccent: "appointments and finance",
-          quote: "A practical Excel-based system sold and deployed to a clinic. It manages appointment tracking, payments, shifts, balances, and operational dashboards in one file.",
+          quote: "A practical Excel system sold and deployed to a clinic. It organizes appointments, payments, morning and afternoon shifts, balances, and operational dashboards in one file.",
           stats: [
             { value: "60%", label: "Less tracking time" },
             { value: "3k+", label: "Annual appointments" },
@@ -248,14 +253,14 @@ export const translations = {
       },
       nexus: {
         title: "NexusData AI",
-        description: "AI-assisted data workflow that turns messy CSV, Excel, or JSON files into cleaned data, quality checks, executive summaries, charts, business recommendations, dataset chat, and downloadable reports.",
+        description: "AI-assisted workflow for cleaning CSV, Excel, or JSON files, checking data quality, exploring insights, and exporting reports.",
         results: "One-click demo: upload, clean, analyze, explain, and export",
         spotlight: {
           status: "Live Demo",
           kicker: "AI data cleaner + insight engine",
           displayTitle: "NexusData AI",
           headlineAccent: "from data to decisions",
-          quote: "A full workflow for messy business datasets: upload a file, clean common issues, generate quality checks, surface insights, and export an executive report.",
+          quote: "A full workflow for messy business datasets: upload a file, clean common issues, review quality checks, explore insights, and export a report.",
           stats: [
             { value: "3", label: "File formats" },
             { value: "Score", label: "Quality checks" },
@@ -283,10 +288,10 @@ export const translations = {
   es: {
     // Hero
     hero: {
-      role: "Desarrollador Python y estudiante de analisis de datos",
-      headline: "Del caos a operaciones que se manejan solas.",
-      subheadline: "Analizo problemas operativos y después construyo las herramientas, automatizaciones y flujos de datos que los resuelven.",
-      tagline: "Me gustan las dos partes del trabajo: entender el problema y crear el sistema que lo arregla.",
+      role: "Desarrollador Python, Análisis de datos, Automatización",
+      headline: "Software práctico para trabajo operativo.",
+      subheadline: "Observo flujos reales, detecto dónde se pierde tiempo y construyo herramientas internas, automatizaciones y sistemas de datos que ordenan el trabajo diario.",
+      tagline: "Me enfoco en sistemas útiles: herramientas que reemplazan pasos manuales, organizan información y siguen funcionando después de la demo.",
       ctaProjects: "Ver Proyectos",
       ctaGitHub: "Ver GitHub",
     },
@@ -333,14 +338,15 @@ export const translations = {
     },
     // Projects
     projects: {
-      title: "Más proyectos",
-      subtitle: "Otros trabajos con usuarios reales, impacto medible y contexto operativo.",
+      title: "Resumen de proyectos",
+      heading: "Vista rápida del portfolio.",
+      subtitle: "Compará los proyectos y abrí cualquiera en grande.",
       stack: "Stack:",
       results: "Resultados:",
       viewCode: "Ver Código",
       liveDemo: "Demo en Vivo",
       caseStudy: "Caso de Estudio",
-      promote: "Ver como destacado",
+      promote: "Ver en grande",
       previewUnavailable: "Vista previa no disponible",
       expandImage: "Ampliar imagen",
       previousImage: "Imagen anterior",
@@ -360,29 +366,30 @@ export const translations = {
     },
     // ProfileWork
     profileWork: {
-      eyebrow: "Perfil & forma de trabajo",
-      title: "Analizo el flujo y después construyo la herramienta.",
-      intro: "Soy Lautaro Ortiz, desarrollador enfocado en Python y estudiante orientado al análisis de datos en Argentina. Tengo experiencia resolviendo problemas operativos reales: observo cómo trabajan las personas, detecto fricciones y construyo software para hacer sus tareas más claras y rápidas.",
-      pillars: [
+      eyebrow: "Sobre mí",
+      title: "Mi forma de construir soluciones",
+      intro: "No empiezo por la tecnología. Primero observo cómo trabaja la persona, detecto dónde pierde tiempo y después construyo una herramienta útil, simple y medible.",
+      stepsTitle: "Cómo trabajo",
+      steps: [
         {
-          title: "Entender",
-          description: "Observo la tarea, escucho al usuario, hago preguntas y detecto dónde se pierde tiempo, información o coordinación.",
+          title: "Observar",
+          description: "Entiendo el flujo real y detecto fricciones.",
         },
         {
           title: "Construir",
-          description: "Convierto el problema en una herramienta práctica: automatizaciones, dashboards, apps internas, reportes o flujos de datos.",
+          description: "Creo una herramienta práctica para resolverlo.",
         },
         {
           title: "Medir",
-          description: "Me importa que sea útil: menos trabajo manual, información más ordenada, reportes más rápidos y herramientas que se usen.",
+          description: "Busco menos tiempo, menos errores y más orden.",
         },
       ],
-      stackTitle: "Herramientas que uso para resolver estos problemas",
-      stack: ["Python", "Pandas", "SQL", "Excel", "Next.js", "TypeScript", "Supabase", "Automatización", "IA aplicada", "Herramientas internas"],
+      stackTitle: "Stack / herramientas",
+      stack: ["Python", "Pandas", "SQL", "Excel", "Next.js", "TypeScript", "Supabase", "Automatización", "IA aplicada"],
       metrics: [
-        { value: "100+", label: "pacientes en sistema activo" },
+        { value: "100+", label: "pacientes gestionados" },
         { value: "300+", label: "informes generados" },
-        { value: "3", label: "sistemas reales creados" },
+        { value: "3", label: "sistemas reales en uso" },
       ],
     },
     // HowIWork
@@ -443,7 +450,7 @@ export const translations = {
     projectDetails: {
       agenda: {
         title: "Sistema de agenda odontológica",
-        description: "PWA en producción usada diariamente por una doctora y dos secretarias. Reemplazó el uso de papel y anotaciones manuales por perfiles de pacientes, pagos, mutual, odontograma, configuración de días laborales, días ocupados, agenda y feedback constante de usuarios reales.",
+        description: "PWA en producción para una doctora y dos secretarias. Digitaliza turnos, perfiles, pagos, mutual, odontograma y alertas de llegada.",
         results: "100+ pacientes registrados, uso diario por la doctora y 2 secretarias, flujo en papel reemplazado por actualizaciones instantáneas",
         spotlight: {
           status: "En producción",
@@ -467,15 +474,18 @@ export const translations = {
           primaryCta: "Ver proyecto",
         },
         slides: [
-          "Dashboard: agenda diaria, estadísticas de turnos y vista operativa",
-          "Lista de pacientes: búsqueda, estado del turno, llegada y fichas",
-          "Perfil de paciente: datos, historial, mutual, pagos y notas clínicas",
-          "Calendario: días laborales, disponibilidad, horarios ocupados y agenda",
+          "Panel de control: métricas de turnos, actividad de pacientes y operación mensual",
+          "Calendario: agenda mensual, días laborales y días ocupados",
+          "Lista de pacientes: búsqueda, mutual, perfil e historia clínica",
+          "Perfil del paciente: visitas, pagos, odontograma, imágenes y contexto clínico",
+          "Historia clínica: campos médicos estructurados para guardar o imprimir",
+          "Alertas: configuración push, email y Telegram para avisos de llegada",
+          "Odontograma: estado dental guardado dentro del perfil del paciente",
         ],
       },
       respiratory: {
         title: "Generador de Informes de Espirometría",
-        description: "Aplicación de escritorio que uso en mi propio trabajo para generar informes médicos de espirometría. Carga datos del paciente, valida campos y crea documentos Word en minutos en vez de horas.",
+        description: "App de escritorio que uso en mi trabajo para generar informes de espirometría desde datos del paciente y crear documentos Word en minutos.",
         results: "300+ informes generados, reduciendo trabajo de horas a minutos",
         spotlight: {
           status: "Usada en mi trabajo",
@@ -501,14 +511,14 @@ export const translations = {
       },
       excel: {
         title: "Sistema de Gestión para Clínica Médica",
-        description: "Solución Excel lista para producción para programación de citas médicas y seguimiento financiero. Sistema de doble turno (mañana/tarde), cálculos de balance automáticos y dashboards en tiempo real. Vendido y desplegado en clínica con 2 secretarias usándolo activamente.",
+        description: "Sistema Excel en producción para turnos y finanzas de clínica, con mañana/tarde, balances automáticos y visibilidad mensual.",
         results: "60% de reducción en tiempo de seguimiento de citas, 3,000+ citas anuales gestionadas",
         spotlight: {
           status: "Producto vendido",
           kicker: "Sistema Excel para operación clínica",
           displayTitle: "Sistema Excel clínico",
           headlineAccent: "turnos y finanzas",
-          quote: "Una solución práctica en Excel vendida e implementada en una clínica. Gestiona turnos, pagos, turnos mañana/tarde, balances y dashboards operativos en un archivo.",
+          quote: "Una solución práctica en Excel vendida e implementada en una clínica. Organiza turnos, pagos, mañana y tarde, balances y dashboards operativos en un archivo.",
           stats: [
             { value: "60%", label: "Menos tiempo de seguimiento" },
             { value: "3k+", label: "Turnos anuales" },
@@ -527,14 +537,14 @@ export const translations = {
       },
       nexus: {
         title: "NexusData AI",
-        description: "Workflow de datos asistido por IA que convierte archivos CSV, Excel o JSON desordenados en datos limpios, controles de calidad, resumen ejecutivo, gráficos, recomendaciones, preguntas al dataset y reportes descargables.",
+        description: "Workflow con IA para limpiar CSV, Excel o JSON, revisar calidad de datos, explorar insights y exportar reportes.",
         results: "Demo en un clic: subir, limpiar, analizar, explicar y exportar",
         spotlight: {
           status: "Demo en vivo",
           kicker: "Data cleaner con IA + motor de insights",
           displayTitle: "NexusData AI",
           headlineAccent: "de datos a decisiones",
-          quote: "Un flujo completo para datasets de negocio desordenados: subís el archivo, limpia problemas comunes, genera controles de calidad, encuentra insights y exporta un reporte ejecutivo.",
+          quote: "Un flujo completo para datasets de negocio desordenados: subís el archivo, limpia problemas comunes, revisa controles de calidad, explora insights y exporta un reporte.",
           stats: [
             { value: "3", label: "Formatos de archivo" },
             { value: "Score", label: "Control de calidad" },

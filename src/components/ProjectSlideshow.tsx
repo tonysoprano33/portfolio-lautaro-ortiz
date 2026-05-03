@@ -73,14 +73,16 @@ export default function ProjectSlideshow({ images, alt, labels }: ProjectSlidesh
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-35 dark:opacity-45"
-              loading="lazy"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             <div className="absolute inset-0 bg-background/45 dark:bg-background/55" />
             <img
               src={img.src}
               alt={img.caption}
               className="relative z-10 w-full h-full object-contain"
-              loading="lazy"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
           </div>
         ))}
