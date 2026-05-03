@@ -5,194 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lautaro Ortiz - CV</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.4;
-      color: #1a1a1a;
-      max-width: 210mm;
+      width: 210mm;
+      min-height: 297mm;
       margin: 0 auto;
-      padding: 15mm 18mm;
+      padding: 10.5mm 15mm;
+      color: #111;
+      background: #fff;
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.33;
     }
     h1 {
-      font-size: 22pt;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: #000;
+      font-size: 20pt;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 5px;
     }
-    .headline {
-      font-size: 11pt;
-      color: #444;
-      margin-bottom: 10px;
+    .role {
+      font-size: 10.5pt;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 7px;
     }
     .contact {
-      font-size: 9.5pt;
       color: #555;
-      margin-bottom: 15px;
+      font-size: 8.9pt;
+      margin-bottom: 11px;
     }
-    .contact a {
-      color: #2563eb;
-      text-decoration: none;
-    }
+    .contact div { margin-top: 2px; }
+    a { color: #2563eb; text-decoration: none; }
     h2 {
-      font-size: 11pt;
-      font-weight: 600;
+      border-top: 1px solid #d8d8d8;
+      color: #111;
+      font-size: 9.4pt;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      margin-top: 9px;
+      padding-top: 7px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 3px;
-      margin: 14px 0 8px 0;
-      color: #000;
     }
-    .job {
-      margin-bottom: 10px;
+    .summary {
+      margin-top: 7px;
+      color: #222;
     }
-    .job-title {
-      font-weight: 600;
-      font-size: 10.5pt;
-    }
-    .job-meta {
-      font-size: 9.5pt;
-      color: #666;
-      margin-bottom: 3px;
-    }
-    .job-desc {
-      font-size: 10pt;
-      color: #333;
-      padding-left: 12px;
-    }
-    .job-desc li {
-      margin-bottom: 2px;
-    }
-    .project {
-      margin-bottom: 8px;
-    }
-    .project-title {
-      font-weight: 600;
-      font-size: 10.5pt;
-    }
-    .project-title a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    .project-meta {
-      font-size: 9pt;
-      color: #666;
-    }
-    .skills-grid {
+    .item { margin-top: 7px; }
+    .item-head {
       display: flex;
-      flex-wrap: wrap;
-      gap: 4px 12px;
-      font-size: 9.5pt;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 700;
+      color: #111;
     }
-    .skill-category {
-      font-weight: 600;
+    .meta {
+      color: #666;
+      font-size: 8.8pt;
+      margin-top: 1px;
     }
     ul {
-      list-style: disc;
-      padding-left: 18px;
+      margin-top: 5px;
+      padding-left: 17px;
     }
+    li { margin-bottom: 2px; }
+    .project-title {
+      font-weight: 700;
+      color: #111;
+    }
+    .project-stack {
+      color: #555;
+      font-size: 8.8pt;
+    }
+    .skills p, .education p, .languages p {
+      margin-top: 6px;
+    }
+    .label { font-weight: 700; }
+    @page { size: A4; margin: 0; }
     @media print {
-      body { padding: 10mm 15mm; }
-      a { color: #2563eb !important; }
+      body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
     }
   </style>
 </head>
 <body>
-  <h1>Lautaro Ortiz</h1>
-  <div class="headline">Data & Automation Specialist | Project Builder</div>
-  
-  <div class="contact">
-    San Luis, Argentina | 
-    <a href="mailto:johnsopranojr@outlook.com">johnsopranojr@outlook.com</a> | 
-    <a href="https://www.linkedin.com/in/lautaro-ortiz-b79866235/">linkedin.com/in/lautaro-ortiz</a> | 
-    <a href="https://github.com/tonysoprano33">github.com/tonysoprano33</a>
-  </div>
-
-  <h2>Professional Summary</h2>
-  <p style="font-size: 10pt; margin-bottom: 10px;">
-    Self-taught Data & Automation Specialist building internal tools and systems for healthcare and business operations. 
-    Proven track record of shipping production-ready solutions: sold and deployed an Excel-based clinic management system 
-    used daily by medical staff. Dental appointment system with 80+ registered patients and growing. Fast execution from 
-    idea to deployment (3 weeks for medical report generator). Continuous learning through online courses and hands-on 
-    project development.
-  </p>
-
-  <h2>Experience</h2>
-  
-  <div class="job">
-    <div class="job-title">Automation & Data Systems Developer</div>
-    <div class="job-meta">Freelance | 2025–Present</div>
-    <ul class="job-desc">
-      <li>Built and sold production Excel system for medical clinic appointment scheduling and financial tracking</li>
-      <li>Developed Python desktop app generating medical spirometry reports, reducing documentation time from 15+ min to 30 seconds</li>
-      <li>Created AI-powered data analysis prototype using LLMs for automated business insights from CSV/Excel files</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-title">Data Analyst / Process Optimization</div>
-    <div class="job-meta">Medical Clinic Operations | 2025–Present</div>
-    <ul class="job-desc">
-      <li>Identified workflow inefficiencies in 3,000+ annual appointment tracking process</li>
-      <li>Designed and deployed automated solutions saving 60% time in daily operations</li>
-      <li>Managed end-to-end implementation: identification → solution → training → deployment</li>
-    </ul>
-  </div>
-
-  <h2>Featured Projects</h2>
-  
-  <div class="project">
-    <div class="project-title">
-      <a href="https://github.com/tonysoprano33/consultorio-dental">Dental Office Management System</a> — Web App (+ 80 REGISTERED PATIENTS)
+  <header>
+    <h1>Lautaro Ortiz</h1>
+    <div class="role">Internal Tools Developer | Python, Data & Automation</div>
+    <div class="contact">
+      <div>Argentina | <a href="mailto:johnsopranojr@outlook.com">johnsopranojr@outlook.com</a></div>
+      <div>
+        <a href="https://www.linkedin.com/in/lautaro-ortiz-b79866235/">linkedin.com/in/lautaro-ortiz</a> |
+        <a href="https://github.com/tonysoprano33">github.com/tonysoprano33</a> |
+        <a href="https://lautaro-ortiz-portfolio.vercel.app/">lautaro-ortiz-portfolio.vercel.app</a>
+      </div>
     </div>
-    <div class="project-meta">PWA with real-time notifications, appointment scheduling, patient records, and multi-device sync. Used daily by dentist and secretary.</div>
-  </div>
+  </header>
 
-  <div class="project">
-    <div class="project-title">
-      <a href="https://github.com/tonysoprano33/Excel-Clinica">Medical Clinic Management System</a> — Excel Solution (SOLD)
+  <section>
+    <h2>Professional Profile</h2>
+    <p class="summary">
+      Developer focused on building internal tools, automation, and data systems for real operational workflows.
+      I observe manual processes, identify bottlenecks, and turn them into practical solutions used after delivery.
+      Built tools for clinics and small businesses, including a dental management PWA with 100+ patients, a Python app
+      with 300+ generated spirometry reports, and an Excel system implemented for clinic operations.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="item">
+      <div class="item-head">
+        <span>Software & Automation Developer</span>
+        <span>2025 - Present</span>
+      </div>
+      <div class="meta">Freelance projects, operational automation, and real clinic systems</div>
+      <ul>
+        <li>Observed paper-based and spreadsheet-heavy clinic workflows, collected user feedback, identified bottlenecks, and translated them into deployable internal tools.</li>
+        <li>Built a private PWA for appointment and patient management, used daily by one dentist and two secretaries, with 100+ registered patients, appointments, profiles, payments, insurance data, odontogram, and arrival alerts.</li>
+        <li>Developed a Python desktop app for spirometry reports, generating 300+ reports and reducing repetitive document creation from hours of manual work to minutes.</li>
+        <li>Delivered and implemented an Excel-based clinic system for appointments and finance, tracking 3,000+ annual appointments with automatic balances and monthly summaries.</li>
+      </ul>
     </div>
-    <div class="project-meta">Production system tracking 3,000+ appointments/year with dual-shift scheduling and automated financial reporting</div>
-  </div>
+  </section>
 
-  <div class="project">
-    <div class="project-title">
-      <a href="https://github.com/tonysoprano33/espiro-informes">Spirometry Report Generator</a> — Python Desktop App (HOURS OF TIME OPTIMIZED)
+  <section>
+    <h2>Selected Projects</h2>
+
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/consultorio-dental">Dental Appointment & Patient System</a></div>
+      <div class="project-stack">Next.js, TypeScript, Supabase, PWA, Telegram Bot API</div>
+      <p>Production system used daily by one dentist and two secretaries. Manages 100+ patients, appointments, payments, insurance, odontogram, calendar control, and notifications.</p>
     </div>
-    <div class="project-meta">CustomTkinter + python-docx for generating Word reports with Excel batch processing. Deployed in hospital.</div>
-  </div>
 
-  <div class="project">
-    <div class="project-title">
-      <a href="https://github.com/tonysoprano33/nexusdata">NexusData AI</a> — Full-Stack Prototype
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/espiro-informes">Spirometry Report Generator</a></div>
+      <div class="project-stack">Python, CustomTkinter, python-docx, pandas, openpyxl</div>
+      <p>Desktop app used at work to generate Word-based spirometry reports. 300+ reports generated, reducing repetitive reporting from hours to minutes.</p>
     </div>
-    <div class="project-meta">React + Python platform exploring AI-powered data analysis, allowing to clean complete datasets without repetitive formulas</div>
-  </div>
 
-  <h2>Technical Skills</h2>
-  <div class="skills-grid">
-    <span><span class="skill-category">Languages:</span> Python, TypeScript, SQL, VBA</span>
-    <span><span class="skill-category">Frontend:</span> React, Next.js, Tailwind CSS, CustomTkinter</span>
-    <span><span class="skill-category">Backend:</span> Python (FastAPI), PostgreSQL, Supabase</span>
-    <span><span class="skill-category">Data:</span> pandas, Excel Advanced, Power Query, python-docx</span>
-    <span><span class="skill-category">Tools:</span> Docker, Git, Vercel, AI Integration (LLMs)</span>
-  </div>
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/Excel-Clinica">Medical Clinic Management System</a></div>
+      <div class="project-stack">Excel, advanced formulas, conditional formatting, data validation</div>
+      <p>Sold production workbook for clinic appointments and finance, tracking shifts, payments, expenses, monthly summaries, and 3,000+ annual appointments.</p>
+    </div>
 
-  <h2>Education</h2>
-  <div style="font-size: 10pt;">
-    <strong>Continuous Self-Learning</strong> — Online Courses & Hands-on Projects<br>
-    <span style="color: #666; font-size: 9.5pt;">Self-taught developer through practical application and specialized online courses</span>
-  </div>
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/nexusdata">NexusData AI</a></div>
+      <div class="project-stack">Next.js, TypeScript, FastAPI, Python, Pandas</div>
+      <p>Full-stack platform for cleaning CSV, Excel, and JSON files, checking data quality, querying datasets, exploring insights, and exporting reports with AI assistance.</p>
+    </div>
+  </section>
 
-  <h2>Languages</h2>
-  <div style="font-size: 10pt;">
-    Spanish (Native) · English (Intermediate)
-  </div>
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <p><span class="label">Languages:</span> Python, TypeScript, SQL</p>
+    <p><span class="label">Data & automation:</span> Pandas, Excel advanced formulas, Power Query, data cleaning, report generation, openpyxl, python-docx</p>
+    <p><span class="label">Web & backend:</span> Next.js, React, Tailwind CSS, FastAPI, Supabase, PostgreSQL, PWA</p>
+    <p><span class="label">Tools:</span> Git, Vercel, Docker, LLMs applied to development and data analysis</p>
+  </section>
 
-  <div style="margin-top: 15px; font-size: 8.5pt; color: #888; text-align: center;">
-    Portfolio: <a href="https://portfolio-lautaro-ortiz.vercel.app">portfolio-lautaro-ortiz.vercel.app</a>
-  </div>
+  <section class="education">
+    <h2>Education</h2>
+    <p><span class="label">Continuous Technical Training - Python, Data, Automation & Web Development</span> | Practical training through online courses, technical documentation, and real projects for clinics and clients.</p>
+  </section>
+
+  <section class="languages">
+    <h2>Languages</h2>
+    <p>Spanish: Native | English: Intermediate - technical reading, documentation, and written communication</p>
+  </section>
 </body>
 </html>

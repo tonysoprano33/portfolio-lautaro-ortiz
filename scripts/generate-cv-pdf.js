@@ -23,8 +23,8 @@ async function generatePDF(inputFile, outputFile) {
 
 (async () => {
   try {
-    await generatePDF('cv-lautaro-ortiz-en.html', 'cv-lautaro-ortiz.pdf');
-    await generatePDF('cv-lautaro-ortiz-es.html', 'cv-lautaro-ortiz-es.pdf');
+    await generatePDF('cv-lautaro-ortiz.html', 'cv-lautaro-ortiz.pdf');
+    await generatePDF('cv-lautaro-ortiz-es.html', 'cv-lautaro-ortiz-esp.pdf');
     console.log('✓ Both CVs generated successfully');
   } catch (err) {
     console.error('Error:', err.message);
