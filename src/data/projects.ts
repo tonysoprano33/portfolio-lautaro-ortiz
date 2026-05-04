@@ -45,10 +45,10 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "Dental Appointment & Patient System",
-    description: "Production PWA for one doctor and two secretaries. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
+    description: "Production PWA for a private dental clinic. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
     tags: ["Healthcare", "PWA", "Operations", "Production"],
     tools: ["Next.js", "Supabase", "TypeScript", "Telegram Bot API", "PWA"],
-    results: "100+ registered patients, daily use by doctor and 2 secretaries, paper workflow replaced by instant updates",
+    results: "100+ registered patients, daily use by doctor and 2 secretaries, anonymized evidence and reference available upon request",
     githubUrl: "https://github.com/tonysoprano33/consultorio-dental",
     liveUrl: undefined,
     caseStudyUrl: "/case-studies/agenda",

@@ -31,9 +31,11 @@ const copy = {
       { value: "Paper", label: "workflow replaced" },
     ],
     overview: [
+      { label: "Client", value: "Private dental clinic in Argentina" },
       { label: "Role", value: "Product analysis, UX, frontend, backend, database and deployment" },
       { label: "Users", value: "1 dentist and 2 secretaries" },
       { label: "Status", value: "Private production system" },
+      { label: "Evidence", value: "Anonymized screenshots, 100+ registered patients and reference available upon request" },
       { label: "Stack", value: "Next.js, TypeScript, Supabase, PWA, Telegram Bot API" },
     ],
     problemTitle: "The problem",
@@ -110,7 +112,7 @@ const copy = {
     ],
     impactTitle: "Impact",
     impact:
-      "The system is used as part of the clinic's real daily workflow. It moved patient and appointment management from paper notes into a shared digital tool, with more than 100 registered patients and constant feedback from the dentist and secretaries.",
+      "The system is used as part of a private clinic's real daily workflow. It moved patient and appointment management from paper notes into a shared digital tool, with more than 100 registered patients, anonymized product evidence and constant feedback from the dentist and secretaries.",
     learningTitle: "Why this project matters",
     learning:
       "This is the project that best shows how I like to work: observe a real operational problem, talk with the people who live with it, build the solution, and keep improving it until it becomes useful in practice.",
@@ -139,9 +141,11 @@ const copy = {
       { value: "Papel", label: "flujo reemplazado" },
     ],
     overview: [
+      { label: "Cliente", value: "Consultorio odontológico privado, Argentina" },
       { label: "Rol", value: "Análisis del problema, UX, frontend, backend, base de datos y deploy" },
       { label: "Usuarios", value: "1 odontóloga y 2 secretarias" },
       { label: "Estado", value: "Sistema privado en producción" },
+      { label: "Evidencia", value: "Capturas anonimizadas, 100+ pacientes registrados y referencia disponible bajo solicitud" },
       { label: "Stack", value: "Next.js, TypeScript, Supabase, PWA, Telegram Bot API" },
     ],
     problemTitle: "El problema",
@@ -218,7 +222,7 @@ const copy = {
     ],
     impactTitle: "Impacto",
     impact:
-      "El sistema forma parte del flujo diario real de la clínica. Pasó la gestión de pacientes y turnos desde papel a una herramienta digital compartida, con más de 100 pacientes registrados y feedback constante de la doctora y sus secretarias.",
+      "El sistema forma parte del flujo diario real de un consultorio privado. Pasó la gestión de pacientes y turnos desde papel a una herramienta digital compartida, con más de 100 pacientes registrados, evidencia visual anonimizada y feedback constante de la doctora y sus secretarias.",
     learningTitle: "Por qué este proyecto importa",
     learning:
       "Es el proyecto que mejor muestra cómo me gusta trabajar: observar un problema operativo real, conversar con quienes lo viven, construir la solución y seguir mejorándola hasta que sea útil en la práctica.",

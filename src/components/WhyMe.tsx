@@ -20,7 +20,7 @@ export default function WhyMe() {
     {
       icon: Code,
       title: t.whyMe?.fullStack || "End-to-End",
-      description: t.whyMe?.fullStackDesc || "From VBA macros to React frontends to Python backends. One person who can own the whole solution.",
+      description: t.whyMe?.fullStackDesc || "From Excel systems to React frontends and Python backends. One person who can own the whole solution.",
     },
   ];
 
@@ -66,7 +66,7 @@ export default function WhyMe() {
             <span>·</span>
             <span>Supabase</span>
             <span>·</span>
-            <span>VBA / Excel</span>
+            <span>Excel systems</span>
             <span>·</span>
             <span>Docker</span>
             <span>·</span>

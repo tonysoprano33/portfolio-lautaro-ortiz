@@ -144,7 +144,7 @@ export const translations = {
       speed: "Speed of Execution",
       speedDesc: "The report generator went from idea to clinic deployment in 3 weeks. I prototype fast and iterate with real users.",
       fullStack: "End-to-End",
-      fullStackDesc: "From VBA macros to React frontends to Python backends. One person who can own the whole solution.",
+      fullStackDesc: "From Excel systems to React frontends and Python backends. One person who can own the whole solution.",
       trust: "Technologies I've shipped to production:",
     },
     // Contact
@@ -166,8 +166,8 @@ export const translations = {
     projectDetails: {
       agenda: {
         title: "Dental Appointment & Patient System",
-        description: "Production PWA for one doctor and two secretaries. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
-        results: "100+ registered patients, daily use by doctor and 2 secretaries, paper workflow replaced by instant updates",
+        description: "Production PWA for a private dental clinic. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
+        results: "100+ registered patients, daily use by doctor and 2 secretaries, anonymized evidence and reference available upon request",
         spotlight: {
           status: "In production",
           kicker: "Operational system for a dental clinic",
@@ -184,7 +184,7 @@ export const translations = {
             "Patient profiles, payments, coverage, and clinical notes",
             "Workday calendar, availability, and occupied slots",
             "Appointment status and arrival indicators for secretaries",
-            "Improved with feedback from daily clinic users",
+            "Private clinic project with anonymized screenshots and reference available upon request",
           ],
           screenshotsTitle: "Dental system views",
           primaryCta: "View project",
@@ -428,7 +428,7 @@ export const translations = {
       speed: "Velocidad de Ejecución",
       speedDesc: "El generador de reportes pasó de idea a clínica en 3 semanas. Prototipo rápido e itero con usuarios reales.",
       fullStack: "De Punta a Punta",
-      fullStackDesc: "Desde macros VBA hasta frontends React y backends Python. Una persona que puede llevar toda la solución.",
+      fullStackDesc: "Desde sistemas Excel hasta frontends React y backends Python. Una persona que puede llevar toda la solución.",
       trust: "Tecnologías que mandé a producción:",
     },
     // Contact
@@ -450,8 +450,8 @@ export const translations = {
     projectDetails: {
       agenda: {
         title: "Sistema de agenda odontológica",
-        description: "PWA en producción para una doctora y dos secretarias. Digitaliza turnos, perfiles, pagos, mutual, odontograma y alertas de llegada.",
-        results: "100+ pacientes registrados, uso diario por la doctora y 2 secretarias, flujo en papel reemplazado por actualizaciones instantáneas",
+        description: "PWA en producción para un consultorio odontológico privado. Digitaliza turnos, perfiles, pagos, mutual, odontograma y alertas de llegada.",
+        results: "100+ pacientes registrados, uso diario por la doctora y 2 secretarias, evidencia anonimizada y referencia disponible bajo solicitud",
         spotlight: {
           status: "En producción",
           kicker: "Sistema operativo para consultorio odontológico",
@@ -468,7 +468,7 @@ export const translations = {
             "Fichas con historial, mutual, pagos y notas clínicas",
             "Calendario con disponibilidad y turnos ocupados",
             "Estado del turno e indicadores de llegada",
-            "Mejorada con feedback de usuarios reales",
+            "Proyecto para consultorio privado con capturas anonimizadas y referencia bajo solicitud",
           ],
           screenshotsTitle: "Vistas del sistema odontológico",
           primaryCta: "Ver proyecto",
