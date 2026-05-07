@@ -15,35 +15,6 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "NexusData AI",
-    description: "AI-assisted workflow for cleaning CSV, Excel, or JSON files, checking data quality, exploring insights, and exporting reports.",
-    tags: ["AI", "Data Analysis", "Automation"],
-    tools: ["Next.js", "TypeScript", "FastAPI", "Python", "Pandas"],
-    results: "One-click demo: upload, clean, analyze, explain, and export",
-    githubUrl: "https://github.com/tonysoprano33/nexusdata",
-    liveUrl: "https://nexusdata-ai-dashboard.vercel.app/",
-    caseStudyUrl: "https://nexusdata-ai-dashboard.vercel.app/case-study",
-    previewSlideshow: [
-      {
-        src: "/projects/nexus/dashboard.png",
-        caption: "Dashboard: executive overview, quality score, charts, and recommendations",
-      },
-      {
-        src: "/projects/nexus/data-upload.png",
-        caption: "Data Upload: import CSV, Excel, or JSON, or run the prepared demo dataset",
-      },
-      {
-        src: "/projects/nexus/chat-interface.png",
-        caption: "Dataset chat: ask business questions about the analyzed file",
-      },
-      {
-        src: "/projects/nexus/insights.png",
-        caption: "Insights: cleaning log, raw vs cleaned comparison, and analyst notes",
-      },
-    ],
-  },
-  {
-    id: "2",
     title: "Dental Appointment & Patient System",
     description: "Production PWA for a private dental clinic. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
     tags: ["Healthcare", "PWA", "Operations", "Production"],
@@ -80,6 +51,35 @@ export const projects: Project[] = [
       {
         src: "/projects/turnos/captured/12-perfil-odontograma-blur.png",
         caption: "Odontogram: dental state stored inside the patient profile",
+      },
+    ],
+  },
+  {
+    id: "2",
+    title: "Job Application Copilot",
+    description: "Responsible job search assistant that reads a CV, searches allowed job sources, ranks opportunities, explains fit and stores applications in a tracker.",
+    tags: ["Internal Tools", "Automation", "ATS", "Productivity"],
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "pdfjs-dist"],
+    results: "CV parsing, ATS/API search, local fit scoring, red flags, outreach drafts and CSV tracker",
+    githubUrl: "https://github.com/tonysoprano33/ats-searcher",
+    liveUrl: undefined,
+    caseStudyUrl: "/case-studies/job-copilot",
+    previewSlideshow: [
+      {
+        src: "/projects/job-copilot/workspace-hero.png",
+        caption: "Workspace: market snapshot, top 10 ranking, fit analysis and tracker panel",
+      },
+      {
+        src: "/projects/job-copilot/onboarding-hero.png",
+        caption: "Onboarding: manual profile setup or PDF CV import before searching",
+      },
+      {
+        src: "/projects/job-copilot/profile-editor-hero.png",
+        caption: "Profile editor: extracted CV fields, preferences, locations, skills and languages",
+      },
+      {
+        src: "/projects/job-copilot/dark-workspace-hero.png",
+        caption: "Dark workspace: ranked jobs, risk signals, source trust and application strategy",
       },
     ],
   },
@@ -142,6 +142,35 @@ export const projects: Project[] = [
       {
         src: "/projects/excel-clinica/05-turno-tarde.png",
         caption: "Configuration: clinic data, secretary names, contact fields, and color guide",
+      },
+    ],
+  },
+  {
+    id: "5",
+    title: "NexusData AI",
+    description: "AI-assisted workflow for cleaning CSV, Excel, or JSON files, checking data quality, exploring insights, and exporting reports.",
+    tags: ["AI", "Data Analysis", "Automation"],
+    tools: ["Next.js", "TypeScript", "FastAPI", "Python", "Pandas"],
+    results: "One-click demo: upload, clean, analyze, explain, and export",
+    githubUrl: "https://github.com/tonysoprano33/nexusdata",
+    liveUrl: "https://nexusdata-ai-dashboard.vercel.app/",
+    caseStudyUrl: "https://nexusdata-ai-dashboard.vercel.app/case-study",
+    previewSlideshow: [
+      {
+        src: "/projects/nexus/dashboard.png",
+        caption: "Dashboard: executive overview, quality score, charts, and recommendations",
+      },
+      {
+        src: "/projects/nexus/data-upload.png",
+        caption: "Data Upload: import CSV, Excel, or JSON, or run the prepared demo dataset",
+      },
+      {
+        src: "/projects/nexus/chat-interface.png",
+        caption: "Dataset chat: ask business questions about the analyzed file",
+      },
+      {
+        src: "/projects/nexus/insights.png",
+        caption: "Insights: cleaning log, raw vs cleaned comparison, and analyst notes",
       },
     ],
   },

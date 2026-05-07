@@ -6,13 +6,14 @@ import type { TranslationBundle } from "@/lib/i18n";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
-type ProjectKey = "agenda" | "respiratory" | "excel" | "nexus";
+type ProjectKey = "agenda" | "jobCopilot" | "respiratory" | "excel" | "nexus";
 
 const projectKeyMap: Record<string, ProjectKey> = {
-  "1": "nexus",
-  "2": "agenda",
+  "1": "agenda",
+  "2": "jobCopilot",
   "3": "respiratory",
   "4": "excel",
+  "5": "nexus",
 };
 
 interface HeroProjectProps {
@@ -35,7 +36,7 @@ function getTranslatedSlides(
 export default function HeroProject({ projectId, onSelectProject }: HeroProjectProps) {
   const { t } = useLocale();
   const project = projects.find((item) => item.id === projectId) || projects[0];
-  const projectKey = projectKeyMap[project.id] || "nexus";
+  const projectKey = projectKeyMap[project.id] || "agenda";
   const details = t.projectDetails[projectKey];
   const spotlight = details.spotlight;
   const images = getTranslatedSlides(project, details);
