@@ -56,22 +56,6 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Clinical Cover Sheet Generator",
-    description: "Production intake and print workflow for a respiratory clinic. Secretaries fill patient data, select insurance and referring doctors, then print or export the cover sheet in seconds.",
-    tags: ["Healthcare", "Automation", "Operations", "Production"],
-    tools: ["Vite", "TypeScript", "jsPDF", "docx", "Vercel"],
-    results: "Daily use by 2 clinic secretaries, faster intake-to-print flow, printable PDF output and editable Word export",
-    githubUrl: "https://github.com/tonysoprano33/auto-form-clinical",
-    liveUrl: "https://auto-form-clinical.vercel.app",
-    previewSlideshow: [
-      {
-        src: "/projects/clinical-cover-generator/main.png",
-        caption: "Main workflow: wide form, live preview, dynamic insurance and doctor suggestions, and one-click print/export",
-      },
-    ],
-  },
-  {
-    id: "3",
     title: "Job Application Copilot",
     description: "Responsible job search assistant that reads a CV, searches allowed job sources, ranks opportunities, explains fit and stores applications in a tracker.",
     tags: ["Internal Tools", "Automation", "ATS", "Productivity"],
@@ -96,6 +80,22 @@ export const projects: Project[] = [
       {
         src: "/projects/job-copilot/dark-workspace-hero.png",
         caption: "Dark workspace: ranked jobs, risk signals, source trust and application strategy",
+      },
+    ],
+  },
+  {
+    id: "3",
+    title: "Clinical Cover Sheet Generator",
+    description: "Production intake and print workflow for a respiratory clinic. Secretaries fill patient data, select insurance and referring doctors, then print or export the cover sheet in seconds.",
+    tags: ["Healthcare", "Automation", "Operations", "Production"],
+    tools: ["Vite", "TypeScript", "jsPDF", "docx", "Vercel"],
+    results: "Daily use by 2 clinic secretaries, faster intake-to-print flow, printable PDF output and editable Word export",
+    githubUrl: "https://github.com/tonysoprano33/auto-form-clinical",
+    liveUrl: "https://auto-form-clinical.vercel.app",
+    previewSlideshow: [
+      {
+        src: "/projects/clinical-cover-generator/main.png",
+        caption: "Main workflow: wide form, live preview, dynamic insurance and doctor suggestions, and one-click print/export",
       },
     ],
   },

@@ -48,8 +48,8 @@ function getPreviewSource(project: Project, translatedSlides?: string[]): Previe
 // Map project ID to translation key
 const projectKeyMap: Record<string, ProjectKey> = {
   "1": "agenda",
-  "2": "clinicalCover",
-  "3": "jobCopilot",
+  "2": "jobCopilot",
+  "3": "clinicalCover",
   "4": "respiratory",
   "5": "excel",
   "6": "nexus",
