@@ -13,7 +13,7 @@ type PreviewSource =
   | { type: "microlink"; src: string }
   | null;
 
-type ProjectKey = "agenda" | "jobCopilot" | "respiratory" | "excel" | "nexus";
+type ProjectKey = "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus";
 type ProjectDetails = TranslationBundle["projectDetails"][ProjectKey];
 
 function getTranslatedSlides(details: ProjectDetails | null): string[] | undefined {
@@ -48,10 +48,11 @@ function getPreviewSource(project: Project, translatedSlides?: string[]): Previe
 // Map project ID to translation key
 const projectKeyMap: Record<string, ProjectKey> = {
   "1": "agenda",
-  "2": "jobCopilot",
-  "3": "respiratory",
-  "4": "excel",
-  "5": "nexus",
+  "2": "clinicalCover",
+  "3": "jobCopilot",
+  "4": "respiratory",
+  "5": "excel",
+  "6": "nexus",
 };
 
 const tagLabels: Record<string, Record<string, string>> = {

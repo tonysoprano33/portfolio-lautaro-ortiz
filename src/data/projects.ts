@@ -56,6 +56,22 @@ export const projects: Project[] = [
   },
   {
     id: "2",
+    title: "Clinical Cover Sheet Generator",
+    description: "Production intake and print workflow for a respiratory clinic. Secretaries fill patient data, select insurance and referring doctors, then print or export the cover sheet in seconds.",
+    tags: ["Healthcare", "Automation", "Operations", "Production"],
+    tools: ["Vite", "TypeScript", "jsPDF", "docx", "Vercel"],
+    results: "Daily use by 2 clinic secretaries, faster intake-to-print flow, printable PDF output and editable Word export",
+    githubUrl: "https://github.com/tonysoprano33/auto-form-clinical",
+    liveUrl: "https://auto-form-clinical.vercel.app",
+    previewSlideshow: [
+      {
+        src: "/projects/clinical-cover-generator/main.png",
+        caption: "Main workflow: wide form, live preview, dynamic insurance and doctor suggestions, and one-click print/export",
+      },
+    ],
+  },
+  {
+    id: "3",
     title: "Job Application Copilot",
     description: "Responsible job search assistant that reads a CV, searches allowed job sources, ranks opportunities, explains fit and stores applications in a tracker.",
     tags: ["Internal Tools", "Automation", "ATS", "Productivity"],
@@ -84,7 +100,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     title: "Spirometry Report Generator",
     description: "Desktop app I use at work to generate spirometry reports from patient data and create Word documents in minutes.",
     tags: ["Healthcare", "Desktop App", "Document Generation"],
@@ -109,7 +125,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "4",
+    id: "5",
     title: "Medical Clinic Management System",
     description: "Production Excel system for clinic appointments and finance, with morning/afternoon shifts, automatic balances, and monthly visibility.",
     tags: ["Excel", "Healthcare", "Financial Tracking", "Sold Product"],
@@ -146,7 +162,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "5",
+    id: "6",
     title: "NexusData AI",
     description: "AI-assisted workflow for cleaning CSV, Excel, or JSON files, checking data quality, exploring insights, and exporting reports.",
     tags: ["AI", "Data Analysis", "Automation"],

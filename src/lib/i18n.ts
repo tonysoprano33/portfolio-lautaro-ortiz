@@ -199,6 +199,35 @@ export const translations = {
           "Odontogram: dental state stored inside the patient profile",
         ],
       },
+      clinicalCover: {
+        title: "Clinical Cover Sheet Generator",
+        description: "Production intake and print workflow for a respiratory clinic. Secretaries fill patient data, select insurance and referring doctors, then print or export the cover sheet in seconds.",
+        results: "Daily use by 2 clinic secretaries, faster intake-to-print flow, printable PDF output and editable Word export",
+        spotlight: {
+          status: "Used daily in clinic",
+          kicker: "Reception workflow automation",
+          displayTitle: "Clinical cover sheet",
+          headlineAccent: "from intake to print",
+          quote: "A practical clinic tool built for secretaries: load the patient's details, reuse insurance and doctor options, print a consistent cover sheet, and export Word if a last-minute correction is needed.",
+          stats: [
+            { value: "2", label: "Daily secretaries" },
+            { value: "A4", label: "Stable print output" },
+            { value: "Word", label: "Editable export" },
+            { value: "Local", label: "Browser-first setup" },
+          ],
+          proofPoints: [
+            "Speeds up repetitive patient intake before studies",
+            "Keeps insurance and doctor lists editable for staff",
+            "Prints from generated PDF for more consistent browser output",
+            "Designed around legibility and low-friction daily use",
+          ],
+          screenshotsTitle: "Clinical cover sheet views",
+          primaryCta: "Open live app",
+        },
+        slides: [
+          "Main workflow: wide form, live preview, dynamic insurance and doctor suggestions, and one-click print/export",
+        ],
+      },
       jobCopilot: {
         title: "Job Application Copilot",
         description: "Responsible job search assistant that reads a CV, searches allowed job sources, ranks opportunities, explains fit and stores applications in a tracker.",
@@ -513,6 +542,35 @@ export const translations = {
           "Historia clínica: campos médicos estructurados para guardar o imprimir",
           "Alertas: configuración push, email y Telegram para avisos de llegada",
           "Odontograma: estado dental guardado dentro del perfil del paciente",
+        ],
+      },
+      clinicalCover: {
+        title: "Generador de car?tulas cl?nicas",
+        description: "Flujo de recepci?n e impresi?n en producci?n para una cl?nica respiratoria. Las secretarias cargan datos del paciente, eligen obra social y m?dico derivante, y luego imprimen o exportan la car?tula en segundos.",
+        results: "Uso diario por 2 secretarias, flujo de carga a impresi?n m?s r?pido, salida PDF imprimible y exportaci?n Word editable",
+        spotlight: {
+          status: "Uso diario en cl?nica",
+          kicker: "Automatizaci?n de recepci?n",
+          displayTitle: "Car?tula cl?nica",
+          headlineAccent: "de admisi?n a impresi?n",
+          quote: "Una herramienta pr?ctica para secretarias: cargan los datos del paciente, reutilizan listas de obra social y m?dicos, imprimen una car?tula consistente y exportan Word si hay que corregir algo a ?ltimo momento.",
+          stats: [
+            { value: "2", label: "Secretarias diarias" },
+            { value: "A4", label: "Impresi?n estable" },
+            { value: "Word", label: "Export editable" },
+            { value: "Local", label: "Setup simple" },
+          ],
+          proofPoints: [
+            "Acelera la carga repetitiva antes de los estudios",
+            "Mantiene editables las listas de obras sociales y m?dicos",
+            "Imprime desde PDF generado para mayor consistencia entre navegadores",
+            "Dise?ada para legibilidad y uso operativo diario",
+          ],
+          screenshotsTitle: "Vistas de la car?tula cl?nica",
+          primaryCta: "Abrir app",
+        },
+        slides: [
+          "Flujo principal: formulario amplio, vista previa, sugerencias din?micas de obra social y m?dico, e impresi?n/exportaci?n en un clic",
         ],
       },
       jobCopilot: {
