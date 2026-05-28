@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "./LocaleProvider";
-import { Check, DollarSign, Clock, Code } from "lucide-react";
+import { DollarSign, Clock, Code } from "lucide-react";
 
 export default function WhyMe() {
   const { t } = useLocale();
@@ -10,18 +10,34 @@ export default function WhyMe() {
     {
       icon: DollarSign,
       title: t.whyMe?.builtToSell || "Built to Sell",
-      description: t.whyMe?.builtToSellDesc || "I don't just build demos. I shipped an Excel system to a real clinic that their staff uses daily.",
+      description:
+        t.whyMe?.builtToSellDesc ||
+        "I do not just build demos. I shipped an Excel system to a real clinic that their staff uses daily."
     },
     {
       icon: Clock,
       title: t.whyMe?.speed || "Speed of Execution",
-      description: t.whyMe?.speedDesc || "The report generator went from idea to clinic deployment in 3 weeks. I prototype fast and iterate with real users.",
+      description:
+        t.whyMe?.speedDesc ||
+        "The report generator went from idea to clinic deployment in 3 weeks. I prototype fast and iterate with real users."
     },
     {
       icon: Code,
       title: t.whyMe?.fullStack || "End-to-End",
-      description: t.whyMe?.fullStackDesc || "From Excel systems to React frontends and Python backends. One person who can own the whole solution.",
-    },
+      description:
+        t.whyMe?.fullStackDesc ||
+        "From Excel systems to React frontends and Python backends. One person who can own the whole solution."
+    }
+  ];
+
+  const shippedStack = [
+    "React / Next.js",
+    "Python / FastAPI",
+    "PostgreSQL",
+    "Supabase",
+    "Excel systems",
+    "Docker",
+    "TypeScript"
   ];
 
   return (
@@ -41,9 +57,7 @@ export default function WhyMe() {
                 <div className="p-3 bg-accent/10 text-accent">
                   <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-display text-xl font-medium pt-2">
-                  {item.title}
-                </h3>
+                <h3 className="font-display text-xl font-medium pt-2">{item.title}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed pl-[3.25rem]">
                 {item.description}
@@ -52,25 +66,17 @@ export default function WhyMe() {
           ))}
         </div>
 
-        {/* Social proof / Trust */}
         <div className="mt-16 pt-12 border-t border-border">
           <p className="text-muted-foreground text-sm mb-6 text-center">
             {t.whyMe?.trust || "Technologies I've shipped to production:"}
           </p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-muted-foreground/60 text-sm">
-            <span>React / Next.js</span>
-            <span>·</span>
-            <span>Python / FastAPI</span>
-            <span>·</span>
-            <span>PostgreSQL</span>
-            <span>·</span>
-            <span>Supabase</span>
-            <span>·</span>
-            <span>Excel systems</span>
-            <span>·</span>
-            <span>Docker</span>
-            <span>·</span>
-            <span>TypeScript</span>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 text-muted-foreground/60 text-sm">
+            {shippedStack.map((item, index) => (
+              <div key={item} className="flex items-center gap-5">
+                <span>{item}</span>
+                {index < shippedStack.length - 1 ? <span>/</span> : null}
+              </div>
+            ))}
           </div>
         </div>
       </div>
