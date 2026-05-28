@@ -30,16 +30,6 @@ export default function WhyMe() {
     }
   ];
 
-  const shippedStack = [
-    "React / Next.js",
-    "Python / FastAPI",
-    "PostgreSQL",
-    "Supabase",
-    "Excel systems",
-    "Docker",
-    "TypeScript"
-  ];
-
   return (
     <section id="why-me" className="py-20 sm:py-28 px-6 sm:px-12 lg:px-24 bg-muted/30">
       <div className="max-w-5xl mx-auto">
@@ -64,20 +54,6 @@ export default function WhyMe() {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 pt-12 border-t border-border">
-          <p className="text-muted-foreground text-sm mb-6 text-center">
-            {t.whyMe?.trust || "Technologies I've shipped to production:"}
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 text-muted-foreground/60 text-sm">
-            {shippedStack.map((item, index) => (
-              <div key={item} className="flex items-center gap-5">
-                <span>{item}</span>
-                {index < shippedStack.length - 1 ? <span>/</span> : null}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

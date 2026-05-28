@@ -100,8 +100,8 @@ export const translations = {
           description: "I look for less time, fewer errors, and more order.",
         },
       ],
-      stackTitle: "Stack / tools",
-      stack: ["Python", "Pandas", "SQL", "Excel", "Next.js", "TypeScript", "Supabase", "Automation", "Applied AI"],
+      stackTitle: "Main tools",
+      stack: ["Python", "SQL", "Excel", "Next.js", "TypeScript", "Automation"],
       metrics: [
         { value: "100+", label: "patients managed" },
         { value: "300+", label: "reports generated" },
