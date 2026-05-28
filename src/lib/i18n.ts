@@ -139,8 +139,8 @@ export const translations = {
     whyMe: {
       title: "Why Me",
       headline: "Pragmatic solutions, not perfect demos.",
-      builtToSell: "Built to Sell",
-      builtToSellDesc: "I don't just build demos. I shipped an Excel system to a real clinic that their staff uses daily.",
+      builtToSell: "Real Operational Work",
+      builtToSellDesc: "A good part of my work has been improving administrative efficiency in a clinic through tools that people actually use in their daily routine.",
       speed: "Speed of Execution",
       speedDesc: "The report generator went from idea to clinic deployment in 3 weeks. I prototype fast and iterate with real users.",
       fullStack: "End-to-End",
@@ -484,8 +484,8 @@ export const translations = {
     whyMe: {
       title: "Por Qué Yo",
       headline: "Soluciones pragmáticas, no demos perfectas.",
-      builtToSell: "Hecho Para Vender",
-      builtToSellDesc: "No solo armo demos. Vendí un sistema Excel a una clínica real que usan todos los días.",
+      builtToSell: "Trabajo Operativo Real",
+      builtToSellDesc: "Gran parte de mi trabajo estuvo enfocada en mejorar la eficiencia administrativa de una clinica con herramientas que realmente se usan en el dia a dia.",
       speed: "Velocidad de Ejecución",
       speedDesc: "El generador de reportes pasó de idea a clínica en 3 semanas. Prototipo rápido e itero con usuarios reales.",
       fullStack: "De Punta a Punta",
