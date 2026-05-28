@@ -106,8 +106,9 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
         </div>
 
         <div className="space-y-0">
-          {secondaryProjects.map((project) => {
+          {secondaryProjects.map((project, index) => {
             const projectKey = projectKeyMap[project.id];
+            const displayNumber = String(index + 1).padStart(2, "0");
             
             // Get translations safely
             const details = projectKey ? t.projectDetails[projectKey] : null;
@@ -133,7 +134,7 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
                   <div className="flex-1">
                     <div className="flex items-baseline gap-4 mb-3">
-                      <span className="text-accent text-sm font-medium">0{project.id}</span>
+                      <span className="text-accent text-sm font-medium">{displayNumber}</span>
                       <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-medium group-hover:text-accent transition-colors">
                         {projectTitle}
                       </h3>
