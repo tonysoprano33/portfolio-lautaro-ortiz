@@ -6,21 +6,6 @@ import { useLocale } from "./LocaleProvider";
 export default function Hero() {
   const { t, locale } = useLocale();
 
-  const proofChips =
-    locale === "es"
-      ? [
-          "3 sistemas reales en uso",
-          "100+ pacientes gestionados",
-          "300+ informes generados",
-          "Automatizaciones usadas en clinica"
-        ]
-      : [
-          "3 real systems in use",
-          "100+ patients managed",
-          "300+ reports generated",
-          "Clinic-tested automations"
-        ];
-
   const proofStats =
     locale === "es"
       ? [
@@ -39,17 +24,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(91,78,255,0.18),transparent_34%),radial-gradient(circle_at_bottom,rgba(91,78,255,0.08),transparent_28%)]" />
 
       <div className="w-full max-w-[1180px] mx-auto relative z-10">
-        <div className="flex flex-wrap justify-center gap-3 mb-6">
-          {proofChips.map((chip) => (
-            <span
-              key={chip}
-              className="border border-white/12 bg-white/[0.03] px-3 py-1.5 text-[11px] sm:text-xs tracking-wide text-white/72"
-            >
-              {chip}
-            </span>
-          ))}
-        </div>
-
         <p className="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase mb-6">
           {t.hero.role}
         </p>
