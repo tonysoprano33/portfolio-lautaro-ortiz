@@ -46,13 +46,19 @@ export default function ProjectSlideshow({ images, alt, labels }: ProjectSlidesh
 
   return (
     <>
-      <div className="relative w-full h-full overflow-hidden rounded-lg cursor-pointer">
-        <button
-          type="button"
-          className="absolute inset-0 z-10"
-          aria-label={`${labels.expandImage}: ${alt}`}
-          onClick={() => setIsModalOpen(true)}
-        />
+      <div
+        className="group relative w-full h-full overflow-hidden rounded-lg cursor-pointer"
+        role="button"
+        tabIndex={0}
+        aria-label={`${labels.expandImage}: ${alt}`}
+        onClick={() => setIsModalOpen(true)}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setIsModalOpen(true);
+          }
+        }}
+      >
 
         {/* Expand hint */}
         <div className="absolute top-2 right-2 z-20 bg-black/50 text-white text-xs px-2 py-1 rounded flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">

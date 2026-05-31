@@ -94,8 +94,20 @@ export const projects: Project[] = [
     liveUrl: "https://auto-form-clinical.vercel.app",
     previewSlideshow: [
       {
-        src: "/projects/clinical-cover-generator/main.png",
+        src: "/projects/clinical-cover-generator/01-dashboard.png",
         caption: "Main workflow: wide form, live preview, dynamic insurance and doctor suggestions, and one-click print/export",
+      },
+      {
+        src: "/projects/clinical-cover-generator/02-form-filled.png",
+        caption: "Filled intake form: patient data, insurance, medical referral, and print-ready cover sheet in the same screen",
+      },
+      {
+        src: "/projects/clinical-cover-generator/03-lists-modal.png",
+        caption: "Editable lists: secretaries can maintain insurance and referring doctor options without touching code",
+      },
+      {
+        src: "/projects/clinical-cover-generator/04-word-export-ready.png",
+        caption: "Export flow: generate the editable Word version when a last-minute correction is needed before delivery",
       },
     ],
   },

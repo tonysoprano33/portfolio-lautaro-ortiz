@@ -226,6 +226,9 @@ export const translations = {
         },
         slides: [
           "Main workflow: wide form, live preview, dynamic insurance and doctor suggestions, and one-click print/export",
+          "Filled intake form: patient data, insurance, medical referral, and print-ready cover sheet in the same screen",
+          "Editable lists: secretaries can maintain insurance and referring doctor options without touching code",
+          "Export flow: generate the editable Word version when a last-minute correction is needed before delivery",
         ],
       },
       jobCopilot: {
@@ -571,6 +574,9 @@ export const translations = {
         },
         slides: [
           "Flujo principal: formulario amplio, vista previa, sugerencias dinamicas de obra social y medico, e impresion/exportacion en un clic",
+          "Formulario cargado: datos del paciente, obra social, derivacion medica y caratula lista en la misma pantalla",
+          "Listas editables: las secretarias actualizan obras sociales y medicos sin tocar codigo",
+          "Flujo de exportacion: genera la version Word editable cuando hace falta corregir algo antes de entregar",
         ],
       },
       jobCopilot: {
