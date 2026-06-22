@@ -164,6 +164,40 @@ export const translations = {
     },
     // Project details
     projectDetails: {
+      clinicaEspiro: {
+        title: "Clinica Espiro",
+        description: "Operational clinic system for respiratory studies: patient intake, SO2/FC tracking, physician review, automatic printable reports, calendar, statistics, and patient history.",
+        results: "300+ reports generated, clinical data captured once and reused for automatic spirometry/cyclometry reports, calendar, statistics, and patient history",
+        spotlight: {
+          status: "Real clinic workflow",
+          kicker: "Respiratory reports + clinic operation",
+          displayTitle: "Clinica Espiro",
+          headlineAccent: "data to printable reports",
+          quote: "An internal system for respiratory studies: reception loads the patient, SO2/FC values are captured, the doctor validates the result, and the system generates the correct printable report.",
+          stats: [
+            { value: "300+", label: "Reports generated" },
+            { value: "SO2/FC", label: "Clinical values" },
+            { value: "Auto", label: "Printable reports" },
+            { value: "Stats", label: "Clinic data" },
+          ],
+          proofPoints: [
+            "Patient intake with study type, coverage, referring doctor, SO2 and FC",
+            "Pulmonologist reviews the file, compares the suggestion, and saves the final result",
+            "Different output for spirometry/cyclometry and private/insurance coverage",
+            "Calendar, statistics, patient history and previous reports in one flow",
+          ],
+          screenshotsTitle: "Clinica Espiro views",
+          primaryCta: "View case study",
+        },
+        slides: [
+          "Daily intake: add patients, choose study type and coverage, record SO2/FC, and generate the report from captured data",
+          "Automatic print output: the report changes by study type, coverage, captured values, and physician-reviewed result",
+          "Calendar: loaded patients by day, quick review, and edit flow when reception needs to correct data",
+          "Statistics: monthly operation, coverage mix, pending reports, clinical averages, and patient demographics",
+          "Patient database: search, medical history, previous reports, and spirometry results in one place",
+          "Doctor review: the pulmonologist opens the spirometry file, compares the automatic suggestion, chooses the final result, and saves it for report generation",
+        ],
+      },
       agenda: {
         title: "Dental Appointment & Patient System",
         description: "Production PWA for a private dental clinic. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
@@ -512,6 +546,40 @@ export const translations = {
     },
     // Project details
     projectDetails: {
+      clinicaEspiro: {
+        title: "Clinica Espiro",
+        description: "Sistema operativo para estudios respiratorios: admision de pacientes, SO2/FC, revision medica, informes imprimibles automaticos, calendario, estadisticas e historial.",
+        results: "300+ informes generados, datos clinicos cargados una vez y reutilizados para informes automaticos de espirometria/ciclometria, calendario, estadisticas e historial",
+        spotlight: {
+          status: "Flujo real de clinica",
+          kicker: "Informes respiratorios + operacion",
+          displayTitle: "Clinica Espiro",
+          headlineAccent: "datos a informes imprimibles",
+          quote: "Un sistema interno para estudios respiratorios: recepcion carga el paciente, se registran SO2/FC, el medico valida el resultado y el sistema genera el informe correcto para imprimir.",
+          stats: [
+            { value: "300+", label: "Informes generados" },
+            { value: "SO2/FC", label: "Valores clinicos" },
+            { value: "Auto", label: "Informes imprimibles" },
+            { value: "Stats", label: "Datos de clinica" },
+          ],
+          proofPoints: [
+            "Carga de paciente con estudio, cobertura, medico derivante, SO2 y FC",
+            "El neumologo revisa la ficha, compara la sugerencia y guarda el resultado final",
+            "Salida distinta para espirometria/ciclometria y particular/mutual",
+            "Calendario, estadisticas, historial e informes previos en un mismo flujo",
+          ],
+          screenshotsTitle: "Vistas de Clinica Espiro",
+          primaryCta: "Ver case study",
+        },
+        slides: [
+          "Carga diaria: agregar pacientes, elegir estudio y cobertura, registrar SO2/FC y generar el informe desde datos cargados",
+          "Salida imprimible automatica: el informe cambia segun estudio, cobertura, valores capturados y resultado revisado por medico",
+          "Calendario: pacientes cargados por dia, revision rapida y edicion si recepcion necesita corregir datos",
+          "Estadisticas: operacion mensual, mutuales, pendientes, promedios clinicos y datos demograficos",
+          "Base de pacientes: busqueda, historial medico, informes previos y resultados de espirometria en un lugar",
+          "Revision del neumologo: abre el archivo de espirometria, compara la sugerencia automatica, elige el resultado final y lo guarda para generar el informe",
+        ],
+      },
       agenda: {
         title: "Sistema de agenda odontológica",
         description: "PWA en producción para un consultorio odontológico privado. Digitaliza turnos, perfiles, pagos, mutual, odontograma y alertas de llegada.",

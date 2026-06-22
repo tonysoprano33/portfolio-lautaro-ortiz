@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import { ArrowLeft, ArrowUpRight, CheckCircle2, Github } from "lucide-react";
+import ImageModal from "./ImageModal";
 import { useLocale } from "./LocaleProvider";
 
 type CaseStudyCopy = {
@@ -38,8 +40,20 @@ interface CaseStudyTemplateProps {
 }
 
 export default function CaseStudyTemplate({ copy }: CaseStudyTemplateProps) {
-  const { locale } = useLocale();
+  const { locale, t: siteCopy } = useLocale();
   const t = copy[locale];
+  const [modalIndex, setModalIndex] = useState<number | null>(null);
+  const isModalOpen = modalIndex !== null;
+  const modalImages = t.screenshots.map((screenshot) => ({
+    src: screenshot.src,
+    caption: screenshot.caption,
+  }));
+  const showPreviousImage = () => {
+    setModalIndex((value) => (value === null ? 0 : (value - 1 + modalImages.length) % modalImages.length));
+  };
+  const showNextImage = () => {
+    setModalIndex((value) => (value === null ? 0 : (value + 1) % modalImages.length));
+  };
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -145,8 +159,21 @@ export default function CaseStudyTemplate({ copy }: CaseStudyTemplateProps) {
         <div className="max-w-[1280px] mx-auto">
           <h2 className="font-display text-4xl sm:text-5xl font-medium mb-8">{t.screenshotsTitle}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {t.screenshots.map((screenshot) => (
-              <figure key={screenshot.src} className="border border-border bg-background overflow-hidden">
+            {t.screenshots.map((screenshot, index) => (
+              <figure
+                key={screenshot.src}
+                role="button"
+                tabIndex={0}
+                onClick={() => setModalIndex(index)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setModalIndex(index);
+                  }
+                }}
+                aria-label={`${siteCopy.projects.expandImage}: ${screenshot.title}`}
+                className="group border border-border bg-background overflow-hidden cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
                 <div className="aspect-[16/10] bg-muted overflow-hidden">
                   <img src={screenshot.src} alt={screenshot.title} className="h-full w-full object-cover object-left-top" />
                 </div>
@@ -225,6 +252,16 @@ export default function CaseStudyTemplate({ copy }: CaseStudyTemplateProps) {
           </div>
         </div>
       </section>
+
+      <ImageModal
+        images={modalImages}
+        currentIndex={modalIndex ?? 0}
+        isOpen={isModalOpen}
+        onClose={() => setModalIndex(null)}
+        onNext={showNextImage}
+        onPrevious={showPreviousImage}
+        labels={siteCopy.projects}
+      />
     </main>
   );
 }

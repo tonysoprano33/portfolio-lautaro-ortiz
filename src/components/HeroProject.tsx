@@ -6,9 +6,10 @@ import type { TranslationBundle } from "@/lib/i18n";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
-type ProjectKey = "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus";
+type ProjectKey = "clinicaEspiro" | "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus";
 
 const projectKeyMap: Record<string, ProjectKey> = {
+  "0": "clinicaEspiro",
   "1": "agenda",
   "2": "jobCopilot",
   "3": "clinicalCover",
@@ -156,7 +157,7 @@ export default function HeroProject({ projectId, onSelectProject }: HeroProjectP
                     <span>{spotlight.status}</span>
                   </div>
                 </div>
-                <div className="w-full lg:w-[min(100%,780px)] xl:w-[min(100%,860px)] h-[34vh] sm:h-[42vh] lg:h-[58vh] min-h-[240px] sm:min-h-[320px] lg:min-h-[460px] max-h-[640px] bg-muted border border-border rounded-lg overflow-hidden shadow-2xl group">
+                <div className="w-full lg:w-[min(100%,780px)] xl:w-[min(100%,860px)] aspect-[3/2] min-h-[240px] sm:min-h-[320px] bg-muted border border-border rounded-lg overflow-hidden shadow-2xl group">
                   {images.length > 0 ? (
                     <ProjectSlideshow images={images} alt={details.title} labels={t.projects} />
                   ) : (

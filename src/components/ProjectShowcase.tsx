@@ -5,7 +5,7 @@ import HeroProject from "./HeroProject";
 import Projects from "./Projects";
 
 export default function ProjectShowcase() {
-  const [selectedProjectId, setSelectedProjectId] = useState("1");
+  const [selectedProjectId, setSelectedProjectId] = useState("0");
 
   const handleSelectProject = (projectId: string, shouldScroll = true) => {
     setSelectedProjectId(projectId);

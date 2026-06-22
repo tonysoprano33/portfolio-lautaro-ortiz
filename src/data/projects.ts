@@ -14,6 +14,43 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "0",
+    title: "Clinica Espiro - Respiratory Clinic Workflow",
+    description: "Operational clinic system for respiratory studies: patient intake, SO2/FC tracking, physician review, automatic printable reports, calendar, statistics, and patient history.",
+    tags: ["Healthcare", "Automation", "Reports", "Operations", "Production"],
+    tools: ["Django", "Python", "Supabase", "Vercel", "docx", "PDF"],
+    results: "300+ reports generated, clinical data captured once and reused for automatic spirometry/cyclometry reports, calendar, statistics, and patient history.",
+    githubUrl: "https://github.com/tonysoprano33/Clinica-automatizador-espiro",
+    liveUrl: undefined,
+    caseStudyUrl: "/case-studies/clinica-espiro",
+    previewSlideshow: [
+      {
+        src: "/projects/espiro/01-intake-dashboard.png",
+        caption: "Daily intake: add patients, choose study type and coverage, record SO2/FC, and generate the report from captured data",
+      },
+      {
+        src: "/projects/espiro/02-generated-report.png",
+        caption: "Automatic print output: the report changes by study type, coverage, captured values, and physician-reviewed result",
+      },
+      {
+        src: "/projects/espiro/03-calendar.png",
+        caption: "Calendar: loaded patients by day, quick review, and edit flow when reception needs to correct data",
+      },
+      {
+        src: "/projects/espiro/04-statistics.png",
+        caption: "Statistics: monthly operation, coverage mix, pending reports, clinical averages, and patient demographics",
+      },
+      {
+        src: "/projects/espiro/05-patient-database.png",
+        caption: "Patient database: search, medical history, previous reports, and spirometry results in one place",
+      },
+      {
+        src: "/projects/espiro/06-medical-review.png",
+        caption: "Doctor review: the pulmonologist opens the spirometry file, compares the automatic suggestion, chooses the final result, and saves it for report generation",
+      },
+    ],
+  },
+  {
     id: "1",
     title: "Dental Appointment & Patient System",
     description: "Production PWA for a private dental clinic. It digitizes appointments, patient profiles, payments, insurance, odontograms, and arrival alerts.",
@@ -60,7 +97,7 @@ export const projects: Project[] = [
     description: "Responsible job search assistant that reads a CV, searches allowed job sources, ranks opportunities, explains fit and stores applications in a tracker.",
     tags: ["Internal Tools", "Automation", "ATS", "Productivity"],
     tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "pdfjs-dist"],
-    results: "CV parsing, ATS/API search, local fit scoring, red flags, outreach drafts and CSV tracker",
+    results: "CV parsing, ATS/API search, local fit scoring, red flags, outreach drafts and CSV tracker",       
     githubUrl: "https://github.com/tonysoprano33/ats-searcher",
     liveUrl: undefined,
     caseStudyUrl: "/case-studies/job-copilot",
@@ -157,7 +194,7 @@ export const projects: Project[] = [
       },
       {
         src: "/projects/excel-clinica/02-vista-mes.png",
-        caption: "Day summary: automatic totals for cash, transfers, consultations, expenses, and balance",
+        caption: "Day summary: automatic totals for cash, transfers, consultations, expenses, and balance",     
       },
       {
         src: "/projects/excel-clinica/04-turno-manana.png",
