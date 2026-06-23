@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import { ArrowDown, Github, Mail } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { useLocale } from "./LocaleProvider";
 
 export default function Hero() {
@@ -60,7 +60,6 @@ export default function Hero() {
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 font-medium hover:opacity-90 transition-opacity"
           >
             {t.hero.ctaProjects}
-            <ArrowDown className="w-4 h-4" />
           </a>
           <a
             href="#contact"
@@ -80,14 +79,7 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      <div
-        aria-hidden="true"
-        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40"
-      >
-        <span className="h-8 w-px bg-white/20" />
-        <ArrowDown className="w-4 h-4" strokeWidth={1.75} />
-      </div>
     </section>
   );
 }
+
