@@ -9,14 +9,14 @@ export default function Hero() {
   const proofStats =
     locale === "es"
       ? [
-          { value: "3", label: "sistemas activos" },
-          { value: "2", label: "secretarias usando mis herramientas" },
-          { value: "horas -> min", label: "reducciones reales en trabajo operativo" }
+          { value: "Producción", label: "Sistemas reales en uso diario" },
+          { value: "200+", label: "Pacientes registrados" },
+          { value: "OCR & IA", label: "Automatización avanzada de datos" }
         ]
       : [
-          { value: "3", label: "active systems" },
-          { value: "2", label: "secretaries using my tools" },
-          { value: "hours -> min", label: "real reductions in operational work" }
+          { value: "Production", label: "Real systems in daily use" },
+          { value: "200+", label: "Registered patients" },
+          { value: "OCR & AI", label: "Advanced data automation" }
         ];
 
   return (
