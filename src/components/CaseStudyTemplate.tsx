@@ -14,7 +14,7 @@ type CaseStudyCopy = {
   intro: string;
   primaryCta: string;
   secondaryCta: string;
-  githubUrl: string;
+  githubUrl?: string;
   metrics: ReadonlyArray<{ value: string; label: string }>;
   overview: ReadonlyArray<{ label: string; value: string }>;
   problemTitle: string;
@@ -83,16 +83,18 @@ export default function CaseStudyTemplate({ copy }: CaseStudyTemplateProps) {
               {t.intro}
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href={t.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 font-medium hover:opacity-90 transition-opacity"
-              >
-                <Github className="w-4 h-4" />
-                {t.primaryCta}
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+              {t.githubUrl ? (
+                <a
+                  href={t.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 font-medium hover:opacity-90 transition-opacity"
+                >
+                  <Github className="w-4 h-4" />
+                  {t.primaryCta}
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              ) : null}
               <Link
                 href="/#contact"
                 className="inline-flex items-center gap-2 border border-border px-5 py-3 font-medium hover:border-accent hover:text-accent transition-colors"

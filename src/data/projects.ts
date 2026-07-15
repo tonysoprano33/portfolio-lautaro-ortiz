@@ -239,4 +239,27 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: "7",
+    title: "NexoIO Industrial Monitoring",
+    description: "Offline-first industrial monitoring system for local plants: device ingestion, current values, history, grouped equipment views, alarms, diagnostics, and backup-ready operation.",
+    tags: ["Industry 4.0", "Offline-first", "Industrial Monitoring", "Local Systems"],
+    tools: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL", "Docker Compose", "HTTP REST"],
+    results: "Working local demo with simulated edge data, device authentication, historical traceability, alarms, diagnostics, and no cloud dependency",
+    caseStudyUrl: "/case-studies/nexoio",
+    previewSlideshow: [
+      {
+        src: "/projects/nexoio-dashboard.png",
+        caption: "Operational dashboard: local server health, device status, fresh values, groups, and active alarms",
+      },
+      {
+        src: "/projects/nexoio-industrial.png",
+        caption: "Industrial visualization: values grouped by equipment and area with state badges and mini trends",
+      },
+      {
+        src: "/projects/nexoio-system.png",
+        caption: "System diagnostics: database, ingestion, freshness, devices, accepted values, duplicates, and recovery",
+      },
+    ],
+  },
 ];

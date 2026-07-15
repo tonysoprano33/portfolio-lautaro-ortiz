@@ -13,7 +13,7 @@ type PreviewSource =
   | { type: "microlink"; src: string }
   | null;
 
-type ProjectKey = "clinicaEspiro" | "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus";
+type ProjectKey = "clinicaEspiro" | "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus" | "nexoio";
 type ProjectDetails = TranslationBundle["projectDetails"][ProjectKey];
 
 function getTranslatedSlides(details: ProjectDetails | null): string[] | undefined {
@@ -54,6 +54,7 @@ const projectKeyMap: Record<string, ProjectKey> = {
   "4": "respiratory",
   "5": "excel",
   "6": "nexus",
+  "7": "nexoio",
 };
 
 const tagLabels: Record<string, Record<string, string>> = {

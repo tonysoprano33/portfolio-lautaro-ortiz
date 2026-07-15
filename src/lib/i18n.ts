@@ -381,6 +381,37 @@ export const translations = {
           "Insights: cleaning log, raw vs cleaned comparison, and analyst notes"
         ]
       },
+      nexoio: {
+        title: "NexoIO Industrial Monitoring",
+        description: "Offline-first industrial monitoring for local plants: device ingestion, current values, history, grouped equipment views, alarms, diagnostics, and backup-ready operation.",
+        results: "Working local demo with simulated edge data, device authentication, historical traceability, alarms, diagnostics, and no cloud dependency",
+        spotlight: {
+          status: "Local V0 demo",
+          kicker: "Industrial monitoring without cloud dependency",
+          displayTitle: "NexoIO",
+          headlineAccent: "plant data, kept local",
+          quote: "A local industrial system that receives edge readings over HTTP, stores traceability, groups variables by equipment, and exposes operational and technical views for a real plant context.",
+          stats: [
+            { value: "V0", label: "Working scope" },
+            { value: "HTTP", label: "Local ingestion" },
+            { value: "5", label: "Demo variables" },
+            { value: "0", label: "Cloud dependencies" },
+          ],
+          proofPoints: [
+            "Receives LIVE, BACKFILL, and RECOVERY batches from authenticated devices",
+            "Stores current values and historical traceability with deduplication",
+            "Groups variables by equipment and area instead of exposing loose tags",
+            "Shows freshness, device health, alarms, ingestion, and local diagnostics",
+          ],
+          screenshotsTitle: "NexoIO views",
+          primaryCta: "",
+        },
+        slides: [
+          "Operational dashboard: local server health, device status, fresh values, groups, and active alarms",
+          "Industrial visualization: values grouped by equipment and area with state badges and mini trends",
+          "System diagnostics: database, ingestion, freshness, devices, accepted values, duplicates, and recovery",
+        ],
+      },
     },
   },
   es: {
@@ -762,6 +793,37 @@ export const translations = {
           "Preguntas al dataset: consultas de negocio sobre el archivo analizado",
           "Insights: log de limpieza, raw vs cleaned y notas de analista"
         ]
+      },
+      nexoio: {
+        title: "NexoIO Monitoreo Industrial",
+        description: "Monitoreo industrial offline-first para plantas locales: ingesta de dispositivos, valores actuales, historico, equipos agrupados, alarmas y diagnostico.",
+        results: "Demo local funcionando con datos simulados de edge, autenticacion de dispositivos, trazabilidad historica, alarmas, diagnostico y sin dependencia cloud",
+        spotlight: {
+          status: "Demo local V0",
+          kicker: "Monitoreo industrial sin dependencia cloud",
+          displayTitle: "NexoIO",
+          headlineAccent: "datos de planta, en local",
+          quote: "Un sistema industrial local que recibe lecturas por HTTP, conserva trazabilidad, agrupa variables por equipo y ofrece vistas operativas y tecnicas para una planta real.",
+          stats: [
+            { value: "V0", label: "Alcance funcional" },
+            { value: "HTTP", label: "Ingesta local" },
+            { value: "5", label: "Variables demo" },
+            { value: "0", label: "Dependencias cloud" },
+          ],
+          proofPoints: [
+            "Recibe lotes LIVE, BACKFILL y RECOVERY desde dispositivos autenticados",
+            "Guarda valores actuales e historicos con deduplicacion",
+            "Agrupa variables por equipo y area en vez de mostrar tags sueltos",
+            "Muestra frescura, salud de devices, alarmas, ingesta y diagnostico local",
+          ],
+          screenshotsTitle: "Vistas de NexoIO",
+          primaryCta: "",
+        },
+        slides: [
+          "Dashboard operativo: salud del servidor local, estado del device, valores frescos, grupos y alarmas",
+          "Visualizacion industrial: valores agrupados por equipo y area con estados y mini tendencias",
+          "Diagnostico del sistema: DB, ingesta, frescura, devices, aceptados, duplicados y recovery",
+        ],
       },
     },
   },

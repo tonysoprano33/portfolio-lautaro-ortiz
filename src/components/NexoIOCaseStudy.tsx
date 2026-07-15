@@ -1,0 +1,127 @@
+"use client";
+
+import { Activity, Database, Gauge, LockKeyhole, Network, Server } from "lucide-react";
+import CaseStudyTemplate from "./CaseStudyTemplate";
+
+const copy = {
+  en: {
+    back: "Back to portfolio",
+    eyebrow: "Industrial Product Case Study",
+    title: "A local-first monitoring system for plants that cannot depend on the cloud.",
+    intro: "NexoIO turns edge readings into an operational view with current values, historical traceability, equipment groups, alarms, and technical diagnostics. The V0 is intentionally narrow, local, and verifiable.",
+    primaryCta: "",
+    secondaryCta: "Contact me",
+    metrics: [
+      { value: "V0", label: "Working product scope" },
+      { value: "HTTP", label: "Local edge ingestion" },
+      { value: "5", label: "Demo variables" },
+      { value: "0", label: "Cloud runtime dependencies" },
+    ],
+    overview: [
+      { label: "Role", value: "Product definition, industrial UX, frontend, backend, data model, simulator, and local operations" },
+      { label: "Context", value: "Small and mid-sized plants that need visibility without exposing operations to the public internet" },
+      { label: "Status", value: "V0 working locally with simulated edge data and a reproducible Docker Compose setup" },
+      { label: "Stack", value: "Next.js, TypeScript, FastAPI, PostgreSQL, Alembic, Docker Compose, HTTP REST" },
+    ],
+    problemTitle: "The problem",
+    problem: "Industrial data is often fragmented between manual checks, isolated machines, and dashboards that assume permanent connectivity. That creates blind spots: operators need current values, supervisors need context, and technical teams need to know whether the data is trustworthy.",
+    goalTitle: "The goal",
+    goal: "Build a practical local layer that receives readings, keeps history, groups data by equipment, and exposes the health of the system itself. The first version avoids control commands and focuses on reliable visibility.",
+    screenshotsTitle: "Product views",
+    screenshots: [
+      { src: "/projects/nexoio-dashboard.png", title: "Operational dashboard", caption: "Local server health, online device, fresh variables, equipment groups, alarm state, and recent ingestion." },
+      { src: "/projects/nexoio-industrial.png", title: "Industrial visualization", caption: "Variables grouped by equipment and area, with current values, status badges, mini trends, and a selected group detail." },
+      { src: "/projects/nexoio-system.png", title: "System diagnostics", caption: "Database and API state, device health, freshness, accepted values, duplicates, recovery, and ingestion traffic." },
+    ],
+    workflowTitle: "What the system provides",
+    workflow: [
+      { title: "Edge ingestion", description: "Receives local HTTP batches from authenticated devices and keeps the server clock as the official reference.", icon: Network },
+      { title: "Traceable data", description: "Stores historical values, current state, rejected readings, batches, and deduplicated sequences.", icon: Database },
+      { title: "Operational context", description: "Turns loose tags into equipment and area views that can be read quickly during operation.", icon: Activity },
+      { title: "Freshness and alarms", description: "Separates healthy, stale, bad, offline, and alarm conditions so a number is not shown without context.", icon: Gauge },
+      { title: "Local security", description: "Authenticates devices with unique headers and stores token hashes instead of raw device tokens.", icon: LockKeyhole },
+      { title: "Technical diagnosis", description: "Shows API, database, ingestion, device health, backups, and recovery information in one place.", icon: Server },
+    ],
+    processTitle: "How I built it",
+    process: [
+      { title: "Reduced the first version", description: "Kept V0 focused on read-only monitoring, current/history endpoints, device auth, and a simulator instead of adding machine control too early." },
+      { title: "Designed the data path", description: "The edge talks to FastAPI over local HTTP; FastAPI is the only layer that talks to PostgreSQL; the frontend consumes the local API." },
+      { title: "Validated the offline story", description: "Docker Compose, seeded data, simulator traffic, deduplication, freshness, and diagnostics make the product demonstrable without internet access." },
+    ],
+    technicalTitle: "Technical decisions",
+    technical: [
+      "Next.js and TypeScript dashboard served locally, with no external runtime requests.",
+      "FastAPI as the only database boundary, with PostgreSQL and Alembic migrations.",
+      "HTTP REST and JSON for the V0 edge path, keeping the first deployment simple to inspect.",
+      "Device authentication with X-Device-Id and X-Device-Token in V0; token hashes are stored server-side.",
+      "LIVE, BACKFILL, and RECOVERY ingestion states with deduplication by device, tag, batch, and sequence.",
+      "No HTTPS edge transport, MQTT, cloud deploy, or machine write commands in V0.",
+    ],
+    impactTitle: "Why it matters",
+    impact: "NexoIO is a credible Industry 4.0 foundation because it connects real operational needs with a deployment model that respects local control, unreliable connectivity, and technical maintainability.",
+    learningTitle: "What I would validate next",
+    learning: "The next proof is not another screen: it is a pilot with one real machine or process, a measurable baseline, and a clear answer to how much time, error, or uncertainty the system removes.",
+  },
+  es: {
+    back: "Volver al portfolio",
+    eyebrow: "Caso de estudio industrial",
+    title: "Un sistema de monitoreo local para plantas que no pueden depender de la nube.",
+    intro: "NexoIO convierte lecturas de edge en una vista operativa con valores actuales, trazabilidad historica, grupos de equipos, alarmas y diagnostico tecnico. La V0 es acotada, local y verificable.",
+    primaryCta: "",
+    secondaryCta: "Contactarme",
+    metrics: [
+      { value: "V0", label: "Alcance funcionando" },
+      { value: "HTTP", label: "Ingesta edge local" },
+      { value: "5", label: "Variables demo" },
+      { value: "0", label: "Dependencias cloud en runtime" },
+    ],
+    overview: [
+      { label: "Rol", value: "Definicion de producto, UX industrial, frontend, backend, modelo de datos, simulador y operacion local" },
+      { label: "Contexto", value: "Plantas pequenas y medianas que necesitan visibilidad sin exponer la operacion a internet publico" },
+      { label: "Estado", value: "V0 funcionando en local con datos simulados de edge y setup reproducible con Docker Compose" },
+      { label: "Stack", value: "Next.js, TypeScript, FastAPI, PostgreSQL, Alembic, Docker Compose y HTTP REST" },
+    ],
+    problemTitle: "El problema",
+    problem: "Los datos industriales suelen quedar repartidos entre controles manuales, maquinas aisladas y dashboards que suponen conectividad permanente. Eso crea puntos ciegos: el operario necesita valores actuales, el supervisor necesita contexto y el equipo tecnico necesita saber si los datos son confiables.",
+    goalTitle: "El objetivo",
+    goal: "Construir una capa local practica que reciba lecturas, conserve historico, agrupe datos por equipo y exponga la salud del propio sistema. La primera version evita comandos de control y se concentra en visibilidad confiable.",
+    screenshotsTitle: "Vistas del producto",
+    screenshots: [
+      { src: "/projects/nexoio-dashboard.png", title: "Dashboard operativo", caption: "Salud del servidor local, device online, variables frescas, grupos de equipos, alarmas e ingesta reciente." },
+      { src: "/projects/nexoio-industrial.png", title: "Visualizacion industrial", caption: "Variables agrupadas por equipo y area, con valores actuales, estados, mini tendencias y detalle del grupo seleccionado." },
+      { src: "/projects/nexoio-system.png", title: "Diagnostico del sistema", caption: "Estado de DB y API, salud del device, frescura, aceptados, duplicados, recovery y trafico de ingesta." },
+    ],
+    workflowTitle: "Que provee el sistema",
+    workflow: [
+      { title: "Ingesta edge", description: "Recibe lotes HTTP locales desde dispositivos autenticados y conserva la hora del servidor como referencia oficial.", icon: Network },
+      { title: "Datos trazables", description: "Guarda historicos, valores actuales, rechazos, lotes y secuencias deduplicadas.", icon: Database },
+      { title: "Contexto operativo", description: "Convierte tags sueltos en vistas por equipo y area para leer rapido durante la operacion.", icon: Activity },
+      { title: "Frescura y alarmas", description: "Diferencia normal, stale, bad, offline y alarma para no mostrar un numero sin contexto.", icon: Gauge },
+      { title: "Seguridad local", description: "Autentica devices con headers unicos y guarda hashes de tokens en vez de tokens crudos.", icon: LockKeyhole },
+      { title: "Diagnostico tecnico", description: "Concentra API, base, ingesta, salud de devices, backups y recovery en una sola vista.", icon: Server },
+    ],
+    processTitle: "Como lo construi",
+    process: [
+      { title: "Acote la primera version", description: "Deje la V0 enfocada en monitoreo de solo lectura, current/history, autenticacion de devices y simulador, sin sumar control de maquinas demasiado pronto." },
+      { title: "Diseñe el camino de datos", description: "Edge habla con FastAPI por HTTP local; FastAPI es la unica capa que habla con PostgreSQL; el frontend consume la API local." },
+      { title: "Valide la historia offline", description: "Docker Compose, seed, trafico del simulador, deduplicacion, frescura y diagnostico hacen demostrable el producto sin internet." },
+    ],
+    technicalTitle: "Decisiones tecnicas",
+    technical: [
+      "Dashboard Next.js y TypeScript servido en local, sin requests externos en runtime.",
+      "FastAPI como unica frontera de base de datos, con PostgreSQL y migraciones Alembic.",
+      "HTTP REST y JSON para el camino edge de V0, simple de instalar e inspeccionar.",
+      "Autenticacion con X-Device-Id y X-Device-Token en V0; los hashes quedan guardados en servidor.",
+      "Ingesta LIVE, BACKFILL y RECOVERY con deduplicacion por device, tag, batch y sequence.",
+      "Sin HTTPS edge, MQTT, deploy cloud ni comandos de escritura a maquinas en V0.",
+    ],
+    impactTitle: "Por que importa",
+    impact: "NexoIO puede ser una base creible de Industria 4.0 porque conecta necesidades operativas reales con un despliegue local, mantenible y respetuoso de la conectividad de cada planta.",
+    learningTitle: "Que validaria despues",
+    learning: "La siguiente prueba no es otra pantalla: es un piloto con una maquina o proceso real, una linea de base medible y una respuesta clara sobre cuanto tiempo, error o incertidumbre elimina el sistema.",
+  },
+} as const;
+
+export default function NexoIOCaseStudy() {
+  return <CaseStudyTemplate copy={copy} />;
+}

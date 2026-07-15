@@ -6,7 +6,7 @@ import type { TranslationBundle } from "@/lib/i18n";
 import ProjectSlideshow from "./ProjectSlideshow";
 import { useLocale } from "./LocaleProvider";
 
-type ProjectKey = "clinicaEspiro" | "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus";
+type ProjectKey = "clinicaEspiro" | "agenda" | "clinicalCover" | "jobCopilot" | "respiratory" | "excel" | "nexus" | "nexoio";
 
 const projectKeyMap: Record<string, ProjectKey> = {
   "0": "clinicaEspiro",
@@ -16,6 +16,7 @@ const projectKeyMap: Record<string, ProjectKey> = {
   "4": "respiratory",
   "5": "excel",
   "6": "nexus",
+  "7": "nexoio",
 };
 
 interface HeroProjectProps {
