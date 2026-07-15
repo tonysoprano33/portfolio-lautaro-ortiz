@@ -1,11 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import { Mail, Linkedin, Github, FileDown, ArrowRight } from "lucide-react";
 import { useLocale } from "./LocaleProvider";
 
 export default function Contact() {
   const { t, locale } = useLocale();
   const email = t.contact.email;
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // If clipboard access is blocked, keep the mail link behavior intact.
+    }
+  };
 
   return (
     <section id="contact" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-24 bg-foreground text-background">
@@ -26,13 +38,24 @@ export default function Contact() {
           <div className="flex flex-col items-center gap-2">
             <a
               href={`mailto:${email}`}
+              onClick={handleEmailClick}
               className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="w-5 h-5" />
               {t.contact.cta}
               <ArrowRight className="w-5 h-5" />
             </a>
-            <p className="text-background/50 text-sm">{email}</p>
+            <button
+              type="button"
+              onClick={handleEmailClick}
+              className="text-background/50 text-sm transition-colors hover:text-background"
+              aria-label={copied ? t.contact.copySuccess : t.contact.copyHint}
+            >
+              {email}
+            </button>
+            <p className="text-background/35 text-xs">
+              {copied ? t.contact.copySuccess : t.contact.copyHint}
+            </p>
           </div>
 
           <a
