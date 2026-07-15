@@ -6,18 +6,9 @@ import { useLocale } from "./LocaleProvider";
 export default function Hero() {
   const { t, locale } = useLocale();
 
-  const proofStats =
-    locale === "es"
-      ? [
-          { value: "Producción", label: "Sistemas reales en uso diario" },
-          { value: "200+", label: "Pacientes registrados" },
-          { value: "OCR & IA", label: "Automatización avanzada de datos" }
-        ]
-      : [
-          { value: "Production", label: "Real systems in daily use" },
-          { value: "200+", label: "Registered patients" },
-          { value: "OCR & AI", label: "Advanced data automation" }
-        ];
+  const proofLine = locale === "es"
+    ? "Herramientas reales que siguen en uso después de la entrega."
+    : "Real tools that keep being used after delivery.";
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 py-20 relative overflow-hidden text-center bg-[#080808] text-white">
@@ -45,13 +36,13 @@ export default function Hero() {
           {t.hero.tagline}
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12 text-left">
-          {proofStats.map((item) => (
-            <div key={item.label} className="border border-white/10 bg-white/[0.03] px-5 py-5">
-              <p className="font-display text-3xl sm:text-4xl text-accent mb-2">{item.value}</p>
-              <p className="text-sm sm:text-base text-white/72 leading-snug">{item.label}</p>
-            </div>
-          ))}
+        <div className="max-w-3xl mx-auto mb-12 border-y border-accent/30 py-5">
+          <p className="text-xs sm:text-sm font-medium tracking-widest uppercase text-accent mb-2">
+            {locale === "es" ? "Evidencia real" : "Real-world proof"}
+          </p>
+          <p className="text-base sm:text-lg lg:text-xl font-medium text-white">
+            {proofLine}
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">

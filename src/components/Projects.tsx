@@ -85,7 +85,7 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
   const { t, locale } = useLocale();
   const secondaryProjects = projects.filter((project) => project.id !== selectedProjectId);
 
-  const handleProjectClick = (event: MouseEvent<HTMLDivElement>, projectId: string) => {
+  const handleProjectClick = (event: MouseEvent<HTMLElement>, projectId: string) => {
     if ((event.target as HTMLElement).closest("a,button")) return;
     onSelectProject(projectId);
   };
@@ -120,18 +120,10 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
             const projectResults = details?.results || project.results;
             
             return (
-              <div
+              <article
                 key={project.id}
-                role="button"
-                tabIndex={0}
                 onClick={(event) => handleProjectClick(event, project.id)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    onSelectProject(project.id);
-                  }
-                }}
-                className="group py-10 sm:py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="group py-10 sm:py-12 border-t border-border hover:bg-muted/30 transition-colors -mx-6 sm:-mx-12 lg:-mx-24 px-6 sm:px-12 lg:px-24 cursor-pointer"
               >
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
                   <div className="flex-1">
@@ -238,7 +230,7 @@ export default function Projects({ selectedProjectId, onSelectProject }: Project
                     )}
                   </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

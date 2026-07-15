@@ -44,7 +44,7 @@ export const translations = {
     contact: {
       title: "¿Trabajemos juntos?",
       subtitle: "Estoy disponible para proyectos de análisis de datos, consultoría y oportunidades laborales. Envíame un mensaje y conversemos sobre cómo puedo ayudar a tu equipo.",
-      email: "tu.email@ejemplo.com",
+      email: "lautarovirtual209@gmail.com",
       linkedin: "LinkedIn",
       github: "GitHub",
       cv: "Descargar CV",
@@ -94,7 +94,7 @@ export const translations = {
     contact: {
       title: "Let's work together?",
       subtitle: "I'm available for data analysis projects, consulting, and job opportunities. Send me a message and let's discuss how I can help your team.",
-      email: "your.email@example.com",
+      email: "lautarovirtual209@gmail.com",
       linkedin: "LinkedIn",
       github: "GitHub",
       cv: "Download CV",

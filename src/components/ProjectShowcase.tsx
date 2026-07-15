@@ -3,9 +3,10 @@
 import { useState } from "react";
 import HeroProject from "./HeroProject";
 import Projects from "./Projects";
+import { projects } from "@/data/projects";
 
 export default function ProjectShowcase() {
-  const [selectedProjectId, setSelectedProjectId] = useState("7");
+  const [selectedProjectId, setSelectedProjectId] = useState(projects[0].id);
 
   const handleSelectProject = (projectId: string, shouldScroll = true) => {
     setSelectedProjectId(projectId);

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lautaro Ortiz - CV Datos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 10.5mm 15mm;
+      color: #111;
+      background: #fff;
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.33;
+    }
+    h1 { font-size: 20pt; line-height: 1; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 5px; }
+    .role { font-size: 10.5pt; color: #333; font-weight: 600; margin-bottom: 7px; }
+    .contact { color: #555; font-size: 8.9pt; margin-bottom: 11px; }
+    .contact div { margin-top: 2px; }
+    a { color: #2563eb; text-decoration: none; }
+    h2 {
+      border-top: 1px solid #d8d8d8; color: #111; font-size: 9.4pt; font-weight: 700;
+      letter-spacing: 0.7px; margin-top: 9px; padding-top: 7px; text-transform: uppercase;
+    }
+    .summary { margin-top: 7px; color: #222; }
+    .item { margin-top: 7px; }
+    .item-head { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; color: #111; }
+    .meta { color: #666; font-size: 8.8pt; margin-top: 1px; }
+    ul { margin-top: 5px; padding-left: 17px; }
+    li { margin-bottom: 2px; }
+    .project-title { font-weight: 700; color: #111; }
+    .project-stack { color: #555; font-size: 8.8pt; }
+    .skills p, .education p, .languages p { margin-top: 6px; }
+    .label { font-weight: 700; }
+    @page { size: A4; margin: 0; }
+    @media print { body { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lautaro Ortiz</h1>
+    <div class="role">Analista de Datos | Reporting, SQL, Excel y Analítica Operativa</div>
+    <div class="contact">
+      <div>Argentina | <a href="mailto:lautarovirtual209@gmail.com">lautarovirtual209@gmail.com</a></div>
+      <div>
+        <a href="https://www.linkedin.com/in/lautaro-ortiz-b79866235/">linkedin.com/in/lautaro-ortiz</a> |
+        <a href="https://github.com/tonysoprano33">github.com/tonysoprano33</a> |
+        <a href="https://lautaro-ortiz-portfolio.vercel.app/">lautaro-ortiz-portfolio.vercel.app</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Perfil profesional</h2>
+    <p class="summary">
+      Perfil orientado a análisis de datos, reporting y ordenamiento de información operativa. Trabajo con SQL, Python, Pandas y Excel para limpiar datos, estructurar información, generar reportes y apoyar decisiones con resultados prácticos. Construí herramientas reales para clínicas y pequeños negocios, incluyendo sistemas con 100+ pacientes, 300+ informes generados y 3.000+ turnos anuales controlados mediante reporting operativo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiencia</h2>
+    <div class="item">
+      <div class="item-head">
+        <span>Desarrollador orientado a datos y operaciones</span>
+        <span>2025 - Actualidad</span>
+      </div>
+      <div class="meta">Proyectos freelance, sistemas de reporting y operación real para clínicas</div>
+      <ul>
+        <li>Analicé flujos de trabajo basados en papel y planillas, documenté cuellos de botella operativos y los transformé en sistemas internos y reportes estructurados.</li>
+        <li>Implementé un sistema Excel para clínica con 3.000+ turnos anuales, balances, egresos, resúmenes mensuales y visibilidad financiera diaria.</li>
+        <li>Construí una PWA privada de gestión odontológica con 100+ pacientes registrados, mejorando la organización de turnos, historiales, pagos y mutuales.</li>
+        <li>Desarrollé una app Python que generó 300+ informes de espirometría, estandarizando reportes y mejorando los tiempos de entrega.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proyectos seleccionados</h2>
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/Excel-Clinica">Sistema de gestión para clínica médica</a></div>
+      <div class="project-stack">Excel, fórmulas avanzadas, formato condicional, validación de datos</div>
+      <p>Planilla en producción vendida a una clínica para gestionar turnos, pagos, egresos, resúmenes mensuales y control operativo sobre 3.000+ turnos al año.</p>
+    </div>
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/nexusdata">NexusData AI</a></div>
+      <div class="project-stack">Next.js, TypeScript, FastAPI, Python, Pandas</div>
+      <p>Plataforma full-stack para limpiar CSV, Excel y JSON, revisar calidad de datos, consultar datasets, explorar insights y exportar reportes con asistencia de IA.</p>
+    </div>
+    <div class="item">
+      <div class="project-title"><a href="https://github.com/tonysoprano33/espiro-informes">Generador de informes de espirometría</a></div>
+      <div class="project-stack">Python, pandas, python-docx, openpyxl</div>
+      <p>Aplicación de escritorio que estandarizó el reporting médico y generó 300+ informes Word con menos errores manuales y menor tiempo de entrega.</p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Habilidades técnicas</h2>
+    <p><span class="label">Lenguajes:</span> Python, SQL, TypeScript</p>
+    <p><span class="label">Datos y reporting:</span> Pandas, limpieza de datos, Excel avanzado, Power Query, reporting operativo, generación de resúmenes, validación de datos</p>
+    <p><span class="label">Análisis y operaciones:</span> análisis de procesos, seguimiento de métricas, documentación de flujos, organización de información</p>
+    <p><span class="label">Herramientas:</span> openpyxl, python-docx, Next.js, React, FastAPI, Supabase, PostgreSQL, Git</p>
+  </section>
+
+  <section class="education">
+    <h2>Educación</h2>
+    <p><span class="label">Formación Técnica Continua - Análisis de Datos, Python, Automatización y Desarrollo Web</span> | Formación práctica mediante cursos online, documentación técnica y proyectos reales para clínicas y clientes.</p>
+  </section>
+
+  <section class="languages">
+    <h2>Idiomas</h2>
+    <p>Español: Nativo | Inglés: Intermedio - lectura técnica, documentación y comunicación escrita</p>
+  </section>
+</body>
+</html>

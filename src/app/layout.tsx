@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { LocaleProvider } from "@/components/LocaleProvider";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -79,7 +80,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-background text-primary transition-colors duration-300">
         <Providers>
           <LocaleProvider>
-            {children}
+            <AnalyticsProvider>{children}</AnalyticsProvider>
           </LocaleProvider>
         </Providers>
       </body>

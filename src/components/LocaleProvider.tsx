@@ -20,12 +20,14 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const initial = getInitialLocale();
     setLocaleState(initial);
+    document.documentElement.lang = initial;
     setMounted(true);
   }, []);
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);
     localStorage.setItem("locale", newLocale);
+    document.documentElement.lang = newLocale;
   };
 
   // Prevent hydration mismatch
