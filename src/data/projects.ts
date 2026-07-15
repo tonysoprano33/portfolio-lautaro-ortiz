@@ -260,6 +260,18 @@ export const projects: Project[] = [
         src: "/projects/nexoio-system.png",
         caption: "System diagnostics: database, ingestion, freshness, devices, accepted values, duplicates, and recovery",
       },
+      {
+        src: "/projects/nexoio-comparator.png",
+        caption: "Local comparison view: compare equipment variables, review 60 historical records, and export the selection as CSV",
+      },
+      {
+        src: "/projects/nexoio-industrial-detail.png",
+        caption: "Equipment detail: current values, range chart, mini trend, and historical records for Motor 1",
+      },
+      {
+        src: "/projects/nexoio-reports.png",
+        caption: "Offline reporting: local historical data, variable filters, record counts, and CSV export workflow",
+      },
     ],
   },
 ];

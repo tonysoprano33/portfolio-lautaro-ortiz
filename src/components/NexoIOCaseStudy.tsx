@@ -32,6 +32,9 @@ const copy = {
       { src: "/projects/nexoio-dashboard.png", title: "Operational dashboard", caption: "Local server health, online device, fresh variables, equipment groups, alarm state, and recent ingestion." },
       { src: "/projects/nexoio-industrial.png", title: "Industrial visualization", caption: "Variables grouped by equipment and area, with current values, status badges, mini trends, and a selected group detail." },
       { src: "/projects/nexoio-system.png", title: "System diagnostics", caption: "Database and API state, device health, freshness, accepted values, duplicates, recovery, and ingestion traffic." },
+      { src: "/projects/nexoio-comparator.png", title: "Local comparison", caption: "Compare equipment variables, review historical records, and export the selected comparison as CSV." },
+      { src: "/projects/nexoio-industrial-detail.png", title: "Equipment detail", caption: "Current values, range chart, mini trend, and historical records for Motor 1." },
+      { src: "/projects/nexoio-reports.png", title: "Offline reporting", caption: "Local history, variable filters, record counts, and a simple CSV export workflow." },
     ],
     workflowTitle: "What the system provides",
     workflow: [
@@ -90,6 +93,9 @@ const copy = {
       { src: "/projects/nexoio-dashboard.png", title: "Dashboard operativo", caption: "Salud del servidor local, device online, variables frescas, grupos de equipos, alarmas e ingesta reciente." },
       { src: "/projects/nexoio-industrial.png", title: "Visualizacion industrial", caption: "Variables agrupadas por equipo y area, con valores actuales, estados, mini tendencias y detalle del grupo seleccionado." },
       { src: "/projects/nexoio-system.png", title: "Diagnostico del sistema", caption: "Estado de DB y API, salud del device, frescura, aceptados, duplicados, recovery y trafico de ingesta." },
+      { src: "/projects/nexoio-comparator.png", title: "Comparador local", caption: "Compara variables de equipos, revisa registros historicos y exporta la seleccion en CSV." },
+      { src: "/projects/nexoio-industrial-detail.png", title: "Detalle de equipo", caption: "Valores actuales, grafico de rango, mini tendencia e historico del Motor 1." },
+      { src: "/projects/nexoio-reports.png", title: "Reportes offline", caption: "Historico local, filtros por variable, conteo de registros y flujo simple de exportacion CSV." },
     ],
     workflowTitle: "Que provee el sistema",
     workflow: [
