@@ -16,10 +16,10 @@ export const projects: Project[] = [
   {
     id: "0",
     title: "Clinica Espiro - Respiratory Clinic Workflow",
-    description: "Operational clinic system for respiratory studies: patient intake, SO2/FC tracking, physician review, automatic printable reports, calendar, statistics, and patient history.",
-    tags: ["Healthcare", "Automation", "Reports", "Operations", "Production"],
+    description: "Production respiratory-clinic workflow with role-focused reception, doctor review, and spirometry views. It connects intake, SO2/FC capture, PDF review, printable reports, calendar, patient history, and mutual-aware statistics.",
+    tags: ["Healthcare", "Automation", "Clinical Workflow", "Reports", "Production"],
     tools: ["Django", "Python", "Supabase", "Vercel", "docx", "PDF"],
-    results: "300+ reports generated, clinical data captured once and reused for automatic spirometry/cyclometry reports, calendar, statistics, and patient history.",
+    results: "300+ reports generated; one clinical record powers doctor review, conditional spirometry/cyclometry and mutual reports, searchable patient history, operational calendar, and monthly statistics by coverage.",
     githubUrl: "https://github.com/tonysoprano33/Clinica-automatizador-espiro",
     liveUrl: undefined,
     caseStudyUrl: "/case-studies/clinica-espiro",
@@ -38,11 +38,11 @@ export const projects: Project[] = [
       },
       {
         src: "/projects/espiro/04-statistics.png",
-        caption: "Statistics: monthly operation, coverage mix, pending reports, clinical averages, and patient demographics",
+        caption: "Statistics: monthly activity, named mutual coverage mix, completed results, operational follow-up, and descriptive clinical indicators",
       },
       {
         src: "/projects/espiro/05-patient-database.png",
-        caption: "Patient database: search, medical history, previous reports, and spirometry results in one place",
+        caption: "Patient database: one clinical search finds records by name, DNI, mutual, date, or final result without losing history",
       },
       {
         src: "/projects/espiro/06-medical-review.png",
