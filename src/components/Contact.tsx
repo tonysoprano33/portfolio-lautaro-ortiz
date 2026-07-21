@@ -9,20 +9,14 @@ export default function Contact() {
   const email = t.contact.email;
   const [copied, setCopied] = useState(false);
 
-  const handleEmailClick = async () => {
-    const mailtoHref = `mailto:${email}`;
-
+  const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1800);
     } catch {
-      // If clipboard access is blocked, keep the mail link behavior intact.
+      // Ignore clipboard failures and keep the mail action available.
     }
-
-    window.setTimeout(() => {
-      window.location.href = mailtoHref;
-    }, 150);
   };
 
   return (
@@ -42,19 +36,19 @@ export default function Contact() {
 
         <div className="flex flex-col items-center gap-4 mb-12">
           <div className="flex flex-col items-center gap-2">
-            <button
-              type="button"
-              onClick={handleEmailClick}
-              aria-label={copied ? t.contact.copySuccess : t.contact.cta}
+            <a
+              href={`mailto:${email}`}
+              onClick={copyEmail}
+              aria-label={t.contact.cta}
               className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="w-5 h-5" />
-              {copied ? t.contact.copySuccess : t.contact.cta}
+              {t.contact.cta}
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
             <button
               type="button"
-              onClick={handleEmailClick}
+              onClick={copyEmail}
               className="text-background/50 text-sm transition-colors hover:text-background"
               aria-label={copied ? t.contact.copySuccess : t.contact.copyHint}
             >
