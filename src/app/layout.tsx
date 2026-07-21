@@ -24,6 +24,21 @@ export const metadata: Metadata = {
     template: "%s | Lautaro Ortiz",
   },
   description: "Portfolio de Lautaro Ortiz: análisis de problemas operativos, herramientas internas, automatización, dashboards y sistemas usados en operaciones reales.",
+  openGraph: {
+    title: "Lautaro Ortiz | Internal Tools & Data Automation",
+    description: "Portfolio de Lautaro Ortiz: análisis de problemas operativos, herramientas internas, automatización, dashboards y sistemas usados en operaciones reales.",
+    url: "https://lautaro-ortiz-portfolio.vercel.app/",
+    siteName: "Lautaro Ortiz Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Lautaro Ortiz portfolio preview",
+      },
+    ],
+  },
   authors: [{ name: "Lautaro Ortiz" }],
   creator: "Lautaro Ortiz",
   keywords: [
