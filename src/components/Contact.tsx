@@ -8,6 +8,8 @@ export default function Contact() {
   const { t, locale } = useLocale();
   const email = t.contact.email;
   const [copied, setCopied] = useState(false);
+  const subject = locale === "es" ? "Consulta desde tu portfolio" : "Portfolio inquiry";
+  const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 
   const copyEmail = async () => {
     try {
@@ -37,8 +39,7 @@ export default function Contact() {
         <div className="flex flex-col items-center gap-4 mb-12">
           <div className="flex flex-col items-center gap-2">
             <a
-              href={`mailto:${email}`}
-              onClick={copyEmail}
+              href={mailtoHref}
               aria-label={t.contact.cta}
               className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
             >
