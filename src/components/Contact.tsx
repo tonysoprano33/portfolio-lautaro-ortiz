@@ -8,8 +8,10 @@ export default function Contact() {
   const { t, locale } = useLocale();
   const email = t.contact.email;
   const [copied, setCopied] = useState(false);
+  const [showFallback, setShowFallback] = useState(false);
   const subject = locale === "es" ? "Consulta desde tu portfolio" : "Portfolio inquiry";
   const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}`;
 
   const copyEmail = async () => {
     try {
@@ -38,15 +40,21 @@ export default function Contact() {
 
         <div className="flex flex-col items-center gap-4 mb-12">
           <div className="flex flex-col items-center gap-2">
-            <a
-              href={mailtoHref}
+            <button
+              type="button"
+              onClick={() => {
+                setShowFallback(true);
+                window.setTimeout(() => {
+                  window.location.href = mailtoHref;
+                }, 50);
+              }}
               aria-label={t.contact.cta}
               className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="w-5 h-5" />
               {t.contact.cta}
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </button>
             <button
               type="button"
               onClick={copyEmail}
@@ -58,6 +66,31 @@ export default function Contact() {
             <p className="text-background/35 text-xs" aria-live="polite">
               {copied ? t.contact.copySuccess : t.contact.copyHint}
             </p>
+            {showFallback && (
+              <div className="mt-3 rounded-2xl border border-background/15 bg-background/5 px-4 py-3 text-center">
+                <p className="text-background/55 text-xs mb-3">
+                  {t.contact.mailFallback}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <a
+                    href={gmailHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border border-background/25 text-background px-4 py-2 text-sm font-medium hover:bg-background hover:text-foreground transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    {t.contact.openGmail}
+                  </a>
+                  <button
+                    type="button"
+                    onClick={copyEmail}
+                    className="inline-flex items-center gap-2 border border-background/25 text-background px-4 py-2 text-sm font-medium hover:bg-background hover:text-foreground transition-colors"
+                  >
+                    {t.contact.copyAction}
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           <a

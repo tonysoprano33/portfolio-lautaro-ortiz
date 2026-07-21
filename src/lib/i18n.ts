@@ -156,6 +156,9 @@ export const translations = {
       email: "lautarovirtual209@gmail.com",
       copySuccess: "Copied to clipboard!",
       copyHint: "Click to copy",
+      copyAction: "Copy email",
+      openGmail: "Open Gmail",
+      mailFallback: "If your mail app does not open, use one of these options.",
       downloadCV: "Download CV",
     },
     // Footer
@@ -569,6 +572,9 @@ export const translations = {
       email: "lautarovirtual209@gmail.com",
       copySuccess: "¡Copiado al portapapeles!",
       copyHint: "Clic para copiar",
+      copyAction: "Copiar correo",
+      openGmail: "Abrir Gmail",
+      mailFallback: "Si no se abre tu app de correo, usá una de estas opciones.",
       downloadCV: "Descargar CV",
     },
     // Footer
