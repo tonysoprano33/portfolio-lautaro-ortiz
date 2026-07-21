@@ -17,9 +17,9 @@ export default function Credibility() {
           context: "Generados con mi herramienta",
         },
         {
-          value: "3",
-          label: "Usuarios diarios",
-          context: "Doctora + 2 secretarias",
+          value: "En uso",
+          label: "Flujo clínico real",
+          context: "Recepción, médico y espirometría",
         },
         {
           value: "min",
@@ -39,9 +39,9 @@ export default function Credibility() {
           context: "Generated with my tool",
         },
         {
-          value: "3",
-          label: "Daily users",
-          context: "Doctor + 2 secretaries",
+          value: "Live",
+          label: "Clinical workflow",
+          context: "Reception, doctor, and spirometry",
         },
         {
           value: "min",
