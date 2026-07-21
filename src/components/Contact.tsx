@@ -10,6 +10,8 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
 
   const handleEmailClick = async () => {
+    const mailtoHref = `mailto:${email}`;
+
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
@@ -17,6 +19,10 @@ export default function Contact() {
     } catch {
       // If clipboard access is blocked, keep the mail link behavior intact.
     }
+
+    window.setTimeout(() => {
+      window.location.href = mailtoHref;
+    }, 150);
   };
 
   return (
@@ -36,15 +42,16 @@ export default function Contact() {
 
         <div className="flex flex-col items-center gap-4 mb-12">
           <div className="flex flex-col items-center gap-2">
-            <a
-              href={`mailto:${email}`}
+            <button
+              type="button"
               onClick={handleEmailClick}
+              aria-label={copied ? t.contact.copySuccess : t.contact.cta}
               className="inline-flex items-center gap-3 bg-background text-foreground px-10 py-5 text-lg font-medium hover:opacity-90 transition-opacity"
             >
               <Mail className="w-5 h-5" />
-              {t.contact.cta}
+              {copied ? t.contact.copySuccess : t.contact.cta}
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </button>
             <button
               type="button"
               onClick={handleEmailClick}
@@ -53,7 +60,7 @@ export default function Contact() {
             >
               {email}
             </button>
-            <p className="text-background/35 text-xs">
+            <p className="text-background/35 text-xs" aria-live="polite">
               {copied ? t.contact.copySuccess : t.contact.copyHint}
             </p>
           </div>
